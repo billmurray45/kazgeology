@@ -1,0 +1,626 @@
+[
+{
+  "model": "core.financialreport",
+  "pk": 1,
+  "fields": {
+    "year": 2024,
+    "report_type": "consolidated",
+    "file": "investors/financial/2024_Консолидированная_фин_отчетность_Казгеология.pdf",
+    "uploaded_at": "2026-04-29T04:55:07.650Z"
+  }
+},
+{
+  "model": "core.financialreport",
+  "pk": 2,
+  "fields": {
+    "year": 2024,
+    "report_type": "separate",
+    "file": "investors/financial/2024_Отдельная_фин_отчетность_Казгеология.pdf",
+    "uploaded_at": "2026-04-29T04:55:23.661Z"
+  }
+},
+{
+  "model": "core.financialreport",
+  "pk": 3,
+  "fields": {
+    "year": 2025,
+    "report_type": "consolidated",
+    "file": "investors/financial/2025_Консолидированная_фин_отчетность_Казгеология.pdf",
+    "uploaded_at": "2026-04-29T04:55:40.593Z"
+  }
+},
+{
+  "model": "core.financialreport",
+  "pk": 4,
+  "fields": {
+    "year": 2025,
+    "report_type": "separate",
+    "file": "investors/financial/2025_Отдельная_фин_отчетность_Казгеология.pdf",
+    "uploaded_at": "2026-04-29T04:55:49.128Z"
+  }
+},
+{
+  "model": "core.affiliatedpersonslist",
+  "pk": 1,
+  "fields": {
+    "year": 2024,
+    "quarter": 4,
+    "file": "investors/affiliated/250127_Список_афф_лиц_Казгеология_4_квартал_2024.xlsx",
+    "uploaded_at": "2026-04-29T04:51:56.460Z"
+  }
+},
+{
+  "model": "core.affiliatedpersonslist",
+  "pk": 2,
+  "fields": {
+    "year": 2025,
+    "quarter": 1,
+    "file": "investors/affiliated/250425_Список_афф_лиц_Казгеология_1_квартал_2025.xlsx",
+    "uploaded_at": "2026-04-29T04:52:22.089Z"
+  }
+},
+{
+  "model": "core.affiliatedpersonslist",
+  "pk": 3,
+  "fields": {
+    "year": 2025,
+    "quarter": 2,
+    "file": "investors/affiliated/250731_Список_афф_лиц_Казгеология_2_квартал_2025.xlsx",
+    "uploaded_at": "2026-04-29T04:52:36.557Z"
+  }
+},
+{
+  "model": "core.affiliatedpersonslist",
+  "pk": 4,
+  "fields": {
+    "year": 2025,
+    "quarter": 3,
+    "file": "investors/affiliated/251104_Список_афф_лиц_Казгеология_3_квартал_2025.xlsx",
+    "uploaded_at": "2026-04-29T04:52:50.702Z"
+  }
+},
+{
+  "model": "core.affiliatedpersonslist",
+  "pk": 5,
+  "fields": {
+    "year": 2025,
+    "quarter": 4,
+    "file": "investors/affiliated/260109_Список_афф_лиц_Казгеология_4_квартал_2025.xlsx",
+    "uploaded_at": "2026-04-29T04:53:02.837Z"
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 1,
+  "fields": {
+    "title": "Принятие Советом директоров Общества решении о заключении сделки в совершении которых акционерным обществом имеется заинтересованность",
+    "month": 6,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 2,
+  "fields": {
+    "title": "Заключение сделками, в совершении которых акционерным обществом имеется заинтересованность",
+    "month": 6,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 3,
+  "fields": {
+    "title": "Информация об избрании Совета директоров АО \"Казгеология\"",
+    "month": 7,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 4,
+  "fields": {
+    "title": "Информация о списке, и (или) об изменении в списке организаций, в которых эмитент обладает десятью и более процентами акций (долей, паев) каждой такой организации",
+    "month": 8,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 5,
+  "fields": {
+    "title": "Информация о списке, и (или) об изменении в списке организаций, в которых эмитент обладает десятью и более процентами акций (долей, паев) каждой такой организации",
+    "month": 9,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 6,
+  "fields": {
+    "title": "Информация об избрании Совета директоров АО \"Казгеология\"",
+    "month": 10,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 7,
+  "fields": {
+    "title": "Принятие Советом директоров Общества решении о заключении сделки в совершении которых акционерным обществом имеется заинтересованность",
+    "month": 11,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 8,
+  "fields": {
+    "title": "Заключение сделками, в совершении которых акционерным обществом имеется заинтересованность",
+    "month": 11,
+    "year": 2025
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 9,
+  "fields": {
+    "title": "Принятие Советом директоров Общества решении о заключении сделки в совершении которых акционерным обществом имеется заинтересованность",
+    "month": 2,
+    "year": 2026
+  }
+},
+{
+  "model": "core.corporateevent",
+  "pk": 10,
+  "fields": {
+    "title": "Заключение сделками, в совершении которых акционерным обществом имеется заинтересованность",
+    "month": 2,
+    "year": 2026
+  }
+},
+{
+  "model": "core.orgchart",
+  "pk": 1,
+  "fields": {
+    "image": "org/org-structure.png",
+    "updated_at": "2026-05-13T08:02:22.463Z"
+  }
+},
+{
+  "model": "core.orgunit",
+  "pk": 1,
+  "fields": {
+    "name": "Совет директоров",
+    "count": "",
+    "parent": null,
+    "order": 1
+  }
+},
+{
+  "model": "core.orgunit",
+  "pk": 2,
+  "fields": {
+    "name": "Генеральный директор",
+    "count": "",
+    "parent": null,
+    "order": 2
+  }
+},
+{
+  "model": "core.privacypolicy",
+  "pk": 1,
+  "fields": {
+    "hero_label": "АО «Казгеология»",
+    "hero_title": "ПОЛИТИКА\nКОНФИДЕНЦИАЛЬНОСТИ",
+    "hero_subtitle": "Порядок обработки и защиты персональных данных пользователей сайта.",
+    "document_title": "Политика конфиденциальности",
+    "updated_date": "28 мая 2026",
+    "contact_email": "info@kazgeology.kz",
+    "intro_text": "Настоящая Политика конфиденциальности определяет порядок сбора, хранения, использования и защиты персональных данных пользователей сайта АО «Казгеология»."
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 1,
+  "fields": {
+    "policy": 1,
+    "title": "1. Общие положения",
+    "content": "АО «Казгеология» уважает право пользователей на конфиденциальность и принимает необходимые организационные и технические меры для защиты предоставленной информации.\n\nИспользуя сайт, пользователь подтверждает ознакомление с настоящей Политикой и соглашается с условиями обработки данных в пределах, необходимых для работы сайта и обратной связи.",
+    "list_items": "",
+    "order": 1
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 2,
+  "fields": {
+    "policy": 1,
+    "title": "2. Какие данные могут обрабатываться",
+    "content": "Компания может обрабатывать следующие сведения:",
+    "list_items": "имя, адрес электронной почты, номер телефона и текст обращения;\nтехнические данные: IP-адрес, тип браузера, дата и время посещения;\nинформацию, которую пользователь добровольно передает через формы сайта.",
+    "order": 2
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 3,
+  "fields": {
+    "policy": 1,
+    "title": "3. Цели обработки данных",
+    "content": "Персональные данные используются для:",
+    "list_items": "обработки обращений и предоставления ответа пользователю;\nобеспечения корректной и безопасной работы сайта;\nвыполнения требований законодательства Республики Казахстан;\nулучшения качества информационных материалов и сервисов сайта.",
+    "order": 3
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 4,
+  "fields": {
+    "policy": 1,
+    "title": "4. Передача данных третьим лицам",
+    "content": "Компания не передает персональные данные третьим лицам без согласия пользователя, за исключением случаев, предусмотренных законодательством, либо когда такая передача необходима для обработки обращения пользователя.",
+    "list_items": "",
+    "order": 4
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 5,
+  "fields": {
+    "policy": 1,
+    "title": "5. Хранение и защита данных",
+    "content": "Данные хранятся в течение срока, необходимого для достижения целей обработки, если иной срок не установлен законодательством. Компания применяет разумные меры защиты от несанкционированного доступа, изменения, раскрытия или уничтожения информации.",
+    "list_items": "",
+    "order": 5
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 6,
+  "fields": {
+    "policy": 1,
+    "title": "6. Права пользователя",
+    "content": "Пользователь вправе запросить информацию об обработке своих данных, а также обратиться с просьбой:",
+    "list_items": "уточнить или обновить персональные данные;\nпрекратить обработку данных, если для этого есть законные основания;\nполучить разъяснение по вопросам защиты персональных данных.",
+    "order": 6
+  }
+},
+{
+  "model": "core.privacypolicysection",
+  "pk": 7,
+  "fields": {
+    "policy": 1,
+    "title": "7. Изменение политики",
+    "content": "Компания может обновлять настоящую Политику. Актуальная редакция размещается на этой странице и применяется с момента публикации, если в тексте не указано иное.",
+    "list_items": "",
+    "order": 7
+  }
+},
+{
+  "model": "about.aboutsection",
+  "pk": 1,
+  "fields": {
+    "title": "О КОМПАНИИ",
+    "description": "Мы проводим геологическое изучение недр Казахстана, обеспечивая решение геологических задач в различных отраслях недропользования. Компания располагает квалифицированными кадрами, экспертизой, опытом и финансовой устойчивостью для оперативного и безопасного выполнения проектов.",
+    "main_stat_description": "Более 80 млрд тенге — общий объём государственного финансирования",
+    "main_stat_value": "80",
+    "main_stat_has_plus": true
+  }
+},
+{
+  "model": "about.aboutstatistic",
+  "pk": 1,
+  "fields": {
+    "description": "Более 200+ специалистов и экспертов",
+    "value": "213",
+    "label": "СПЕЦИАЛИСТОВ",
+    "order": 1
+  }
+},
+{
+  "model": "about.aboutstatistic",
+  "pk": 2,
+  "fields": {
+    "description": "Работаем во всех регионах страны",
+    "value": "14",
+    "label": "РЕГИОНОВ",
+    "order": 2
+  }
+},
+{
+  "model": "about.aboutstatistic",
+  "pk": 3,
+  "fields": {
+    "description": "Более 16 проектов с момента основания",
+    "value": "16",
+    "label": "ПРОЕКТОВ",
+    "order": 3
+  }
+},
+{
+  "model": "about.aboutstatistic",
+  "pk": 4,
+  "fields": {
+    "description": "Собственные буровые станки",
+    "value": "10",
+    "label": "СТАНКОВ",
+    "order": 4
+  }
+},
+{
+  "model": "about.abouthistoryevent",
+  "pk": 1,
+  "fields": {
+    "year": 2011,
+    "date_label": "21 июня 2011",
+    "title": "Основание компании",
+    "description": "Постановлением Правительства РК №684 от 21 июня 2011 года АО «Казгеология» создано как высокотехнологичная геологоразведочная компания Республики Казахстан.",
+    "document_reference": "Постановление Правительства РК №684",
+    "is_featured": true,
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "about.abouthistoryevent",
+  "pk": 2,
+  "fields": {
+    "year": 2021,
+    "date_label": "30 декабря 2021",
+    "title": "Переход под управление Самрук-Қазына",
+    "description": "Постановлением Правительства РК №971 от 30 декабря 2021 года принято решение о передаче акций компании в АО «Фонд национального благосостояния «Самрук-Қазына».",
+    "document_reference": "Постановление Правительства РК №971",
+    "is_featured": false,
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "about.abouthistoryevent",
+  "pk": 3,
+  "fields": {
+    "year": 2023,
+    "date_label": "8 сентября 2023",
+    "title": "Передача 100% акций в Самрук-Қазына",
+    "description": "Приказом Председателя Комитета государственного имущества и приватизации Министерства финансов РК №650 от 8 сентября 2023 года осуществлена передача 100% акций компании в собственность АО «ФНБ «Самрук-Қазына».",
+    "document_reference": "Приказ Председателя КГИП МФ РК №650",
+    "is_featured": false,
+    "is_active": true,
+    "order": 3
+  }
+},
+{
+  "model": "about.abouthistoryevent",
+  "pk": 4,
+  "fields": {
+    "year": 2023,
+    "date_label": "14 сентября 2023",
+    "title": "Передача голосующих акций в Тау-Кен Самрук",
+    "description": "На основании договора №1707-И от 14 сентября 2023 года произведена передача 100% голосующих акций АО «Казгеология» от АО «ФНБ «Самрук-Қазына» в АО «НГК «Тау-Кен Самрук».",
+    "document_reference": "Договор №1707-И",
+    "is_featured": false,
+    "is_active": true,
+    "order": 4
+  }
+},
+{
+  "model": "board.boardmember",
+  "pk": 1,
+  "fields": {
+    "full_name": "Абсаметов Нариман Малисулы",
+    "role": "Председатель",
+    "photo": "images/staff/absametov.jpg",
+    "is_chair": true,
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "board.boardmember",
+  "pk": 2,
+  "fields": {
+    "full_name": "Жумагулов Руслан Бахытжанович",
+    "role": "Член СД — Представитель Единственного акционера",
+    "photo": "images/staff/zhumagulov.jpg",
+    "is_chair": false,
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "board.boardmember",
+  "pk": 3,
+  "fields": {
+    "full_name": "Абуов Даурен Канатович",
+    "role": "Член СД — Генеральный директор",
+    "photo": "images/staff/dauren-kanatovich.jpg",
+    "is_chair": false,
+    "is_active": true,
+    "order": 3
+  }
+},
+{
+  "model": "board.boardmember",
+  "pk": 4,
+  "fields": {
+    "full_name": "Бергенев Адылгазы Садвокасович",
+    "role": "Член СД — Независимый директор",
+    "photo": "images/staff/bergenov.jpeg",
+    "is_chair": false,
+    "is_active": true,
+    "order": 4
+  }
+},
+{
+  "model": "board.boardmember",
+  "pk": 5,
+  "fields": {
+    "full_name": "Перзадаев Мурат Абдукадырович",
+    "role": "Член СД — Независимый директор",
+    "photo": "images/staff/perzadayev.png",
+    "is_chair": false,
+    "is_active": true,
+    "order": 5
+  }
+},
+{
+  "model": "board.boardsecretary",
+  "pk": 1,
+  "fields": {
+    "label": "ВРИО Корпоративного секретаря",
+    "full_name": "Хабиева Жанель Камалхановна",
+    "is_active": true
+  }
+},
+{
+  "model": "board.boardcommittee",
+  "pk": 1,
+  "fields": {
+    "title": "Комитет по стратегическому планированию, инвестициям и устойчивому развитию",
+    "count_label": "3 человека",
+    "icon_class": "fa-solid fa-chart-line",
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "board.boardcommittee",
+  "pk": 2,
+  "fields": {
+    "title": "Комитет по кадрам, вознаграждениям и социальным вопросам",
+    "count_label": "3 человека",
+    "icon_class": "fa-solid fa-users",
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "board.boardcommittee",
+  "pk": 3,
+  "fields": {
+    "title": "Комитет по аудиту",
+    "count_label": "3 человека",
+    "icon_class": "fa-solid fa-magnifying-glass-chart",
+    "is_active": true,
+    "order": 3
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 1,
+  "fields": {
+    "committee": 1,
+    "full_name": "Перзадаев М.А.",
+    "note": "независимый директор",
+    "role_label": "Председатель",
+    "is_chair": true,
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 2,
+  "fields": {
+    "committee": 1,
+    "full_name": "Бергенев А.С.",
+    "note": "независимый директор",
+    "role_label": "",
+    "is_chair": false,
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 3,
+  "fields": {
+    "committee": 1,
+    "full_name": "Жумагулов Р.Б.",
+    "note": "представитель ЕА",
+    "role_label": "",
+    "is_chair": false,
+    "is_active": true,
+    "order": 3
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 4,
+  "fields": {
+    "committee": 2,
+    "full_name": "Жумагулов Р.Б.",
+    "note": "представитель ЕА",
+    "role_label": "Председатель",
+    "is_chair": true,
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 5,
+  "fields": {
+    "committee": 2,
+    "full_name": "Перзадаев М.А.",
+    "note": "независимый директор",
+    "role_label": "",
+    "is_chair": false,
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 6,
+  "fields": {
+    "committee": 2,
+    "full_name": "Бергенев А.С.",
+    "note": "независимый директор",
+    "role_label": "",
+    "is_chair": false,
+    "is_active": true,
+    "order": 3
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 7,
+  "fields": {
+    "committee": 3,
+    "full_name": "Бергенев А.С.",
+    "note": "независимый директор",
+    "role_label": "Председатель",
+    "is_chair": true,
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 8,
+  "fields": {
+    "committee": 3,
+    "full_name": "Перзадаев М.А.",
+    "note": "независимый директор",
+    "role_label": "",
+    "is_chair": false,
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "board.boardcommitteemember",
+  "pk": 9,
+  "fields": {
+    "committee": 3,
+    "full_name": "Жумагулов Р.Б.",
+    "note": "представитель ЕА",
+    "role_label": "",
+    "is_chair": false,
+    "is_active": true,
+    "order": 3
+  }
+}
+]

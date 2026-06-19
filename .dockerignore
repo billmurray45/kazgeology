@@ -1,16 +1,15 @@
+.env
 .venv/
 venv/
 __pycache__/
-.vscode/
-.env
-var/
 *.pyc
+.git/
+.gitignore
+.idea/
+.vscode/
+var/
 .agents
 .antigravitycli
 .codex
-
-# TLS certs
 ssl/
 *.pem
-*.key
-*.crt
