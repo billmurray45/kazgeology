@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Корпоративное управление — Казгеология{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/governance.css' %}">
+{% endblock %}
+
+{% block nav_about %}class="active"{% endblock %}
+
+{% block footer_contact %}{% endblock %}
+
+{% block content %}
+
+    <!-- Hero -->
+    <section class="gov-hero">
+        <div class="gov-hero-container">
+            <nav class="gov-breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Главная</a>
+                <span class="sep">/</span>
+                <a href="/about/">О компании</a>
+                <span class="sep">/</span>
+                <span class="current">Корпоративное управление</span>
+            </nav>
+            <div class="gov-hero-label">АО «Казгеология»</div>
+            <h1 class="gov-hero-title">КОРПОРАТИВНОЕ<br>УПРАВЛЕНИЕ</h1>
+            <p class="gov-hero-subtitle">Принципы надлежащего корпоративного управления, деловой этики и прозрачности</p>
+        </div>
+    </section>
+
+    <!-- Main Text -->
+    <section class="gov-text-section">
+        <div class="gov-container">
+            <div class="gov-text-grid">
+
+                <div class="gov-text-main">
+                    <p>В процессе своей деятельности Общество обеспечивает соблюдение принципов надлежащего корпоративного управления, деловой этики и прозрачности во внутренних отношениях и во взаимодействии с участниками рынка.</p>
+                    <p>Корпоративное управление в Обществе осуществляется в соответствии с законодательством Республики Казахстан, включая Закон Республики Казахстан «Об акционерных обществах», и иные применимые нормативные правовые акты, а также с учетом Кодекса корпоративного управления и корпоративных стандартов, действующих в группе Фонда.</p>
+                    <p>С учетом наличия единственного акционера Общество обеспечивает надлежащую систему подотчетности, прозрачности принятия решений и эффективного взаимодействия органов управления с акционером.</p>
+                    <p>В Обществе функционируют системы внутреннего контроля, управления рисками и комплаенс, направленные на обеспечение законности деятельности, предотвращение конфликта интересов и коррупционных проявлений, а также на защиту интересов акционера и иных заинтересованных сторон.</p>
+                    <p>Общество внедряет и последовательно реализует принципы устойчивого развития (ESG), включая экологическую, социальную и управленческую ответственность, с учетом корпоративной политики и стратегических ориентиров Фонда.</p>
+                </div>
+
+                <div class="gov-principles">
+                    <h3 class="gov-principles-title">Ключевые принципы</h3>
+                    <div class="gov-principle-item">
+                        <div class="gov-principle-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div>
+                            <div class="gov-principle-name">Законность</div>
+                            <div class="gov-principle-desc">Соответствие законодательству РК и нормативным актам</div>
+                        </div>
+                    </div>
+                    <div class="gov-principle-item">
+                        <div class="gov-principle-icon"><i class="fa-solid fa-eye"></i></div>
+                        <div>
+                            <div class="gov-principle-name">Прозрачность</div>
+                            <div class="gov-principle-desc">Открытость в принятии решений и взаимодействии</div>
+                        </div>
+                    </div>
+                    <div class="gov-principle-item">
+                        <div class="gov-principle-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <div class="gov-principle-name">Внутренний контроль</div>
+                            <div class="gov-principle-desc">Системы управления рисками и комплаенс</div>
+                        </div>
+                    </div>
+                    <div class="gov-principle-item">
+                        <div class="gov-principle-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <div>
+                            <div class="gov-principle-name">ESG</div>
+                            <div class="gov-principle-desc">Экологическая, социальная и управленческая ответственность</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Document -->
+    <section class="gov-doc-section">
+        <div class="gov-container">
+
+            <div class="gov-section-header">
+                <div class="gov-section-label">Нормативная база</div>
+                <h2 class="gov-section-title">ДОКУМЕНТЫ</h2>
+            </div>
+
+            <div class="gov-docs-grid">
+
+                <div class="gov-doc-card">
+                    <div class="gov-doc-top">
+                        <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div>
+                            <div class="gov-doc-type">Кодекс · PDF</div>
+                            <div class="gov-doc-title">Кодекс корпоративного управления</div>
+                            <div class="gov-doc-meta">от 05.11.2012 г. (с изм. от 15.08.2024 г.)</div>
+                        </div>
+                    </div>
+                    <div class="gov-doc-footer">
+                        <a href="{% static 'docs/board/Кодекс КУ.pdf' %}" class="btn-gov-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gov-doc-card">
+                    <div class="gov-doc-top">
+                        <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div>
+                            <div class="gov-doc-type">Положение · PDF</div>
+                            <div class="gov-doc-title">Положение о Совете директоров</div>
+                        </div>
+                    </div>
+                    <div class="gov-doc-footer">
+                        <a href="{% static 'docs/board/Положение об СД 2.pdf' %}" class="btn-gov-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gov-doc-card">
+                    <div class="gov-doc-top">
+                        <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div>
+                            <div class="gov-doc-type">Положение · PDF</div>
+                            <div class="gov-doc-title">Положение о Корпоративном секретаре</div>
+                            <div class="gov-doc-meta">2023 г.</div>
+                        </div>
+                    </div>
+                    <div class="gov-doc-footer">
+                        <a href="{% static 'docs/board/Положение о КС.pdf' %}" class="btn-gov-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gov-doc-card">
+                    <div class="gov-doc-top">
+                        <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div>
+                            <div class="gov-doc-type">Политика · PDF</div>
+                            <div class="gov-doc-title">Политика противодействия коррупции</div>
+                        </div>
+                    </div>
+                    <div class="gov-doc-footer">
+                        <a href="{% static 'docs/board/Политика противодействия коррупции.pdf' %}" class="btn-gov-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="gov-cta-strip">
+        <div class="gov-cta-container">
+            <div class="gov-cta-text">
+                <h3>Совет директоров</h3>
+                <p>Ознакомьтесь с составом Совета директоров и положениями о комитетах.</p>
+            </div>
+            <a href="/board/" class="btn-gov-cta">
+                ПЕРЕЙТИ <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

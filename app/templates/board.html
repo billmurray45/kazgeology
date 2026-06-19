@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Совет директоров — Казгеология{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/board.css' %}">
+{% endblock %}
+
+{% block nav_about %}class="active"{% endblock %}
+
+{% block footer_contact %}{% endblock %}
+
+{% block content %}
+
+    <!-- Hero -->
+    <section class="board-page-hero">
+        <div class="board-page-hero-container">
+            <nav class="board-page-breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Главная</a>
+                <span class="sep">/</span>
+                <a href="/about/">О компании</a>
+                <span class="sep">/</span>
+                <span class="current">Совет директоров</span>
+            </nav>
+            <div class="board-page-label">Корпоративное управление</div>
+            <h1 class="board-page-title">СОВЕТ<br>ДИРЕКТОРОВ</h1>
+            <p class="board-page-subtitle">Нормативные документы, регулирующие деятельность Совета директоров и его комитетов АО «Казгеология»</p>
+        </div>
+    </section>
+
+    <!-- Состав СД -->
+    <section class="board-docs-section">
+        <div class="board-docs-container">
+
+            <div class="board-docs-header">
+                <div class="board-docs-header-left">
+                    <h2>Состав</h2>
+                    <p>СОВЕТ ДИРЕКТОРОВ</p>
+                </div>
+            </div>
+
+            <div class="board-members-grid">
+
+                {% for member in board_members %}
+                <div class="board-member-card {% if member.is_chair %}board-member-card--chair{% endif %}">
+                    {% if member.photo %}
+                    <img src="{{ member.photo_url }}" alt="{{ member.full_name }}" class="bmc-photo">
+                    {% else %}
+                    <div class="bmc-photo-placeholder">{{ member.full_name|first }}</div>
+                    {% endif %}
+                    <div class="bmc-info">
+                        <div class="bmc-role">{{ member.role }}</div>
+                        <div class="bmc-name">{{ member.full_name }}</div>
+                    </div>
+                </div>
+                {% empty %}
+                <p style="color:#64748b;">Состав Совета директоров будет добавлен в ближайшее время.</p>
+                {% endfor %}
+            </div>
+
+            {% if board_secretary %}
+            <div class="board-secretary">
+                <span class="board-secretary-label">{{ board_secretary.label }}</span>
+                <span class="board-secretary-name">{{ board_secretary.full_name }}</span>
+            </div>
+            {% endif %}
+
+        </div>
+    </section>
+
+    <!-- Состав Комитетов -->
+    <section class="board-committees-section">
+        <div class="board-docs-container">
+
+            <div class="board-docs-header">
+                <div class="board-docs-header-left">
+                    <h2>Комитеты</h2>
+                    <p>СОСТАВ КОМИТЕТОВ СД</p>
+                </div>
+            </div>
+
+            <div class="board-committees-grid">
+
+                {% for committee in board_committees %}
+                <div class="committee-card">
+                    <div class="committee-card-header">
+                        <div class="committee-icon"><i class="{{ committee.icon_class }}"></i></div>
+                        <div>
+                            <div class="committee-count">{{ committee.count_label }}</div>
+                            <h3 class="committee-title">{{ committee.title }}</h3>
+                        </div>
+                    </div>
+                    <div class="committee-members">
+                        {% for member in committee.members.all %}
+                        <div class="committee-member {% if member.is_chair %}committee-member--chair{% endif %}">
+                            {% if member.role_label %}
+                            <span class="cm-badge">{{ member.role_label }}</span>
+                            {% endif %}
+                            <span class="cm-name">{{ member.full_name }}</span>
+                            {% if member.note %}
+                            <span class="cm-note">{{ member.note }}</span>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% empty %}
+                <p style="color:#64748b;">Состав комитетов будет добавлен в ближайшее время.</p>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Документы для скачивания -->
+    <section class="board-docs-section" style="background: #fff;">
+        <div class="board-docs-container">
+
+            <div class="board-docs-header">
+                <div class="board-docs-header-left">
+                    <h2>Документы</h2>
+                    <p>НОРМАТИВНАЯ БАЗА</p>
+                </div>
+            </div>
+
+            <div class="board-docs-grid">
+
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div class="doc-meta">
+                            <div class="doc-type">Положение · PDF</div>
+                            <div class="doc-title">Положение о Совете директоров</div>
+                        </div>
+                    </div>
+                    <div class="doc-card-footer">
+                        <span class="doc-size">PDF документ</span>
+                        <a href="{% static 'docs/board/Положение об СД.pdf' %}" class="btn-doc-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div class="doc-meta">
+                            <div class="doc-type">Положение · PDF</div>
+                            <div class="doc-title">Положение о Комитете по стратегическому планированию, инвестициям и устойчивому развитию СД</div>
+                        </div>
+                    </div>
+                    <div class="doc-card-footer">
+                        <span class="doc-size">PDF документ</span>
+                        <a href="{% static 'docs/board/Положение о КСПИУР СД.pdf' %}" class="btn-doc-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div class="doc-meta">
+                            <div class="doc-type">Положение · PDF</div>
+                            <div class="doc-title">Положение о Комитете по кадрам, вознаграждениям и социальным вопросам СД</div>
+                        </div>
+                    </div>
+                    <div class="doc-card-footer">
+                        <span class="doc-size">PDF документ</span>
+                        <a href="{% static 'docs/board/Положение ККВСВ СД.pdf' %}" class="btn-doc-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div class="doc-meta">
+                            <div class="doc-type">Положение · PDF</div>
+                            <div class="doc-title">Положение о Комитете по аудиту СД</div>
+                        </div>
+                    </div>
+                    <div class="doc-card-footer">
+                        <span class="doc-size">PDF документ</span>
+                        <a href="{% static 'docs/board/Положение о КА СД.pdf' %}" class="btn-doc-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                        <div class="doc-meta">
+                            <div class="doc-type">Кодекс · PDF</div>
+                            <div class="doc-title">Кодекс корпоративного управления (с изм. от 15.08.2024)</div>
+                        </div>
+                    </div>
+                    <div class="doc-card-footer">
+                        <span class="doc-size">PDF документ</span>
+                        <a href="{% static 'docs/board/Кодекс КУ.pdf' %}" class="btn-doc-download" download>
+                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Strip -->
+    <div class="board-info-strip">
+        <div class="board-info-strip-container">
+            <div class="board-info-text">
+                <h3>Остались вопросы по документам?</h3>
+                <p>По всем вопросам корпоративного управления вы можете обратиться в секретариат Совета директоров.</p>
+            </div>
+            <a href="mailto:info@kazgeology.kz" class="btn-board-contact">
+                НАПИСАТЬ НАМ <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

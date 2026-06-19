@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+.vscode/
+.env
+var/
+*.pyc
+.agents
+.antigravitycli
+.codex

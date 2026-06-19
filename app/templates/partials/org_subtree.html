@@ -1,0 +1,12 @@
+{% load org_tags %}
+{% for child in children %}
+<div class="org-node{% if child.children.exists %} org-node--branch{% endif %}">
+    <div class="org-node-box">
+        <span class="org-node-name">{{ child.name }}</span>
+        {% if child.count %}<span class="org-node-count">({{ child.count }})</span>{% endif %}
+    </div>
+    {% if child.children.exists %}
+    <div class="org-children">{% render_children child %}</div>
+    {% endif %}
+</div>
+{% endfor %}

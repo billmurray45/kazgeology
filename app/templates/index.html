@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Казгеология — Геологическое изучение недр Казахстана{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index-sections.css' %}">
+<style>
+    .section-about {
+        padding-top: 220px !important;
+    }
+
+    @media (max-width: 991px) {
+        .section-about {
+            padding-top: 180px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .section-about {
+            padding-top: 140px !important;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block nav_projects %}class="active"{% endblock %}
+
+{% block content %}
+<!-- About Section -->
+<section class="section-about">
+    <div class="about-container">
+        <h2 class="about-title">{{ about_section.title|default:"О КОМПАНИИ" }}</h2>
+
+        <div class="about-top-row">
+            <div class="about-main-stat">
+                <div class="stat-top-text">{{ about_section.main_stat_description|default:"Более 40 млрд тенге — общий объём государственного финансирования" }}</div>
+                <div class="stat-value-huge">
+                    {{ about_section.main_stat_value|default:"80" }}{% if not about_section or about_section.main_stat_has_plus %}<span class="plus">+</span>{% endif %}
+                </div>
+            </div>
+            <div class="about-description">
+                <p>{{ about_section.description|default:"Мы проводим геологическое изучение недр Казахстана, обеспечивая решение геологических задач в различных отраслях недропользования. Компания располагает квалифицированными кадрами, экспертизой, опытом и финансовой устойчивостью для оперативного и безопасного выполнения проектов." }}</p>
+            </div>
+        </div>
+
+        <div class="about-bottom-stats">
+            {% if about_stats %}
+            {% for stat in about_stats %}
+            <div class="about-sub-stat">
+                <div class="stat-top-text">{{ stat.description }}</div>
+                <div class="stat-value-large">{{ stat.value }} <span class="stat-slash">/</span> <span
+                        class="stat-label">{{ stat.label }}</span></div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="about-sub-stat">
+                <div class="stat-top-text">Более 500 специалистов и экспертов</div>
+                <div class="stat-value-large">500 <span class="stat-slash">/</span> <span
+                        class="stat-label">СПЕЦИАЛИСТОВ</span></div>
+            </div>
+            <div class="about-sub-stat">
+                <div class="stat-top-text">Работаем во всех регионах страны</div>
+                <div class="stat-value-large">14 <span class="stat-slash">/</span> <span
+                        class="stat-label">РЕГИОНОВ</span></div>
+            </div>
+            <div class="about-sub-stat">
+                <div class="stat-top-text">Более 200 проектов с момента основания</div>
+                <div class="stat-value-large">200 <span class="stat-slash">/</span> <span
+                        class="stat-label">+ПРОЕКТОВ</span></div>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="about-action">
+            <a href="/about/" class="btn-outline-dark">
+                УЗНАТЬ БОЛЬШЕ
+                <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section-projects">
+    <div class="projects-container">
+        <div class="projects-header">
+            <h2 class="projects-label">ПОСЛЕДНИЕ РЕАЛИЗОВАННЫЕ РАБОТЫ</h2>
+            <div class="projects-title-huge">ПРОЕКТЫ</div>
+        </div>
+
+        <div class="projects-grid">
+            <a href="/projects/" class="project-card">
+                <div class="card-num-bg">01</div>
+                <div class="card-inner">
+                    <div class="card-partner">ТОО «Корпорация Казахмыс»</div>
+                    <div class="card-title">Разведка золота и медьсодержащих руд на Алтынказганском рудном поле</div>
+                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> Костанайская, Карагандинская обл.
+                    </div>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="/projects/" class="project-card">
+                <div class="card-num-bg">02</div>
+                <div class="card-inner">
+                    <div class="card-partner">ТОО «Казцинк»</div>
+                    <div class="card-title">Разведка колчеданно-полиметаллических руд на площади
+                        Сакмарихинско-Черноубинская</div>
+                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> Восточно-Казахстанская обл.</div>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="/projects/" class="project-card">
+                <div class="card-num-bg">03</div>
+                <div class="card-inner">
+                    <div class="card-partner">IG Global</div>
+                    <div class="card-title">Разведка медно-порфировых руд на участке Балхаш-Сарышаган</div>
+                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> Балхаш-Сарышаган</div>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="projects-footer">
+            <a href="/projects/" class="btn-outline-dark">
+                ВСЕ ПРОЕКТЫ
+                <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <div class="projects-pagination">
+                <span class="p-current">01</span> <span class="p-slash">/</span> <span class="p-total">04</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% comment %}
+<!-- News Section -->
+<section class="section-news">
+    <div class="news-container">
+        <div class="news-title-huge">ПОСЛЕДНИЕ НОВОСТИ</div>
+        <div class="news-header">
+            <h2 class="news-label">НОВОСТИ</h2>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-col news-col-left">
+                <a href="#" class="news-item main-news">
+                    <div class="news-date-block">
+                        <span class="date-day">10</span>
+                        <span class="date-month">ОКТ 23</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-image-wrapper">
+                            <img src="https://kazgeology.kz/wp-content/uploads/2023/10/%D0%BB%D0%BE%D0%B3%D0%BE-%D1%82%D0%BA%D1%81-%D0%B8-%D0%BA%D0%B0%D0%B7%D0%B3%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-750x493.jpg"
+                                alt="Тау-Кен Самрук">
+                        </div>
+                        <h3 class="news-item-title">100% акций АО «Казгеология» принадлежат АО «НГК «Тау-Кен Самрук»
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="news-col news-col-right">
+                <a href="#" class="news-item sub-news">
+                    <div class="news-date-block">
+                        <span class="date-day">25</span>
+                        <span class="date-month">ОКТ 23</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-image-wrapper">
+                            <img src="https://kazgeology.kz/wp-content/uploads/2023/10/IMG_8077-750x374.jpg"
+                                alt="День Республики">
+                        </div>
+                        <h3 class="news-item-title">Поздравляем с Днем Республики Казахстан!</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="news-item sub-news">
+                    <div class="news-date-block">
+                        <span class="date-day">06</span>
+                        <span class="date-month">ИЮЛ 23</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-image-wrapper">
+                            <img src="https://kazgeology.kz/wp-content/uploads/2023/07/Frame-5-750x563.jpg"
+                                alt="День столицы">
+                        </div>
+                        <h3 class="news-item-title">С днем столицы, дорогие казахстанцы!</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="news-footer">
+                <a href="#" class="btn-outline-dark">
+                    ВСЕ НОВОСТИ
+                    <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+</section>
+{% endcomment %}
+
+<!-- History Section -->
+<section class="section-history">
+    <div class="history-container">
+        <h2 class="history-label">ИСТОРИЯ</h2>
+        <div class="history-timeline">
+            <div class="history-timeline-item">
+                <div class="history-timeline-year">2011</div>
+                <div class="history-timeline-dot"></div>
+                <div class="history-timeline-content">
+                    <div class="history-timeline-title">Основание компании</div>
+                    <div class="history-timeline-text">АО «Казгеология» создано как высокотехнологичная
+                        геологоразведочная компания Республики Казахстан.</div>
+                </div>
+            </div>
+            <div class="history-timeline-item">
+                <div class="history-timeline-year">2021</div>
+                <div class="history-timeline-dot"></div>
+                <div class="history-timeline-content">
+                    <div class="history-timeline-title">Вхождение в Тау-Кен Самрук</div>
+                    <div class="history-timeline-text">100% акций компании переданы АО «НГК «Тау-Кен Самрук» —
+                        национальному горнорудному холдингу Республики Казахстан.</div>
+                </div>
+            </div>
+            <div class="history-timeline-item">
+                <div class="history-timeline-year">2023</div>
+                <div class="history-timeline-dot"></div>
+                <div class="history-timeline-content">
+                    <div class="history-timeline-title">Переименование в ВГК</div>
+                    <div class="history-timeline-text">Компания получила статус национальной геологоразведочной компании
+                        и переименована в АО «Казгеология».</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="investors-section">
+            <h4 class="investors-label">НАШИ ПАРТНЁРЫ И АФФИЛИРОВАННЫЕ СТРУКТУРЫ</h4>
+        </div>
+    </div>
+
+    <div class="investors-border-wrap">
+        <div class="investors-marquee-wrap">
+            <div class="investors-marquee-track">
+                <div class="investor-item">
+                    <div class="investor-logo">
+                        <img src="{% static 'images/partners/taukensamruk.png' %}" alt="АО «НГК «Тау-Кен Самрук»">
+                    </div>
+                </div>
+                <div class="investor-item">
+                    <div class="investor-logo">
+                        <img src="{% static 'images/partners/kazakhmys.png' %}" alt="ТОО «Корпорация Казахмыс»">
+                    </div>
+                </div>
+                <div class="investor-item">
+                    <div class="investor-logo">
+                        <img src="{% static 'images/partners/kazzinc.png' %}" alt="ТОО «Казцинк»">
+                    </div>
+                </div>
+                <div class="investor-item">
+                    <div class="investor-name">IG Global</div>
+                </div>
+                <!-- duplicate for seamless loop -->
+                <div class="investor-item">
+                    <div class="investor-logo">
+                        <img src="{% static 'images/partners/taukensamruk.png' %}" alt="АО «НГК «Тау-Кен Самрук»">
+                    </div>
+                </div>
+                <div class="investor-item">
+                    <div class="investor-logo">
+                        <img src="{% static 'images/partners/kazakhmys.png' %}" alt="ТОО «Корпорация Казахмыс»">
+                    </div>
+                </div>
+                <div class="investor-item">
+                    <div class="investor-logo">
+                        <img src="{% static 'images/partners/kazzinc.png' %}" alt="ТОО «Казцинк»">
+                    </div>
+                </div>
+                <div class="investor-item">
+                    <div class="investor-name">IG Global</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Governance Section -->
+<section class="idx-governance-section">
+    <div class="idx-container">
+        <div class="idx-gov-grid">
+            <div>
+                <div class="idx-section-label">Принципы управления</div>
+                <h2 class="idx-gov-title">КОРПОРАТИВНОЕ УПРАВЛЕНИЕ</h2>
+                <p class="idx-gov-desc">Система корпоративного управления АО «Казгеология» построена на международных
+                    стандартах и обеспечивает эффективную защиту прав акционеров и устойчивое развитие компании.</p>
+                <a href="/governance/" class="btn-idx-dark">
+                    ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="idx-gov-principles">
+                <div class="idx-gov-principle">
+                    <div class="idx-gov-p-icon"><i class="fa-solid fa-eye"></i></div>
+                    <div>
+                        <div class="idx-gov-p-name">Прозрачность</div>
+                        <div class="idx-gov-p-desc">Открытое раскрытие информации акционерам и заинтересованным лицам
+                        </div>
+                    </div>
+                </div>
+                <div class="idx-gov-principle">
+                    <div class="idx-gov-p-icon"><i class="fa-solid fa-file-contract"></i></div>
+                    <div>
+                        <div class="idx-gov-p-name">Подотчётность</div>
+                        <div class="idx-gov-p-desc">Ответственность органов управления перед акционерами</div>
+                    </div>
+                </div>
+                <div class="idx-gov-principle">
+                    <div class="idx-gov-p-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <div class="idx-gov-p-name">Ответственность</div>
+                        <div class="idx-gov-p-desc">Соответствие деятельности законодательству и этическим нормам</div>
+                    </div>
+                </div>
+                <div class="idx-gov-principle">
+                    <div class="idx-gov-p-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div>
+                        <div class="idx-gov-p-name">Справедливость</div>
+                        <div class="idx-gov-p-desc">Равное отношение ко всем акционерам и участникам рынка</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

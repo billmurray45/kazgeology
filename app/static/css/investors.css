@@ -1,0 +1,488 @@
+/* ===== INVESTORS PAGE ===== */
+
+.inv-hero {
+    background-color: #0a1223;
+    position: relative;
+    padding: 220px 0 80px;
+    overflow: hidden;
+}
+
+.inv-hero::before {
+    display: none;
+}
+
+.inv-hero-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.inv-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+}
+
+.inv-breadcrumb a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.inv-breadcrumb a:hover { color: #fff; }
+.inv-breadcrumb .sep { color: rgba(255, 255, 255, 0.25); }
+.inv-breadcrumb .current { color: #ea232a; }
+
+.inv-hero-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #ea232a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.inv-hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 0 0 24px;
+}
+
+.inv-hero-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    max-width: 540px;
+    line-height: 1.65;
+}
+
+/* ===== SECTIONS ===== */
+
+.inv-section {
+    padding: 80px 0 100px;
+}
+
+.inv-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.inv-section-header {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.inv-section-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #ea232a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.inv-section-title {
+    font-size: 40px;
+    font-weight: 900;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin: 0;
+}
+
+/* ===== DOC CARDS GRID ===== */
+
+.inv-report-group {
+    margin-bottom: 48px;
+}
+
+.inv-report-group:last-child {
+    margin-bottom: 0;
+}
+
+.inv-report-year {
+    font-size: 30px;
+    font-weight: 900;
+    color: #1e293b;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin: 0 0 20px;
+}
+
+.inv-docs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.inv-doc-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.inv-doc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+.inv-doc-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.inv-doc-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.inv-doc-icon--pdf {
+    background: #fef2f2;
+}
+
+.inv-doc-icon--pdf i {
+    font-size: 22px;
+    color: #ea232a;
+}
+
+.inv-doc-meta { flex: 1; }
+
+.inv-doc-type {
+    font-size: 11px;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.inv-doc-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+.inv-doc-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* ===== BADGES ===== */
+
+.inv-doc-badge {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.inv-doc-badge--pdf {
+    background: #fef2f2;
+    color: #ea232a;
+}
+
+.inv-doc-badge--xlsx {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+
+.btn-inv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1e293b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-inv-download:hover {
+    background: #ea232a;
+    transform: translateY(-1px);
+}
+
+.btn-inv-download--sm {
+    padding: 8px 14px;
+    font-size: 11px;
+}
+
+/* ===== TABLE ===== */
+
+.inv-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.inv-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.inv-table thead tr {
+    background: #1e293b;
+}
+
+.inv-table thead th {
+    padding: 16px 24px;
+    font-size: 11px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.inv-table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.15s ease;
+}
+
+.inv-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.inv-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.inv-table tbody td {
+    padding: 20px 24px;
+    font-size: 15px;
+    color: #334155;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.inv-period {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1e293b;
+    white-space: nowrap;
+}
+
+/* ===== CALENDAR CARD ===== */
+
+.inv-calendar-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.inv-calendar-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+    border-color: #cbd5e1;
+}
+
+.inv-calendar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.inv-calendar-icon {
+    width: 56px;
+    height: 56px;
+    background: #fef2f2;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.inv-calendar-icon i {
+    font-size: 24px;
+    color: #ea232a;
+}
+
+.inv-calendar-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.inv-calendar-period {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== EVENTS LIST ===== */
+
+.inv-events-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.inv-event-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 20px 28px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.15s ease;
+}
+
+.inv-event-row:last-child {
+    border-bottom: none;
+}
+
+.inv-event-row:hover {
+    background: #f8fafc;
+}
+
+.inv-event-date {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ea232a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 160px;
+    flex-shrink: 0;
+}
+
+.inv-event-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+/* ===== INFO STRIP ===== */
+
+.inv-info-strip {
+    background: #1e293b;
+    padding: 48px 0;
+}
+
+.inv-info-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.inv-info-text h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.inv-info-text p {
+    font-size: 15px;
+    color: #94a3b8;
+    max-width: 480px;
+    line-height: 1.6;
+}
+
+.btn-inv-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ea232a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.btn-inv-contact:hover {
+    background: #d21f25;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+    .inv-hero-title { font-size: 56px; }
+
+    .inv-docs-grid { grid-template-columns: 1fr; }
+
+    .inv-hero-container,
+    .inv-container,
+    .inv-info-container { padding: 0 24px; }
+
+    .inv-info-container { flex-direction: column; align-items: flex-start; }
+
+    .inv-calendar-card { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+    .inv-hero-title { font-size: 40px; letter-spacing: -2px; }
+
+    .inv-section-title { font-size: 28px; }
+    .inv-report-year { font-size: 24px; }
+
+    .inv-table thead th:nth-child(2) { display: none; }
+    .inv-table tbody td:nth-child(2) { display: none; }
+
+    .inv-calendar-left { flex-direction: column; align-items: flex-start; }
+}

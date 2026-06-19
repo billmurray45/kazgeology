@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}О компании — Казгеология{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block nav_about %}class="active"{% endblock %}
+
+{% block footer_contact %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="about-hero">
+    <div class="about-hero-container">
+        <nav class="about-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Главная</a>
+            <span class="sep">/</span>
+            <span class="current">О компании</span>
+        </nav>
+        <div class="about-hero-label">АО «Казгеология»</div>
+        <h1 class="about-hero-title">О<br>КОМПАНИИ</h1>
+        <p class="about-hero-subtitle">Высокотехнологичная геологоразведочная компания</p>
+    </div>
+</section>
+
+<!-- Intro -->
+<section class="about-intro-section">
+    <div class="about-container">
+        <div class="about-intro-grid">
+            <div class="about-intro-left">
+                <div class="about-section-label">Кто мы</div>
+                <h2 class="about-intro-title">Высокотехнологичная геологоразведочная компания</h2>
+            </div>
+            <div class="about-intro-right">
+                <p class="about-intro-text">
+                    АО «Казгеология» — высокотехнологичная геологоразведочная компания. Компания осуществляет
+                    государственные программы по поиску и оценке месторождений стратегических полезных ископаемых на
+                    территории Республики Казахстан.
+                </p>
+                <div class="about-stats-row">
+                    <div class="about-stat">
+                        <div class="about-stat-num">2011</div>
+                        <div class="about-stat-label">Год основания</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="about-stat-num">100%</div>
+                        <div class="about-stat-label">Государственное владение</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="about-stat-num">15+</div>
+                        <div class="about-stat-label">Лет работы</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline -->
+<section class="about-timeline-section">
+    <div class="about-container">
+
+        <div class="about-section-header">
+            <div class="about-section-label">Хроника событий</div>
+            <h2 class="about-section-title">ИСТОРИЯ<br>КОМПАНИИ</h2>
+        </div>
+
+        <div class="about-timeline">
+
+            {% for group in history_groups %}
+            <div class="timeline-item">
+                <div class="timeline-year-col">
+                    <div class="timeline-year">{{ group.year }}</div>
+                </div>
+                <div class="timeline-connector">
+                    <div class="timeline-dot {% if forloop.first %}timeline-dot--primary{% endif %}"></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content-col">
+                    {% for event in group.events %}
+                    <div class="timeline-card {% if event.is_featured %}timeline-card--featured{% endif %}">
+                        <div class="timeline-date">{{ event.date_label }}</div>
+                        <h3 class="timeline-event-title">{{ event.title }}</h3>
+                        <p class="timeline-event-desc">{{ event.description }}</p>
+                        {% if event.document_reference %}
+                        <div class="timeline-doc-ref">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>{{ event.document_reference }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% empty %}
+            <p style="color:#64748b;">История компании будет добавлена в ближайшее время.</p>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+<!-- Structure Strip -->
+<section class="about-structure-section">
+    <div class="about-container">
+        <div class="about-structure-grid">
+            <div class="about-structure-text">
+                <div class="about-section-label about-section-label--light">Акционерная структура</div>
+                <h2 class="about-structure-title">Единственный акционер</h2>
+                <p class="about-structure-desc">
+                    Единственным акционером АО «Казгеология» является АО «НГК «Тау-Кен Самрук». 100% голосующих акций
+                    Общества принадлежат АО «НГК «Тау-Кен Самрук» на праве собственности.
+                </p>
+                <p class="about-structure-desc" style="margin-top: 16px;">
+                    АО «НГК «Тау-Кен Самрук» входит в структуру АО «Фонд национального благосостояния «Самрук-Қазына» и
+                    осуществляет консолидацию инвестиционной деятельности в сфере твердых полезных ископаемых.
+                </p>
+            </div>
+            <div class="about-ownership-chain">
+                <div class="ownership-node ownership-node--top">
+                    <div class="ownership-node-inner">
+                        <div class="ownership-node-title">Республика Казахстан</div>
+                        <div class="ownership-node-sub">Государство</div>
+                    </div>
+                </div>
+                <div class="ownership-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="ownership-node">
+                    <div class="ownership-node-inner">
+                        <div class="ownership-node-title">Самрук-Қазына</div>
+                        <div class="ownership-node-sub">ФНБ — Фонд национального благосостояния</div>
+                    </div>
+                </div>
+                <div class="ownership-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="ownership-node">
+                    <div class="ownership-node-inner">
+                        <div class="ownership-node-title">Тау-Кен Самрук</div>
+                        <div class="ownership-node-sub">НГК — Национальная горнорудная компания</div>
+                    </div>
+                </div>
+                <div class="ownership-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="ownership-node ownership-node--highlight">
+                    <div class="ownership-node-inner">
+                        <div class="ownership-node-title">Казгеология</div>
+                        <div class="ownership-node-sub">ВГК — Высокотехнологичная геологоразведочная компания</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Org Structure -->
+<section class="about-orgchart-section">
+    <div class="about-container">
+        <div class="about-section-header">
+            <div class="about-section-label">Корпоративное управление</div>
+            <h2 class="about-section-title">ОРГАНИЗАЦИОННАЯ<br>СТРУКТУРА</h2>
+        </div>
+        <div class="about-orgchart-wrapper">
+            {% if org_chart %}
+            <img src="{{ org_chart.image.url }}" alt="Организационная структура АО «Казгеология»"
+                class="about-orgchart-img">
+            {% else %}
+            <p style="color:#64748b;">Структура будет добавлена в ближайшее время.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Strip -->
+<div class="about-cta-strip">
+    <div class="about-cta-container">
+        <div class="about-cta-text">
+            <h3>Корпоративное управление</h3>
+            <p>Ознакомьтесь с составом Совета директоров и нормативными документами компании.</p>
+        </div>
+        <a href="/board/" class="btn-about-cta">
+            СОВЕТ ДИРЕКТОРОВ <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Политика конфиденциальности - Казгеология{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/privacy-policy.css' %}">
+{% endblock %}
+
+{% block footer_contact %}{% endblock %}
+
+{% block content %}
+
+    <section class="privacy-hero">
+        <div class="privacy-hero-container">
+            <nav class="privacy-breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Главная</a>
+                <span class="sep">/</span>
+                <span class="current">Политика конфиденциальности</span>
+            </nav>
+            <div class="privacy-hero-label">{{ privacy_policy.hero_label|default:'АО «Казгеология»' }}</div>
+            <h1 class="privacy-hero-title">{{ privacy_policy.hero_title|default:'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ'|linebreaksbr }}</h1>
+            <p class="privacy-hero-subtitle">{{ privacy_policy.hero_subtitle|default:'Порядок обработки и защиты персональных данных пользователей сайта.' }}</p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <aside class="privacy-meta" aria-label="Сведения о документе">
+                <div class="privacy-meta-item">
+                    <span>Документ</span>
+                    <strong>{{ privacy_policy.document_title|default:'Политика конфиденциальности' }}</strong>
+                </div>
+                <div class="privacy-meta-item">
+                    <span>Дата обновления</span>
+                    <strong>{{ privacy_policy.updated_date|default:'28 мая 2026' }}</strong>
+                </div>
+                <div class="privacy-meta-item">
+                    <span>Контакт</span>
+                    <a href="mailto:{{ privacy_policy.contact_email|default:'info@kazgeology.kz' }}">{{ privacy_policy.contact_email|default:'info@kazgeology.kz' }}</a>
+                </div>
+            </aside>
+
+            <div class="privacy-content">
+                <div class="privacy-intro">
+                    <p>
+                        {{ privacy_policy.intro_text|default:'Настоящая Политика конфиденциальности определяет порядок сбора, хранения, использования и защиты персональных данных пользователей сайта АО «Казгеология».' }}
+                    </p>
+                </div>
+
+                {% if privacy_policy %}
+                {% for section in privacy_policy.sections.all %}
+                <article class="privacy-block">
+                    <h2>{{ section.title }}</h2>
+                    {% for paragraph in section.paragraphs %}
+                    <p>{{ paragraph }}</p>
+                    {% endfor %}
+                    {% if section.items %}
+                    <ul>
+                        {% for item in section.items %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </article>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Казгеология — Геологическое изучение недр Казахстана{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- Floating Header -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <a href="/">
+                    <img src="https://kazgeology.kz/wp-content/uploads/2020/06/logo-1.png" alt="KazGeology Logo"
+                        style="height: 48px; width: auto;">
+                </a>
+            </div>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <span class="active">ҚАЗ</span>
+                    <span>РУС</span>
+                    <span>ENG</span>
+                </div>
+                <a href="mailto:info@kazgeology.kz" class="btn-call">СВЯЗАТЬСЯ
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <button class="btn-search" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+
+                <div class="nav-item has-dropdown">
+                    <a href="/about/" {% block nav_about %}{% endblock %}>О КОМПАНИИ <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <div class="nav-dropdown">
+                        <a href="/about/" class="nav-drop-link">О компании</a>
+                        <a href="/board/" class="nav-drop-link">Совет директоров</a>
+                        <a href="/governance/" class="nav-drop-link">Корпоративное управление</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="/projects/" {% block nav_projects %}{% endblock %}>ПРОЕКТЫ <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <div class="nav-dropdown">
+                        <a href="/projects/" class="nav-drop-link">Совместные проекты</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="/investors/" {% block nav_investors %}{% endblock %}>ИНВЕСТОРАМ <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <div class="nav-dropdown">
+                        <a href="/investors/" class="nav-drop-link">Финансовая отчётность</a>
+                        <a href="/investors/" class="nav-drop-link">Аффилированные лица</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="https://zakup.sk.kz" target="_blank" rel="noopener" {% block nav_procurement %}{% endblock %}>ЗАКУПКИ <i class="fa-solid fa-arrow-up-right-from-square nav-chevron"></i></a>
+                    <div class="nav-dropdown">
+                        <a href="https://zakup.sk.kz" target="_blank" rel="noopener" class="nav-drop-link">Портал закупок zakup.sk.kz</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="/compliance/" {% block nav_compliance %}{% endblock %}>КОМПЛАЕНС <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <div class="nav-dropdown">
+                        <a href="/compliance/" class="nav-drop-link">Комплаенс-система</a>
+                        <a href="/compliance/" class="nav-drop-link">Горячая линия</a>
+                        <a href="/careers/" class="nav-drop-link">Вакансии</a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        {% block footer_contact %}
+        <div class="footer-top">
+            <div class="footer-container footer-contact-header">
+                <h2 class="footer-title">КОНТАКТЫ</h2>
+                <p class="footer-subtitle">МЫ ВСЕГДА РАДЫ ВАШЕМУ ОБРАЩЕНИЮ</p>
+            </div>
+
+            {% block footer_form %}
+            <div class="footer-container contact-split" style="padding-bottom: 80px;">
+                <div>
+                    <h3 style="font-size: 32px; font-weight: 800; margin-bottom: 24px; color: #1e293b;">Нужна дополнительная информация?</h3>
+                    <p style="color: #64748b; line-height: 1.6; max-width: 90%;">
+                        Есть проект или вопросы по нашим услугам? Заполните форму ниже — наша команда свяжется с вами в ближайшее время.
+                    </p>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Спасибо за обращение! Мы свяжемся с вами в ближайшее время.');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="contact-name" required placeholder=" ">
+                                <label for="contact-name">Ваше имя</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contact-email" required placeholder=" ">
+                                <label for="contact-email">Email адрес</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="contact-subject" required placeholder=" ">
+                            <label for="contact-subject">Тема</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contact-message" rows="4" required placeholder=" "></textarea>
+                            <label for="contact-message">Сообщение</label>
+                        </div>
+                        <button type="submit" class="btn-submit-form">
+                            ОТПРАВИТЬ СООБЩЕНИЕ <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            {% endblock footer_form %}
+        </div>
+        {% endblock footer_contact %}
+
+        <div class="footer-main">
+            <div class="footer-container footer-main-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <img src="https://kazgeology.kz/wp-content/uploads/2020/06/logo-1.png" alt="Казгеология"
+                            style="height:40px; width:auto; filter:brightness(0) invert(1);">
+                    </div>
+                    <p class="brand-tagline">Изучаем недра Казахстана.</p>
+                    <p class="brand-subtext">Основано в 2011 году</p>
+                </div>
+
+                <div class="footer-col info-col">
+                    <h4 class="col-title">ЮРИДИЧЕСКИЙ АДРЕС</h4>
+                    <p>+7 (7172) 75-00-00</p>
+                    <p>г. Астана, район Нұра,<br>ул. Сығанақ, строение 17/10,<br>почтовый индекс: 010000</p>
+                    <p><a href="mailto:info@kazgeology.kz" class="link-line">info@kazgeology.kz</a></p>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h4 class="col-title">КОМПАНИЯ</h4>
+                    <ul class="footer-nav">
+                        <li><a href="/about/">О компании</a></li>
+                        <li><a href="/board/">Совет директоров</a></li>
+                        <li><a href="/governance/">Корпоративное управление</a></li>
+                        <li><a href="/projects/">Проекты</a></li>
+                        <li><a href="/investors/">Инвесторам</a></li>
+                        <li><a href="https://zakup.sk.kz" target="_blank" rel="noopener">Закупки</a></li>
+                        <li><a href="/compliance/">Комплаенс</a></li>
+                        <li><a href="/careers/">Вакансии</a></li>
+                    </ul>
+                </div>
+
+                <button class="btn-back-to-top" id="backToTop"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Наверх">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-container bottom-row">
+                <div class="copyright">© 2012–2026 АО «Казгеология». Все права защищены.</div>
+                <div class="legal-links">
+                    <a href="/privacy-policy/">Политика конфиденциальности</a>
+                </div>
+                <div class="credit">Самрук-Казына</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

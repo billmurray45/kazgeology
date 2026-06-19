@@ -1,0 +1,578 @@
+/* ===== INDEX PAGE — EXTRA SECTIONS ===== */
+
+.idx-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.idx-section-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #ea232a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.idx-section-label--light {
+    color: rgba(234,35,42,0.85);
+}
+
+/* ===== INVESTORS ===== */
+
+.idx-investors-section {
+    background: #f8fafc;
+    padding: 100px 0;
+}
+
+.idx-investors-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.idx-investors-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin: 0;
+}
+
+.idx-investors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.idx-inv-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.idx-inv-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    border-color: #cbd5e1;
+}
+
+.idx-inv-icon {
+    width: 52px;
+    height: 52px;
+    background: #fef2f2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idx-inv-icon i { font-size: 22px; color: #ea232a; }
+
+.idx-inv-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.3;
+}
+
+.idx-inv-card-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.idx-inv-card-link {
+    font-size: 12px;
+    font-weight: 800;
+    color: #ea232a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+}
+
+.idx-inv-card-link:hover { gap: 10px; }
+
+/* ===== GOVERNANCE ===== */
+
+.idx-governance-section {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.idx-gov-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.idx-gov-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.idx-gov-desc {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.75;
+    margin-bottom: 36px;
+}
+
+.idx-gov-principles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.idx-gov-principle {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.idx-gov-p-icon {
+    width: 40px;
+    height: 40px;
+    background: #fef2f2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.idx-gov-p-icon i { font-size: 16px; color: #ea232a; }
+
+.idx-gov-p-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.idx-gov-p-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* ===== PROCUREMENT ===== */
+
+.idx-procurement-section {
+    background: #1e293b;
+    padding: 100px 0;
+}
+
+.idx-proc-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 72px;
+    align-items: center;
+}
+
+.idx-proc-label { color: rgba(234,35,42,0.9); }
+
+.idx-proc-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.idx-proc-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+    margin-bottom: 36px;
+    max-width: 500px;
+}
+
+.idx-proc-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-idx-proc-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ea232a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-idx-proc-primary:hover { background: #c81a20; transform: translateY(-1px); }
+
+.btn-idx-proc-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-idx-proc-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+
+.idx-proc-stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 36px;
+    text-align: center;
+}
+
+.idx-proc-stat-value {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.idx-proc-stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.idx-proc-stat-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+.idx-proc-stat-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+}
+
+.idx-proc-stat-item strong { color: #fff; font-weight: 700; }
+
+/* ===== COMPLIANCE ===== */
+
+.idx-compliance-section {
+    background: #0a1223;
+    padding: 100px 0;
+}
+
+.idx-comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+}
+
+.idx-comp-label { color: rgba(234,35,42,0.9); }
+
+.idx-comp-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.idx-comp-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+.idx-comp-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 36px;
+}
+
+.idx-comp-contact {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.idx-comp-contact:last-child { border-bottom: none; }
+
+.idx-comp-c-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(234,35,42,0.15);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.idx-comp-c-icon i { font-size: 14px; color: #ea232a; }
+
+.idx-comp-c-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.idx-comp-c-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.idx-comp-c-value a { color: #fff; text-decoration: none; transition: color 0.2s; }
+.idx-comp-c-value a:hover { color: #ea232a; }
+
+.idx-comp-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.idx-comp-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.idx-comp-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.idx-comp-badge i.fa-check { color: #ea232a; font-size: 14px; flex-shrink: 0; }
+
+.idx-comp-badge-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+}
+
+.btn-idx-comp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ea232a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+    align-self: flex-start;
+}
+
+.btn-idx-comp:hover { background: #c81a20; transform: translateY(-1px); }
+
+/* ===== CAREERS ===== */
+
+.idx-careers-section {
+    background: #ea232a;
+    padding: 80px 0;
+}
+
+.idx-careers-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.idx-careers-left { flex: 1; min-width: 280px; }
+
+.idx-car-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.idx-car-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin: 0 0 16px;
+}
+
+.idx-car-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.65;
+    max-width: 480px;
+}
+
+.idx-careers-right {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.btn-idx-car-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #ea232a;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-idx-car-white:hover { background: #f1f5f9; transform: translateY(-1px); }
+
+.btn-idx-car-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-idx-car-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1); }
+
+/* ===== SHARED BUTTON ===== */
+
+.btn-idx-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1e293b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-idx-dark:hover { background: #0f172a; transform: translateY(-1px); }
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+    .idx-container { padding: 0 24px; }
+
+    .idx-investors-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .idx-gov-grid,
+    .idx-proc-grid,
+    .idx-comp-grid { grid-template-columns: 1fr; gap: 48px; }
+
+    .idx-proc-stat-card { display: none; }
+}
+
+@media (max-width: 640px) {
+    .idx-investors-section,
+    .idx-governance-section,
+    .idx-procurement-section,
+    .idx-compliance-section { padding: 72px 0; }
+
+    .idx-careers-section { padding: 60px 0; }
+
+    .idx-investors-grid { grid-template-columns: 1fr; }
+    .idx-gov-principles { grid-template-columns: 1fr; }
+
+    .idx-investors-title,
+    .idx-gov-title,
+    .idx-proc-title,
+    .idx-comp-title,
+    .idx-car-title { font-size: 32px; letter-spacing: -1px; }
+
+    .idx-investors-header { flex-direction: column; align-items: flex-start; }
+
+    .idx-careers-inner { flex-direction: column; align-items: flex-start; }
+}

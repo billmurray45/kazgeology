@@ -1,0 +1,8 @@
+[flake8]
+ignore = 
+exclude = .venv, build, dist, docs, migrations, tests
+max-line-length = 125
+
+# You can also specify per-file ignores
+# per-file-ignores =
+#     project/module/schema.py: E501
