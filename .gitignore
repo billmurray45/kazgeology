@@ -8,6 +8,7 @@ var/
 .agents
 .antigravitycli
 .codex
+.idea
 
 # TLS certs
 ssl/
