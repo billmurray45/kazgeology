@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Проекты и партнёры — Казгеология{% endblock %}
+{% block title %}{% translate "Проекты и партнёры" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/projects.css' %}">
@@ -17,29 +17,29 @@
     <section class="proj-hero">
         <div class="proj-hero-container">
             <nav class="proj-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Проекты</span>
+                <span class="current">{% translate "Проекты" %}</span>
             </nav>
-            <div class="proj-hero-label">Совместные проекты</div>
-            <h1 class="proj-hero-title">ПРОЕКТЫ<br>И ПАРТНЁРЫ</h1>
-            <p class="proj-hero-subtitle">Геологоразведочные проекты АО «Казгеология» совместно с ведущими горнодобывающими компаниями Казахстана и мира</p>
+            <div class="proj-hero-label">{% translate "Совместные проекты" %}</div>
+            <h1 class="proj-hero-title">{% translate "ПРОЕКТЫ<br>И ПАРТНЁРЫ" %}</h1>
+            <p class="proj-hero-subtitle">{% translate "Геологоразведочные проекты АО «Казгеология» совместно с ведущими горнодобывающими компаниями Казахстана и мира" %}</p>
         </div>
         <div class="proj-hero-stats">
             <div class="proj-hero-stats-container">
                 <div class="proj-hero-stat">
                     <div class="proj-hero-stat-num">20</div>
-                    <div class="proj-hero-stat-label">Совместных проектов</div>
+                    <div class="proj-hero-stat-label">{% translate "Совместных проектов" %}</div>
                 </div>
                 <div class="proj-hero-stat-divider"></div>
                 <div class="proj-hero-stat">
                     <div class="proj-hero-stat-num">12+</div>
-                    <div class="proj-hero-stat-label">Партнёров</div>
+                    <div class="proj-hero-stat-label">{% translate "Партнёров" %}</div>
                 </div>
                 <div class="proj-hero-stat-divider"></div>
                 <div class="proj-hero-stat">
                     <div class="proj-hero-stat-num">8</div>
-                    <div class="proj-hero-stat-label">Регионов Казахстана</div>
+                    <div class="proj-hero-stat-label">{% translate "Регионов Казахстана" %}</div>
                 </div>
             </div>
         </div>
@@ -53,9 +53,9 @@
                     <i class="fa-solid fa-building"></i>
                 </div>
                 <div class="proj-subsidiary-text">
-                    <div class="proj-subsidiary-label">100% дочерняя компания</div>
+                    <div class="proj-subsidiary-label">{% translate "100% дочерняя компания" %}</div>
                     <div class="proj-subsidiary-name">ТОО «Kazgeology Drilling»</div>
-                    <div class="proj-subsidiary-desc">Производство буро-взрывных работ на месторождениях</div>
+                    <div class="proj-subsidiary-desc">{% translate "Производство буро-взрывных работ на месторождениях" %}</div>
                 </div>
             </div>
 
@@ -64,9 +64,9 @@
                     <i class="fa-solid fa-flask"></i>
                 </div>
                 <div class="proj-subsidiary-text">
-                    <div class="proj-subsidiary-label">Партнёрская лаборатория</div>
+                    <div class="proj-subsidiary-label">{% translate "Партнёрская лаборатория" %}</div>
                     <div class="proj-subsidiary-name">ТОО «ALS Казгеохимия» <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:14px; opacity:0.5; margin-left:6px;"></i></div>
-                    <div class="proj-subsidiary-desc">Геохимические и аналитические исследования проб · г. Караганда</div>
+                    <div class="proj-subsidiary-desc">{% translate "Геохимические и аналитические исследования проб · г. Караганда" %}</div>
                 </div>
             </div>
         </div>
@@ -75,12 +75,12 @@
     <!-- ALS Modal -->
     <div class="proj-modal-overlay" id="als-modal" onclick="if(event.target===this) this.classList.remove('active')">
         <div class="proj-modal">
-            <button class="proj-modal-close" onclick="document.getElementById('als-modal').classList.remove('active')" aria-label="Закрыть">
+            <button class="proj-modal-close" onclick="document.getElementById('als-modal').classList.remove('active')" aria-label="{% translate 'Закрыть' %}">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div class="proj-modal-header">
-                <div class="proj-modal-label">Партнёрская лаборатория</div>
+                <div class="proj-modal-label">{% translate "Партнёрская лаборатория" %}</div>
                 <h2 class="proj-modal-title">
                     <a href="https://www.alsglobal.com/en/" target="_blank" rel="noopener" class="proj-modal-title-link">
                         ТОО «ALS Казгеохимия» <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -88,51 +88,51 @@
                 </h2>
                 <div class="proj-modal-address">
                     <i class="fa-solid fa-location-dot"></i>
-                    г. Караганда, 125-учетный квартал, строение 125/1
+                    {% translate "г. Караганда, 125-учетный квартал, строение 125/1" %}
                 </div>
             </div>
 
             <div class="proj-modal-body">
                 <div class="proj-modal-stat">
                     <div class="proj-modal-stat-num">200 000+</div>
-                    <div class="proj-modal-stat-label">проб в год</div>
+                    <div class="proj-modal-stat-label">{% translate "проб в год" %}</div>
                 </div>
 
                 <div class="proj-modal-section">
-                    <h4 class="proj-modal-section-title">Структура лаборатории</h4>
+                    <h4 class="proj-modal-section-title">{% translate "Структура лаборатории" %}</h4>
                     <div class="proj-modal-items">
                         <div class="proj-modal-item">
                             <i class="fa-solid fa-gear"></i>
                             <div>
-                                <strong>Отдел пробоподготовки</strong>
-                                <p>Сушка, дробление, измельчение, хранение, распил горных пород, рентгенофлуоресцентный анализатор (XRF), инфракрасное сканирование TerraSpec</p>
+                                <strong>{% translate "Отдел пробоподготовки" %}</strong>
+                                <p>{% translate "Сушка, дробление, измельчение, хранение, распил горных пород, рентгенофлуоресцентный анализатор (XRF), инфракрасное сканирование TerraSpec" %}</p>
                             </div>
                         </div>
                         <div class="proj-modal-item">
                             <i class="fa-solid fa-vial"></i>
                             <div>
-                                <strong>Отдел пробирного анализа</strong>
-                                <p>Определение содержания благородных металлов пробирной плавкой гравиметрическим, атомно-абсорбционным (AAS) и атомно-эмиссионным (ICP-AES) окончанием</p>
+                                <strong>{% translate "Отдел пробирного анализа" %}</strong>
+                                <p>{% translate "Определение содержания благородных металлов пробирной плавкой гравиметрическим, атомно-абсорбционным (AAS) и атомно-эмиссионным (ICP-AES) окончанием" %}</p>
                             </div>
                         </div>
                         <div class="proj-modal-item">
                             <i class="fa-solid fa-chart-simple"></i>
                             <div>
-                                <strong>Отдел многоэлементного анализа</strong>
-                                <p>Мультиэлементный анализ на 35 элементов с 2- и 4-кислотным разложением (ICP-AES), атомно-абсорбционный анализ базовых металлов, ИК-анализ серы и углерода</p>
+                                <strong>{% translate "Отдел многоэлементного анализа" %}</strong>
+                                <p>{% translate "Мультиэлементный анализ на 35 элементов с 2- и 4-кислотным разложением (ICP-AES), атомно-абсорбционный анализ базовых металлов, ИК-анализ серы и углерода" %}</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="proj-modal-section">
-                    <h4 class="proj-modal-section-title">Преимущества</h4>
+                    <h4 class="proj-modal-section-title">{% translate "Преимущества" %}</h4>
                     <div class="proj-modal-advantages">
-                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> Высокая скорость обработки проб</div>
-                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> Современное оборудование и передовые технологии</div>
-                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> Автоматизированная система GEMS (LIMS)</div>
-                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> Более 50 лет опыта в сфере геохимии</div>
-                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> Большинство методов доступны в ИЛ «Караганда»</div>
+                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> {% translate "Высокая скорость обработки проб" %}</div>
+                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> {% translate "Современное оборудование и передовые технологии" %}</div>
+                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> {% translate "Автоматизированная система GEMS (LIMS)" %}</div>
+                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> {% translate "Более 50 лет опыта в сфере геохимии" %}</div>
+                        <div class="proj-modal-adv"><i class="fa-solid fa-check"></i> {% translate "Большинство методов доступны в ИЛ «Караганда»" %}</div>
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@
                     <div class="proj-modal-contact">
                         <i class="fa-solid fa-phone"></i>
                         <div>
-                            <div class="proj-modal-contact-label">Телефон</div>
+                            <div class="proj-modal-contact-label">{% translate "Телефон" %}</div>
                             <a href="tel:87212981116">8 7212 98 11 16</a> / <a href="tel:87056341688">8 705 634 16 88</a>
                         </div>
                     </div>
@@ -155,9 +155,9 @@
 
                 <div class="proj-modal-footer">
                     <a href="https://www.alsglobal.com/en/" target="_blank" rel="noopener" class="btn-proj-modal">
-                        ОФИЦИАЛЬНЫЙ САЙТ <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        {% translate "ОФИЦИАЛЬНЫЙ САЙТ" %} <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-                    <span class="proj-modal-note">Прайс-лист доступен на русском и английском языке</span>
+                    <span class="proj-modal-note">{% translate "Прайс-лист доступен на русском и английском языке" %}</span>
                 </div>
             </div>
         </div>
@@ -169,56 +169,56 @@
 
             <div class="proj-section-header">
                 <div class="proj-section-label">2025 — 2026</div>
-                <h2 class="proj-section-title">СОВМЕСТНЫЕ ПРОЕКТЫ</h2>
+                <h2 class="proj-section-title">{% translate "СОВМЕСТНЫЕ ПРОЕКТЫ" %}</h2>
             </div>
 
             <!-- Partner groups -->
             <div class="proj-partner-group">
                 <div class="proj-partner-header">
-                    <div class="proj-partner-name">ТОО «Корпорация Казахмыс»</div>
-                    <div class="proj-partner-count">6 проектов</div>
+                    <div class="proj-partner-name">{% translate "ТОО «Корпорация Казахмыс»" %}</div>
+                    <div class="proj-partner-count">{% blocktranslate %}6 проектов{% endblocktranslate %}</div>
                 </div>
                 <div class="proj-cards-grid">
                     <div class="proj-card">
                         <div class="proj-card-num">04</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Костанайская, Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Разведка золота и медьсодержащих руд на Алтынказганском рудном поле</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Костанайская, Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золота и медьсодержащих руд на Алтынказганском рудном поле" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">05</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Костанайская, Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Разведка золота и медьсодержащих руд на Алтынказган (Центральный участок)</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Костанайская, Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золота и медьсодержащих руд на Алтынказган (Центральный участок)" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">06</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Костанайская обл.</div>
-                            <h3 class="proj-card-title">Разведка цветных металлов на площади Бенкала</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Костанайская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка цветных металлов на площади Бенкала" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">07</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Разведка полиметаллических руд на участке Даутбай</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка полиметаллических руд на участке Даутбай" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">08</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Разведка полиметаллов на участке Дюсембай</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка полиметаллов на участке Дюсембай" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">09</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Разведка меди и попутных компонентов на участке Озерное</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка меди и попутных компонентов на участке Озерное" %}</h3>
                         </div>
                     </div>
                 </div>
@@ -226,29 +226,29 @@
 
             <div class="proj-partner-group">
                 <div class="proj-partner-header">
-                    <div class="proj-partner-name">ТОО «Казцинк»</div>
-                    <div class="proj-partner-count">3 проекта</div>
+                    <div class="proj-partner-name">{% translate "ТОО «Казцинк»" %}</div>
+                    <div class="proj-partner-count">{% blocktranslate %}3 проекта{% endblocktranslate %}</div>
                 </div>
                 <div class="proj-cards-grid">
                     <div class="proj-card">
                         <div class="proj-card-num">14</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> ВКО</div>
-                            <h3 class="proj-card-title">Разведка колчеданно-полиметаллических руд на площади Сакмарихинско-Черноубинская</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "ВКО" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка колчеданно-полиметаллических руд на площади Сакмарихинско-Черноубинская" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">15</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> ВКО</div>
-                            <h3 class="proj-card-title">Разведка колчеданно-полиметаллических руд на площади Приграничная</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "ВКО" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка колчеданно-полиметаллических руд на площади Приграничная" %}</h3>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">16</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Акмолинская обл., СКО</div>
-                            <h3 class="proj-card-title">Разведка золота, меди и полиметаллов на площади Кокшетауская</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Акмолинская обл., СКО" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золота, меди и полиметаллов на площади Кокшетауская" %}</h3>
                         </div>
                     </div>
                 </div>
@@ -257,95 +257,95 @@
             <!-- Other partners -->
             <div class="proj-partner-group">
                 <div class="proj-partner-header">
-                    <div class="proj-partner-name">Прочие партнёры</div>
-                    <div class="proj-partner-count">11 проектов</div>
+                    <div class="proj-partner-name">{% translate "Прочие партнёры" %}</div>
+                    <div class="proj-partner-count">{% blocktranslate %}11 проектов{% endblocktranslate %}</div>
                 </div>
                 <div class="proj-cards-grid">
                     <div class="proj-card">
                         <div class="proj-card-num">01</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Балхаш-Сарышаган</div>
-                            <h3 class="proj-card-title">Разведка медно-порфировых руд на участке Балхаш-Сарышаган</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Балхаш-Сарышаган" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка медно-порфировых руд на участке Балхаш-Сарышаган" %}</h3>
                             <div class="proj-card-partner">IG Global</div>
                         </div>
                     </div>
                     <div class="proj-card proj-card--own">
                         <div class="proj-card-num">02</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Ордабасская площадь в Карагандинской области</h3>
-                            <div class="proj-card-partner proj-card-partner--own">АО «Казгеология»</div>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Ордабасская площадь в Карагандинской области" %}</h3>
+                            <div class="proj-card-partner proj-card-partner--own">{% translate "АО «Казгеология»" %}</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">03</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Участок Акбулак</div>
-                            <h3 class="proj-card-title">Разведка редких земель на участке Акбулак</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Участок Акбулак" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка редких земель на участке Акбулак" %}</h3>
                             <div class="proj-card-partner">COVE KAZ CAPITAL GROUP LLC</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">10</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Жамбылская обл.</div>
-                            <h3 class="proj-card-title">Разведка железосодержащих руд на участке Аккудук</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Жамбылская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка железосодержащих руд на участке Аккудук" %}</h3>
                             <div class="proj-card-partner">ТОО «MetalGiant»</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">11</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Площадь Западная</div>
-                            <h3 class="proj-card-title">Разведка золотосодержащих, медьсодержащих руд и попутных компонентов на площади Западная</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Площадь Западная" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золотосодержащих, медьсодержащих руд и попутных компонентов на площади Западная" %}</h3>
                             <div class="proj-card-partner">ТОО «Батыс Байкен»</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">12</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Акмолинская обл.</div>
-                            <h3 class="proj-card-title">Разведка золотосодержащих полиметаллических руд на площади Теллур-Степокская</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Акмолинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золотосодержащих полиметаллических руд на площади Теллур-Степокская" %}</h3>
                             <div class="proj-card-partner">ТОО «PetraMaer»</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">13</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Карабайбулак, Сарымсактин, Арпаозен-Култас</div>
-                            <h3 class="proj-card-title">Разведка золотосодержащих руд на Карабайбулакском, Сарымсактинском и Арпаозен-Култасском рудных полях</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Карабайбулак, Сарымсактин, Арпаозен-Култас" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золотосодержащих руд на Карабайбулакском, Сарымсактинском и Арпаозен-Култасском рудных полях" %}</h3>
                             <div class="proj-card-partner">ТОО «QAZAQ GOLDEN»</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">17</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Жамбылская обл.</div>
-                            <h3 class="proj-card-title">Разведка золотосодержащих руд на Дюкаревской площади</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Жамбылская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золотосодержащих руд на Дюкаревской площади" %}</h3>
                             <div class="proj-card-partner">ТОО «Minerals KazGroup»</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">18</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Карагандинская обл.</div>
-                            <h3 class="proj-card-title">Разведка медно-порфировых руд на участке Коргантас</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Карагандинская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка медно-порфировых руд на участке Коргантас" %}</h3>
                             <div class="proj-card-partner">ТОО «Korgantas Minerals»</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">19</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Абайская обл.</div>
-                            <h3 class="proj-card-title">Разведка золотосодержащих руд на участке Майлишат в пределах Баканасской площади</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Абайская обл." %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка золотосодержащих руд на участке Майлишат в пределах Баканасской площади" %}</h3>
                             <div class="proj-card-partner">YILDIRIM HOLDING</div>
                         </div>
                     </div>
                     <div class="proj-card">
                         <div class="proj-card-num">20</div>
                         <div class="proj-card-body">
-                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> Таулинская площадь</div>
-                            <h3 class="proj-card-title">Разведка гематита (железная руда) на Таулинской площади</h3>
+                            <div class="proj-card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Таулинская площадь" %}</div>
+                            <h3 class="proj-card-title">{% translate "Разведка гематита (железная руда) на Таулинской площади" %}</h3>
                             <div class="proj-card-partner">ТОО «КОФОС»</div>
                         </div>
                     </div>
@@ -359,11 +359,11 @@
     <div class="proj-cta-strip">
         <div class="proj-cta-container">
             <div class="proj-cta-text">
-                <h3>Заинтересованы в сотрудничестве?</h3>
-                <p>Свяжитесь с нами для обсуждения совместных геологоразведочных проектов.</p>
+                <h3>{% translate "Заинтересованы в сотрудничестве?" %}</h3>
+                <p>{% translate "Свяжитесь с нами для обсуждения совместных геологоразведочных проектов." %}</p>
             </div>
             <a href="mailto:info@kazgeology.kz" class="btn-proj-cta">
-                НАПИСАТЬ НАМ <i class="fa-solid fa-arrow-right"></i>
+                {% translate "НАПИСАТЬ НАМ" %} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

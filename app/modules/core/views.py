@@ -1,11 +1,65 @@
 import os
 from django.db.models import Prefetch
 from django.views.generic import TemplateView
-from django.http import FileResponse, Http404
+from django.http import FileResponse, Http404, HttpResponseRedirect
 from django.conf import settings
+from django.utils.http import url_has_allowed_host_and_scheme
 from .models import FinancialReport, AffiliatedPersonsList, CorporateEvent, OrgChart, PrivacyPolicy
 from modules.about.models import AboutHistoryEvent, AboutSection, AboutStatistic
 from modules.board.models import BoardCommittee, BoardCommitteeMember, BoardMember, BoardSecretary
+
+
+def _set_lang_prefix(path, lang):
+    """Replace the language prefix of ``path`` with ``lang``'s prefix.
+
+    The default language (``LANGUAGE_CODE``) has no prefix because the project
+    uses ``i18n_patterns(prefix_default_language=False)``.
+    """
+    codes = [c for c, _ in settings.LANGUAGES]
+    # Strip an existing language prefix, if any.
+    parts = path.split('/', 2)  # ['', '<maybe-lang>', 'rest...']
+    if len(parts) >= 2 and parts[1] in codes:
+        rest = parts[2] if len(parts) > 2 else ''
+        path = '/' + rest
+    # Add the new prefix unless it is the default (unprefixed) language.
+    if lang != settings.LANGUAGE_CODE:
+        path = '/' + lang + path
+    return path
+
+
+def set_language(request):
+    """Switch active language and redirect to the same page under the new
+    language prefix.
+
+    Django's built-in ``set_language`` redirects to ``next`` verbatim, so a
+    path that already carries a language prefix (e.g. ``/en/about/``) keeps the
+    old prefix and the switch appears to do nothing. We rebuild the target URL
+    for the requested language with ``translate_url``.
+    """
+    lang = request.POST.get('language') or request.GET.get('language')
+    next_url = request.POST.get('next') or request.GET.get('next') or '/'
+
+    if not url_has_allowed_host_and_scheme(
+        next_url, allowed_hosts={request.get_host()}, require_https=request.is_secure()
+    ):
+        next_url = '/'
+
+    available = {code for code, _ in settings.LANGUAGES}
+    if lang in available:
+        next_url = _set_lang_prefix(next_url, lang)
+
+    response = HttpResponseRedirect(next_url)
+    if lang in available:
+        response.set_cookie(
+            settings.LANGUAGE_COOKIE_NAME, lang,
+            max_age=settings.LANGUAGE_COOKIE_AGE,
+            path=settings.LANGUAGE_COOKIE_PATH,
+            domain=settings.LANGUAGE_COOKIE_DOMAIN,
+            secure=settings.LANGUAGE_COOKIE_SECURE,
+            httponly=settings.LANGUAGE_COOKIE_HTTPONLY,
+            samesite=settings.LANGUAGE_COOKIE_SAMESITE,
+        )
+    return response
 
 
 class IndexView(TemplateView):

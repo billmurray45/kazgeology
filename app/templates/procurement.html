@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Закупки — Казгеология{% endblock %}
+{% block title %}{% translate "Закупки" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/procurement.css' %}">
@@ -15,13 +15,13 @@
     <section class="proc-hero">
         <div class="proc-hero-container">
             <nav class="proc-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Закупки</span>
+                <span class="current">{% translate "Закупки" %}</span>
             </nav>
-            <div class="proc-hero-label">АО «Казгеология»</div>
-            <h1 class="proc-hero-title">ЗАКУПКИ</h1>
-            <p class="proc-hero-subtitle">Все закупочные процедуры осуществляются в соответствии с Порядком осуществления закупок АО «Самрук-Қазына»</p>
+            <div class="proc-hero-label">{% translate "АО «Казгеология»" %}</div>
+            <h1 class="proc-hero-title">{% translate "ЗАКУПКИ" %}</h1>
+            <p class="proc-hero-subtitle">{% translate "Все закупочные процедуры осуществляются в соответствии с Порядком осуществления закупок АО «Самрук-Қазына»" %}</p>
         </div>
     </section>
 
@@ -30,19 +30,19 @@
         <div class="proc-container">
             <div class="proc-desc-grid">
                 <div class="proc-desc-text">
-                    <div class="proc-section-label">Нормативная база</div>
-                    <p>Все закупочные процедуры осуществляются в соответствии с Порядком осуществления закупок АО «Фонд национального благосостояния «Самрук-Қазына» и юридическими лицами, пятьдесят и более процентов голосующих акций (долей участия) которых прямо или косвенно принадлежат АО «Самрук-Қазына» на праве собственности или доверительного управления».</p>
+                    <div class="proc-section-label">{% translate "Нормативная база" %}</div>
+                    <p>{% translate "Все закупочные процедуры осуществляются в соответствии с Порядком осуществления закупок АО «Фонд национального благосостояния «Самрук-Қазына» и юридическими лицами, пятьдесят и более процентов голосующих акций (долей участия) которых прямо или косвенно принадлежат АО «Самрук-Қазына» на праве собственности или доверительного управления»." %}</p>
                 </div>
                 <div class="proc-desc-actions">
                     <a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-portal">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         <div>
-                            <div class="btn-proc-portal-title">Портал закупок</div>
+                            <div class="btn-proc-portal-title">{% translate "Портал закупок" %}</div>
                             <div class="btn-proc-portal-sub">zakup.sk.kz</div>
                         </div>
                     </a>
                     <a href="{% static 'docs/procurement-plan-2026.pdf' %}" class="btn-proc-download" download>
-                        СКАЧАТЬ ПЛАН ЗАКУПОК <i class="fa-solid fa-arrow-down"></i>
+                        {% translate "СКАЧАТЬ ПЛАН ЗАКУПОК" %} <i class="fa-solid fa-arrow-down"></i>
                     </a>
                 </div>
             </div>
@@ -54,82 +54,82 @@
         <div class="proc-container">
 
             <div class="proc-plan-header">
-                <div class="proc-section-label">2026 год</div>
-                <h2 class="proc-plan-title">ПЛАН ЗАКУПОК ТОВАРОВ, РАБОТ И УСЛУГ</h2>
+                <div class="proc-section-label">{% blocktranslate %}2026 год{% endblocktranslate %}</div>
+                <h2 class="proc-plan-title">{% translate "ПЛАН ЗАКУПОК ТОВАРОВ, РАБОТ И УСЛУГ" %}</h2>
             </div>
 
             <!-- 1. Товары -->
             <div class="proc-category">
                 <div class="proc-category-header">
                     <div class="proc-category-icon"><i class="fa-solid fa-box"></i></div>
-                    <h3 class="proc-category-title">1. Товары</h3>
-                    <div class="proc-category-total">Итого: <strong>1 860 688,09 тенге</strong> (с НДС)</div>
+                    <h3 class="proc-category-title">{% translate "1. Товары" %}</h3>
+                    <div class="proc-category-total">{% translate "Итого:" %} <strong>1 860 688,09 тенге</strong> {% translate "(с НДС)" %}</div>
                 </div>
                 <div class="proc-table-wrapper">
                     <table class="proc-table">
                         <thead>
                             <tr>
-                                <th>№</th>
-                                <th>Наименование</th>
-                                <th>Способ закупок</th>
-                                <th>Сумма без НДС, тенге</th>
-                                <th>Сумма с НДС, тенге</th>
+                                <th>{% translate "№" %}</th>
+                                <th>{% translate "Наименование" %}</th>
+                                <th>{% translate "Способ закупок" %}</th>
+                                <th>{% translate "Сумма без НДС, тенге" %}</th>
+                                <th>{% translate "Сумма с НДС, тенге" %}</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Принтер (офисная оргтехника)</td>
+                                <td>{% translate "Принтер (офисная оргтехника)" %}</td>
                                 <td><span class="proc-badge">ЭМ</span></td>
                                 <td>142 789,50</td>
                                 <td>165 635,82</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Напитки</td>
+                                <td>{% translate "Напитки" %}</td>
                                 <td><span class="proc-badge">ЭМ</span></td>
                                 <td>126 666,00</td>
                                 <td>146 932,56</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Осветительное оборудование</td>
+                                <td>{% translate "Осветительное оборудование" %}</td>
                                 <td><span class="proc-badge">ЭМ</span></td>
                                 <td>27 673,97</td>
                                 <td>32 101,81</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Канцелярские товары</td>
+                                <td>{% translate "Канцелярские товары" %}</td>
                                 <td><span class="proc-badge">ЭМ</span></td>
                                 <td>402 916,64</td>
                                 <td>467 383,30</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Картридж (офисная оргтехника)</td>
+                                <td>{% translate "Картридж (офисная оргтехника)" %}</td>
                                 <td><span class="proc-badge">ЭМ</span></td>
                                 <td>33 479,83</td>
                                 <td>38 836,60</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>Товары из реестра доверенного программного обеспечения и продукции электронной промышленности</td>
+                                <td>{% translate "Товары из реестра доверенного программного обеспечения и продукции электронной промышленности" %}</td>
                                 <td><span class="proc-badge">ЭМ</span></td>
                                 <td>870 515,52</td>
                                 <td>1 009 798,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="3"><strong>Итого по товарам</strong></td>
+                                <td colspan="3"><strong>{% translate "Итого по товарам" %}</strong></td>
                                 <td><strong>1 604 041,46</strong></td>
                                 <td><strong>1 860 688,09</strong></td>
                                 <td></td>
@@ -143,36 +143,36 @@
             <div class="proc-category">
                 <div class="proc-category-header">
                     <div class="proc-category-icon"><i class="fa-solid fa-hammer"></i></div>
-                    <h3 class="proc-category-title">2. Работы</h3>
-                    <div class="proc-category-total">Итого: <strong>2 092 350,00 тенге</strong> (с НДС)</div>
+                    <h3 class="proc-category-title">{% translate "2. Работы" %}</h3>
+                    <div class="proc-category-total">{% translate "Итого:" %} <strong>2 092 350,00 тенге</strong> {% translate "(с НДС)" %}</div>
                 </div>
                 <div class="proc-table-wrapper">
                     <table class="proc-table">
                         <thead>
                             <tr>
-                                <th>№</th>
-                                <th>Наименование</th>
-                                <th>Способ закупок</th>
-                                <th>Срок</th>
-                                <th>Сумма без НДС, тенге</th>
-                                <th>Сумма с НДС, тенге</th>
+                                <th>{% translate "№" %}</th>
+                                <th>{% translate "Наименование" %}</th>
+                                <th>{% translate "Способ закупок" %}</th>
+                                <th>{% translate "Срок" %}</th>
+                                <th>{% translate "Сумма без НДС, тенге" %}</th>
+                                <th>{% translate "Сумма с НДС, тенге" %}</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Работы по разработке/созданию сайтов</td>
+                                <td>{% translate "Работы по разработке/созданию сайтов" %}</td>
                                 <td><span class="proc-badge proc-badge--blue">ЦПП</span></td>
                                 <td>03.2026 — 12.2026</td>
                                 <td>1 803 750,00</td>
                                 <td>2 092 350,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4"><strong>Итого по работам</strong></td>
+                                <td colspan="4"><strong>{% translate "Итого по работам" %}</strong></td>
                                 <td><strong>1 803 750,00</strong></td>
                                 <td><strong>2 092 350,00</strong></td>
                                 <td></td>
@@ -186,153 +186,153 @@
             <div class="proc-category">
                 <div class="proc-category-header">
                     <div class="proc-category-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 class="proc-category-title">3. Услуги</h3>
-                    <div class="proc-category-total">Итого: <strong>50 335 714,99 тенге</strong> (с НДС)</div>
+                    <h3 class="proc-category-title">{% translate "3. Услуги" %}</h3>
+                    <div class="proc-category-total">{% translate "Итого:" %} <strong>50 335 714,99 тенге</strong> {% translate "(с НДС)" %}</div>
                 </div>
                 <div class="proc-table-wrapper">
                     <table class="proc-table">
                         <thead>
                             <tr>
-                                <th>№</th>
-                                <th>Наименование</th>
-                                <th>Способ закупок</th>
-                                <th>Срок</th>
-                                <th>Сумма без НДС, тенге</th>
-                                <th>Сумма с НДС, тенге</th>
+                                <th>{% translate "№" %}</th>
+                                <th>{% translate "Наименование" %}</th>
+                                <th>{% translate "Способ закупок" %}</th>
+                                <th>{% translate "Срок" %}</th>
+                                <th>{% translate "Сумма без НДС, тенге" %}</th>
+                                <th>{% translate "Сумма с НДС, тенге" %}</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Услуги по ускоренной/курьерской почтовой связи</td>
+                                <td>{% translate "Услуги по ускоренной/курьерской почтовой связи" %}</td>
                                 <td><span class="proc-badge proc-badge--blue">ЦП</span></td>
                                 <td>01.2026 — 12.2026</td>
                                 <td>511 953,33</td>
                                 <td>593 865,86</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Услуги облачного сервиса (корпоративная почта)</td>
+                                <td>{% translate "Услуги облачного сервиса (корпоративная почта)" %}</td>
                                 <td><span class="proc-badge proc-badge--blue">ЦП</span></td>
-                                <td>365 кал. дней</td>
+                                <td>{% translate "365 кал. дней" %}</td>
                                 <td>812 000,00</td>
                                 <td>941 920,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Услуги по пользованию информационной системой электронных закупок</td>
+                                <td>{% translate "Услуги по пользованию информационной системой электронных закупок" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>01.2026 — 12.2026</td>
                                 <td>704 975,00</td>
                                 <td>817 771,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Услуги депозитария финансовой отчётности</td>
+                                <td>{% translate "Услуги депозитария финансовой отчётности" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>01.2026 — 12.2026</td>
                                 <td>73 525,00</td>
                                 <td>85 289,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Услуги по предоставлению доступа к нормативно-правовой базе</td>
+                                <td>{% translate "Услуги по предоставлению доступа к нормативно-правовой базе" %}</td>
                                 <td><span class="proc-badge proc-badge--blue">ЦПП</span></td>
                                 <td>02.2026 — 12.2026</td>
                                 <td>1 364 220,00</td>
                                 <td>1 582 495,20</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>Услуги по аренде административных/производственных помещений</td>
+                                <td>{% translate "Услуги по аренде административных/производственных помещений" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>01.2026 — 03.2026</td>
                                 <td>8 037 931,04</td>
                                 <td>9 324 000,01</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td>Услуги депозитария ценных бумаг</td>
+                                <td>{% translate "Услуги депозитария ценных бумаг" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>01.2026 — 12.2026</td>
                                 <td>216 250,00</td>
                                 <td>250 850,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td>Услуги по обучению персонала (тренинги, повышение квалификации)</td>
+                                <td>{% translate "Услуги по обучению персонала (тренинги, повышение квалификации)" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>01.2026 — 12.2026</td>
                                 <td>3 865 813,72</td>
                                 <td>4 484 343,92</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>9</td>
-                                <td>Услуги по обучению (Порядок закупок АО «Самрук-Қазына»)</td>
+                                <td>{% translate "Услуги по обучению (Порядок закупок АО «Самрук-Қазына»)" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>01.2026 — 02.2026</td>
                                 <td>333 000,00</td>
                                 <td>386 280,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>10</td>
-                                <td>Услуги по оценке 180 градусов (HR Tools)</td>
+                                <td>{% translate "Услуги по оценке 180 градусов (HR Tools)" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
-                                <td>до 12.2026</td>
+                                <td>{% translate "до 12.2026" %}</td>
                                 <td>143 534,48</td>
                                 <td>166 500,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>11</td>
-                                <td>Услуги по организации полиграфологического исследования кандидатов</td>
+                                <td>{% translate "Услуги по организации полиграфологического исследования кандидатов" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
-                                <td>до 12.2026</td>
+                                <td>{% translate "до 12.2026" %}</td>
                                 <td>389 655,17</td>
                                 <td>452 000,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>12</td>
-                                <td>Услуги такси</td>
+                                <td>{% translate "Услуги такси" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
                                 <td>02.2026 — 04.2026</td>
                                 <td>1 240 000,00</td>
                                 <td>1 438 400,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>13</td>
-                                <td>Услуги по предоставлению доступа к информационным ресурсам Qsamruk</td>
+                                <td>{% translate "Услуги по предоставлению доступа к информационным ресурсам Qsamruk" %}</td>
                                 <td><span class="proc-badge proc-badge--gray">ОИ</span></td>
-                                <td>365 кал. дней</td>
+                                <td>{% translate "365 кал. дней" %}</td>
                                 <td>700 000,00</td>
                                 <td>812 000,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td>14</td>
-                                <td>Услуги по информационному и имиджевому сопровождению (размещение в СМИ)</td>
+                                <td>{% translate "Услуги по информационному и имиджевому сопровождению (размещение в СМИ)" %}</td>
                                 <td><span class="proc-badge proc-badge--blue">ЦП</span></td>
                                 <td>02.2026 — 12.2026</td>
                                 <td>25 000 000,00</td>
                                 <td>29 000 000,00</td>
-                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">Перейти <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-link">{% translate "Перейти" %} <i class="fa-solid fa-arrow-right"></i></a></td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4"><strong>Итого по услугам</strong></td>
+                                <td colspan="4"><strong>{% translate "Итого по услугам" %}</strong></td>
                                 <td><strong>43 392 857,74</strong></td>
                                 <td><strong>50 335 714,99</strong></td>
                                 <td></td>
@@ -344,16 +344,16 @@
 
             <!-- Grand Total -->
             <div class="proc-grand-total">
-                <div class="proc-grand-total-label">Всего по плану закупок 2026</div>
+                <div class="proc-grand-total-label">{% translate "Всего по плану закупок 2026" %}</div>
                 <div class="proc-grand-total-amounts">
                     <div>
                         <div class="proc-grand-amount">46 800 649,20 тенге</div>
-                        <div class="proc-grand-sub">без НДС</div>
+                        <div class="proc-grand-sub">{% translate "без НДС" %}</div>
                     </div>
                     <div class="proc-grand-divider"></div>
                     <div>
                         <div class="proc-grand-amount">54 288 753,08 тенге</div>
-                        <div class="proc-grand-sub">с НДС</div>
+                        <div class="proc-grand-sub">{% translate "с НДС" %}</div>
                     </div>
                 </div>
             </div>
@@ -365,11 +365,11 @@
     <div class="proc-cta-strip">
         <div class="proc-cta-container">
             <div class="proc-cta-text">
-                <h3>Все тендеры на портале закупок</h3>
-                <p>Актуальные тендеры АО «Казгеология» размещены на официальном портале закупок Самрук-Қазына.</p>
+                <h3>{% translate "Все тендеры на портале закупок" %}</h3>
+                <p>{% translate "Актуальные тендеры АО «Казгеология» размещены на официальном портале закупок Самрук-Қазына." %}</p>
             </div>
             <a href="https://zakup.sk.kz/" target="_blank" rel="noopener" class="btn-proc-cta">
-                ПЕРЕЙТИ НА ПОРТАЛ <i class="fa-solid fa-arrow-right"></i>
+                {% translate "ПЕРЕЙТИ НА ПОРТАЛ" %} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

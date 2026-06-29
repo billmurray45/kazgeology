@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TabbedTranslationAdmin, TranslationStackedInline, TranslationTabularInline
 from .models import (
     AffiliatedPersonsList,
     CorporateEvent,
@@ -23,7 +24,7 @@ class AffiliatedPersonsListAdmin(admin.ModelAdmin):
 
 
 @admin.register(CorporateEvent)
-class CorporateEventAdmin(admin.ModelAdmin):
+class CorporateEventAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'month', 'year')
     list_filter = ('year',)
 
@@ -36,7 +37,7 @@ class OrgChartAdmin(admin.ModelAdmin):
         return not OrgChart.objects.exists()
 
 
-class OrgUnitInline(admin.TabularInline):
+class OrgUnitInline(TranslationTabularInline):
     model = OrgUnit
     fk_name = 'parent'
     extra = 1
@@ -44,30 +45,22 @@ class OrgUnitInline(admin.TabularInline):
 
 
 @admin.register(OrgUnit)
-class OrgUnitAdmin(admin.ModelAdmin):
+class OrgUnitAdmin(TabbedTranslationAdmin):
     list_display = ('name', 'count', 'parent', 'order')
     list_filter = ('parent',)
     list_editable = ('order',)
     inlines = [OrgUnitInline]
 
 
-class PrivacyPolicySectionInline(admin.StackedInline):
+class PrivacyPolicySectionInline(TranslationStackedInline):
     model = PrivacyPolicySection
     extra = 1
     fields = ('title', 'content', 'list_items', 'order')
 
 
 @admin.register(PrivacyPolicy)
-class PrivacyPolicyAdmin(admin.ModelAdmin):
+class PrivacyPolicyAdmin(TabbedTranslationAdmin):
     list_display = ('document_title', 'updated_date', 'contact_email')
-    fieldsets = (
-        ('Шапка страницы', {
-            'fields': ('hero_label', 'hero_title', 'hero_subtitle'),
-        }),
-        ('Сведения о документе', {
-            'fields': ('document_title', 'updated_date', 'contact_email', 'intro_text'),
-        }),
-    )
     inlines = [PrivacyPolicySectionInline]
 
     def has_add_permission(self, request):
@@ -75,7 +68,7 @@ class PrivacyPolicyAdmin(admin.ModelAdmin):
 
 
 @admin.register(PrivacyPolicySection)
-class PrivacyPolicySectionAdmin(admin.ModelAdmin):
+class PrivacyPolicySectionAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'policy', 'order')
     list_filter = ('policy',)
     list_editable = ('order',)

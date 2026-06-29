@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Казгеология — Геологическое изучение недр Казахстана{% endblock %}
+{% block title %}{% translate "Казгеология — Геологическое изучение недр Казахстана" %}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/index-sections.css' %}">
@@ -30,17 +30,17 @@
 <!-- About Section -->
 <section class="section-about">
     <div class="about-container">
-        <h2 class="about-title">{{ about_section.title|default:"О КОМПАНИИ" }}</h2>
+        <h2 class="about-title">{% if about_section.title %}{{ about_section.title }}{% else %}{% translate "О КОМПАНИИ" %}{% endif %}</h2>
 
         <div class="about-top-row">
             <div class="about-main-stat">
-                <div class="stat-top-text">{{ about_section.main_stat_description|default:"Более 40 млрд тенге — общий объём государственного финансирования" }}</div>
+                <div class="stat-top-text">{% if about_section.main_stat_description %}{{ about_section.main_stat_description }}{% else %}{% translate "Более 40 млрд тенге — общий объём государственного финансирования" %}{% endif %}</div>
                 <div class="stat-value-huge">
                     {{ about_section.main_stat_value|default:"80" }}{% if not about_section or about_section.main_stat_has_plus %}<span class="plus">+</span>{% endif %}
                 </div>
             </div>
             <div class="about-description">
-                <p>{{ about_section.description|default:"Мы проводим геологическое изучение недр Казахстана, обеспечивая решение геологических задач в различных отраслях недропользования. Компания располагает квалифицированными кадрами, экспертизой, опытом и финансовой устойчивостью для оперативного и безопасного выполнения проектов." }}</p>
+                <p>{% if about_section.description %}{{ about_section.description }}{% else %}{% translate "Мы проводим геологическое изучение недр Казахстана, обеспечивая решение геологических задач в различных отраслях недропользования. Компания располагает квалифицированными кадрами, экспертизой, опытом и финансовой устойчивостью для оперативного и безопасного выполнения проектов." %}{% endif %}</p>
             </div>
         </div>
 
@@ -55,26 +55,26 @@
             {% endfor %}
             {% else %}
             <div class="about-sub-stat">
-                <div class="stat-top-text">Более 500 специалистов и экспертов</div>
+                <div class="stat-top-text">{% translate "Более 500 специалистов и экспертов" %}</div>
                 <div class="stat-value-large">500 <span class="stat-slash">/</span> <span
-                        class="stat-label">СПЕЦИАЛИСТОВ</span></div>
+                        class="stat-label">{% translate "СПЕЦИАЛИСТОВ" %}</span></div>
             </div>
             <div class="about-sub-stat">
-                <div class="stat-top-text">Работаем во всех регионах страны</div>
+                <div class="stat-top-text">{% translate "Работаем во всех регионах страны" %}</div>
                 <div class="stat-value-large">14 <span class="stat-slash">/</span> <span
-                        class="stat-label">РЕГИОНОВ</span></div>
+                        class="stat-label">{% translate "РЕГИОНОВ" %}</span></div>
             </div>
             <div class="about-sub-stat">
-                <div class="stat-top-text">Более 200 проектов с момента основания</div>
+                <div class="stat-top-text">{% translate "Более 200 проектов с момента основания" %}</div>
                 <div class="stat-value-large">200 <span class="stat-slash">/</span> <span
-                        class="stat-label">+ПРОЕКТОВ</span></div>
+                        class="stat-label">{% translate "+ПРОЕКТОВ" %}</span></div>
             </div>
             {% endif %}
         </div>
 
         <div class="about-action">
-            <a href="/about/" class="btn-outline-dark">
-                УЗНАТЬ БОЛЬШЕ
+            <a href="{% url 'core:about' %}" class="btn-outline-dark">
+                {% translate "УЗНАТЬ БОЛЬШЕ" %}
                 <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
         </div>
@@ -85,47 +85,46 @@
 <section class="section-projects">
     <div class="projects-container">
         <div class="projects-header">
-            <h2 class="projects-label">ПОСЛЕДНИЕ РЕАЛИЗОВАННЫЕ РАБОТЫ</h2>
-            <div class="projects-title-huge">ПРОЕКТЫ</div>
+            <h2 class="projects-label">{% translate "ПОСЛЕДНИЕ РЕАЛИЗОВАННЫЕ РАБОТЫ" %}</h2>
+            <div class="projects-title-huge">{% translate "ПРОЕКТЫ" %}</div>
         </div>
 
         <div class="projects-grid">
-            <a href="/projects/" class="project-card">
+            <a href="{% url 'core:projects' %}" class="project-card">
                 <div class="card-num-bg">01</div>
                 <div class="card-inner">
-                    <div class="card-partner">ТОО «Корпорация Казахмыс»</div>
-                    <div class="card-title">Разведка золота и медьсодержащих руд на Алтынказганском рудном поле</div>
-                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> Костанайская, Карагандинская обл.
+                    <div class="card-partner">{% translate "ТОО «Корпорация Казахмыс»" %}</div>
+                    <div class="card-title">{% translate "Разведка золота и медьсодержащих руд на Алтынказганском рудном поле" %}</div>
+                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Костанайская, Карагандинская обл." %}
                     </div>
                 </div>
                 <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
             </a>
 
-            <a href="/projects/" class="project-card">
+            <a href="{% url 'core:projects' %}" class="project-card">
                 <div class="card-num-bg">02</div>
                 <div class="card-inner">
-                    <div class="card-partner">ТОО «Казцинк»</div>
-                    <div class="card-title">Разведка колчеданно-полиметаллических руд на площади
-                        Сакмарихинско-Черноубинская</div>
-                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> Восточно-Казахстанская обл.</div>
+                    <div class="card-partner">{% translate "ТОО «Казцинк»" %}</div>
+                    <div class="card-title">{% translate "Разведка колчеданно-полиметаллических руд на площади Сакмарихинско-Черноубинская" %}</div>
+                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Восточно-Казахстанская обл." %}</div>
                 </div>
                 <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
             </a>
 
-            <a href="/projects/" class="project-card">
+            <a href="{% url 'core:projects' %}" class="project-card">
                 <div class="card-num-bg">03</div>
                 <div class="card-inner">
                     <div class="card-partner">IG Global</div>
-                    <div class="card-title">Разведка медно-порфировых руд на участке Балхаш-Сарышаган</div>
-                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> Балхаш-Сарышаган</div>
+                    <div class="card-title">{% translate "Разведка медно-порфировых руд на участке Балхаш-Сарышаган" %}</div>
+                    <div class="card-region"><i class="fa-solid fa-location-dot"></i> {% translate "Балхаш-Сарышаган" %}</div>
                 </div>
                 <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
             </a>
         </div>
 
         <div class="projects-footer">
-            <a href="/projects/" class="btn-outline-dark">
-                ВСЕ ПРОЕКТЫ
+            <a href="{% url 'core:projects' %}" class="btn-outline-dark">
+                {% translate "ВСЕ ПРОЕКТЫ" %}
                 <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
             <div class="projects-pagination">
@@ -205,39 +204,36 @@
 <!-- History Section -->
 <section class="section-history">
     <div class="history-container">
-        <h2 class="history-label">ИСТОРИЯ</h2>
+        <h2 class="history-label">{% translate "ИСТОРИЯ" %}</h2>
         <div class="history-timeline">
             <div class="history-timeline-item">
                 <div class="history-timeline-year">2011</div>
                 <div class="history-timeline-dot"></div>
                 <div class="history-timeline-content">
-                    <div class="history-timeline-title">Основание компании</div>
-                    <div class="history-timeline-text">АО «Казгеология» создано как высокотехнологичная
-                        геологоразведочная компания Республики Казахстан.</div>
+                    <div class="history-timeline-title">{% translate "Основание компании" %}</div>
+                    <div class="history-timeline-text">{% translate "АО «Казгеология» создано как высокотехнологичная геологоразведочная компания Республики Казахстан." %}</div>
                 </div>
             </div>
             <div class="history-timeline-item">
                 <div class="history-timeline-year">2021</div>
                 <div class="history-timeline-dot"></div>
                 <div class="history-timeline-content">
-                    <div class="history-timeline-title">Вхождение в Тау-Кен Самрук</div>
-                    <div class="history-timeline-text">100% акций компании переданы АО «НГК «Тау-Кен Самрук» —
-                        национальному горнорудному холдингу Республики Казахстан.</div>
+                    <div class="history-timeline-title">{% translate "Вхождение в Тау-Кен Самрук" %}</div>
+                    <div class="history-timeline-text">{% translate "100% акций компании переданы АО «НГК «Тау-Кен Самрук» — национальному горнорудному холдингу Республики Казахстан." %}</div>
                 </div>
             </div>
             <div class="history-timeline-item">
                 <div class="history-timeline-year">2023</div>
                 <div class="history-timeline-dot"></div>
                 <div class="history-timeline-content">
-                    <div class="history-timeline-title">Переименование в ВГК</div>
-                    <div class="history-timeline-text">Компания получила статус национальной геологоразведочной компании
-                        и переименована в АО «Казгеология».</div>
+                    <div class="history-timeline-title">{% translate "Переименование в ВГК" %}</div>
+                    <div class="history-timeline-text">{% translate "Компания получила статус национальной геологоразведочной компании и переименована в АО «Казгеология»." %}</div>
                 </div>
             </div>
         </div>
 
         <div class="investors-section">
-            <h4 class="investors-label">НАШИ ПАРТНЁРЫ И АФФИЛИРОВАННЫЕ СТРУКТУРЫ</h4>
+            <h4 class="investors-label">{% translate "НАШИ ПАРТНЁРЫ И АФФИЛИРОВАННЫЕ СТРУКТУРЫ" %}</h4>
         </div>
     </div>
 
@@ -292,42 +288,41 @@
     <div class="idx-container">
         <div class="idx-gov-grid">
             <div>
-                <div class="idx-section-label">Принципы управления</div>
-                <h2 class="idx-gov-title">КОРПОРАТИВНОЕ УПРАВЛЕНИЕ</h2>
-                <p class="idx-gov-desc">Система корпоративного управления АО «Казгеология» построена на международных
-                    стандартах и обеспечивает эффективную защиту прав акционеров и устойчивое развитие компании.</p>
-                <a href="/governance/" class="btn-idx-dark">
-                    ПОДРОБНЕЕ <i class="fa-solid fa-arrow-right"></i>
+                <div class="idx-section-label">{% translate "Принципы управления" %}</div>
+                <h2 class="idx-gov-title">{% translate "КОРПОРАТИВНОЕ УПРАВЛЕНИЕ" %}</h2>
+                <p class="idx-gov-desc">{% translate "Система корпоративного управления АО «Казгеология» построена на международных стандартах и обеспечивает эффективную защиту прав акционеров и устойчивое развитие компании." %}</p>
+                <a href="{% url 'core:governance' %}" class="btn-idx-dark">
+                    {% translate "ПОДРОБНЕЕ" %} <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
             <div class="idx-gov-principles">
                 <div class="idx-gov-principle">
                     <div class="idx-gov-p-icon"><i class="fa-solid fa-eye"></i></div>
                     <div>
-                        <div class="idx-gov-p-name">Прозрачность</div>
-                        <div class="idx-gov-p-desc">Открытое раскрытие информации акционерам и заинтересованным лицам
+                        <div class="idx-gov-p-name">{% translate "Прозрачность" %}</div>
+                        <div class="idx-gov-p-desc">{% translate "Открытое раскрытие информации акционерам и заинтересованным лицам" %}
                         </div>
                     </div>
                 </div>
                 <div class="idx-gov-principle">
                     <div class="idx-gov-p-icon"><i class="fa-solid fa-file-contract"></i></div>
                     <div>
-                        <div class="idx-gov-p-name">Подотчётность</div>
-                        <div class="idx-gov-p-desc">Ответственность органов управления перед акционерами</div>
+                        <div class="idx-gov-p-name">{% translate "Подотчётность" %}</div>
+                        <div class="idx-gov-p-desc">{% translate "Ответственность органов управления перед акционерами" %}</div>
                     </div>
                 </div>
                 <div class="idx-gov-principle">
                     <div class="idx-gov-p-icon"><i class="fa-solid fa-shield-halved"></i></div>
                     <div>
-                        <div class="idx-gov-p-name">Ответственность</div>
-                        <div class="idx-gov-p-desc">Соответствие деятельности законодательству и этическим нормам</div>
+                        <div class="idx-gov-p-name">{% translate "Ответственность" %}</div>
+                        <div class="idx-gov-p-desc">{% translate "Соответствие деятельности законодательству и этическим нормам" %}</div>
                     </div>
                 </div>
                 <div class="idx-gov-principle">
                     <div class="idx-gov-p-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                     <div>
-                        <div class="idx-gov-p-name">Справедливость</div>
-                        <div class="idx-gov-p-desc">Равное отношение ко всем акционерам и участникам рынка</div>
+                        <div class="idx-gov-p-name">{% translate "Справедливость" %}</div>
+                        <div class="idx-gov-p-desc">{% translate "Равное отношение ко всем акционерам и участникам рынка" %}</div>
                     </div>
                 </div>
             </div>

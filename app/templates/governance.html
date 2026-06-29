@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Корпоративное управление — Казгеология{% endblock %}
+{% block title %}{% translate "Корпоративное управление" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/governance.css' %}">
@@ -17,15 +17,15 @@
     <section class="gov-hero">
         <div class="gov-hero-container">
             <nav class="gov-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <a href="/about/">О компании</a>
+                <a href="{% url 'core:about' %}">{% translate "О компании" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Корпоративное управление</span>
+                <span class="current">{% translate "Корпоративное управление" %}</span>
             </nav>
-            <div class="gov-hero-label">АО «Казгеология»</div>
-            <h1 class="gov-hero-title">КОРПОРАТИВНОЕ<br>УПРАВЛЕНИЕ</h1>
-            <p class="gov-hero-subtitle">Принципы надлежащего корпоративного управления, деловой этики и прозрачности</p>
+            <div class="gov-hero-label">{% translate "АО «Казгеология»" %}</div>
+            <h1 class="gov-hero-title">{% translate "КОРПОРАТИВНОЕ<br>УПРАВЛЕНИЕ" %}</h1>
+            <p class="gov-hero-subtitle">{% translate "Принципы надлежащего корпоративного управления, деловой этики и прозрачности" %}</p>
         </div>
     </section>
 
@@ -35,41 +35,41 @@
             <div class="gov-text-grid">
 
                 <div class="gov-text-main">
-                    <p>В процессе своей деятельности Общество обеспечивает соблюдение принципов надлежащего корпоративного управления, деловой этики и прозрачности во внутренних отношениях и во взаимодействии с участниками рынка.</p>
-                    <p>Корпоративное управление в Обществе осуществляется в соответствии с законодательством Республики Казахстан, включая Закон Республики Казахстан «Об акционерных обществах», и иные применимые нормативные правовые акты, а также с учетом Кодекса корпоративного управления и корпоративных стандартов, действующих в группе Фонда.</p>
-                    <p>С учетом наличия единственного акционера Общество обеспечивает надлежащую систему подотчетности, прозрачности принятия решений и эффективного взаимодействия органов управления с акционером.</p>
-                    <p>В Обществе функционируют системы внутреннего контроля, управления рисками и комплаенс, направленные на обеспечение законности деятельности, предотвращение конфликта интересов и коррупционных проявлений, а также на защиту интересов акционера и иных заинтересованных сторон.</p>
-                    <p>Общество внедряет и последовательно реализует принципы устойчивого развития (ESG), включая экологическую, социальную и управленческую ответственность, с учетом корпоративной политики и стратегических ориентиров Фонда.</p>
+                    <p>{% translate "В процессе своей деятельности Общество обеспечивает соблюдение принципов надлежащего корпоративного управления, деловой этики и прозрачности во внутренних отношениях и во взаимодействии с участниками рынка." %}</p>
+                    <p>{% translate "Корпоративное управление в Обществе осуществляется в соответствии с законодательством Республики Казахстан, включая Закон Республики Казахстан «Об акционерных обществах», и иные применимые нормативные правовые акты, а также с учетом Кодекса корпоративного управления и корпоративных стандартов, действующих в группе Фонда." %}</p>
+                    <p>{% translate "С учетом наличия единственного акционера Общество обеспечивает надлежащую систему подотчетности, прозрачности принятия решений и эффективного взаимодействия органов управления с акционером." %}</p>
+                    <p>{% translate "В Обществе функционируют системы внутреннего контроля, управления рисками и комплаенс, направленные на обеспечение законности деятельности, предотвращение конфликта интересов и коррупционных проявлений, а также на защиту интересов акционера и иных заинтересованных сторон." %}</p>
+                    <p>{% translate "Общество внедряет и последовательно реализует принципы устойчивого развития (ESG), включая экологическую, социальную и управленческую ответственность, с учетом корпоративной политики и стратегических ориентиров Фонда." %}</p>
                 </div>
 
                 <div class="gov-principles">
-                    <h3 class="gov-principles-title">Ключевые принципы</h3>
+                    <h3 class="gov-principles-title">{% translate "Ключевые принципы" %}</h3>
                     <div class="gov-principle-item">
                         <div class="gov-principle-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                         <div>
-                            <div class="gov-principle-name">Законность</div>
-                            <div class="gov-principle-desc">Соответствие законодательству РК и нормативным актам</div>
+                            <div class="gov-principle-name">{% translate "Законность" %}</div>
+                            <div class="gov-principle-desc">{% translate "Соответствие законодательству РК и нормативным актам" %}</div>
                         </div>
                     </div>
                     <div class="gov-principle-item">
                         <div class="gov-principle-icon"><i class="fa-solid fa-eye"></i></div>
                         <div>
-                            <div class="gov-principle-name">Прозрачность</div>
-                            <div class="gov-principle-desc">Открытость в принятии решений и взаимодействии</div>
+                            <div class="gov-principle-name">{% translate "Прозрачность" %}</div>
+                            <div class="gov-principle-desc">{% translate "Открытость в принятии решений и взаимодействии" %}</div>
                         </div>
                     </div>
                     <div class="gov-principle-item">
                         <div class="gov-principle-icon"><i class="fa-solid fa-shield-halved"></i></div>
                         <div>
-                            <div class="gov-principle-name">Внутренний контроль</div>
-                            <div class="gov-principle-desc">Системы управления рисками и комплаенс</div>
+                            <div class="gov-principle-name">{% translate "Внутренний контроль" %}</div>
+                            <div class="gov-principle-desc">{% translate "Системы управления рисками и комплаенс" %}</div>
                         </div>
                     </div>
                     <div class="gov-principle-item">
                         <div class="gov-principle-icon"><i class="fa-solid fa-leaf"></i></div>
                         <div>
                             <div class="gov-principle-name">ESG</div>
-                            <div class="gov-principle-desc">Экологическая, социальная и управленческая ответственность</div>
+                            <div class="gov-principle-desc">{% translate "Экологическая, социальная и управленческая ответственность" %}</div>
                         </div>
                     </div>
                 </div>
@@ -83,8 +83,8 @@
         <div class="gov-container">
 
             <div class="gov-section-header">
-                <div class="gov-section-label">Нормативная база</div>
-                <h2 class="gov-section-title">ДОКУМЕНТЫ</h2>
+                <div class="gov-section-label">{% translate "Нормативная база" %}</div>
+                <h2 class="gov-section-title">{% translate "ДОКУМЕНТЫ" %}</h2>
             </div>
 
             <div class="gov-docs-grid">
@@ -93,14 +93,14 @@
                     <div class="gov-doc-top">
                         <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="gov-doc-type">Кодекс · PDF</div>
-                            <div class="gov-doc-title">Кодекс корпоративного управления</div>
-                            <div class="gov-doc-meta">от 05.11.2012 г. (с изм. от 15.08.2024 г.)</div>
+                            <div class="gov-doc-type">{% translate "Кодекс · PDF" %}</div>
+                            <div class="gov-doc-title">{% translate "Кодекс корпоративного управления" %}</div>
+                            <div class="gov-doc-meta">{% translate "от 05.11.2012 г. (с изм. от 15.08.2024 г.)" %}</div>
                         </div>
                     </div>
                     <div class="gov-doc-footer">
                         <a href="{% static 'docs/board/Кодекс КУ.pdf' %}" class="btn-gov-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -109,13 +109,13 @@
                     <div class="gov-doc-top">
                         <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="gov-doc-type">Положение · PDF</div>
-                            <div class="gov-doc-title">Положение о Совете директоров</div>
+                            <div class="gov-doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="gov-doc-title">{% translate "Положение о Совете директоров" %}</div>
                         </div>
                     </div>
                     <div class="gov-doc-footer">
                         <a href="{% static 'docs/board/Положение об СД 2.pdf' %}" class="btn-gov-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -124,14 +124,14 @@
                     <div class="gov-doc-top">
                         <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="gov-doc-type">Положение · PDF</div>
-                            <div class="gov-doc-title">Положение о Корпоративном секретаре</div>
-                            <div class="gov-doc-meta">2023 г.</div>
+                            <div class="gov-doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="gov-doc-title">{% translate "Положение о Корпоративном секретаре" %}</div>
+                            <div class="gov-doc-meta">{% translate "2023 г." %}</div>
                         </div>
                     </div>
                     <div class="gov-doc-footer">
                         <a href="{% static 'docs/board/Положение о КС.pdf' %}" class="btn-gov-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -140,13 +140,13 @@
                     <div class="gov-doc-top">
                         <div class="gov-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="gov-doc-type">Политика · PDF</div>
-                            <div class="gov-doc-title">Политика противодействия коррупции</div>
+                            <div class="gov-doc-type">{% translate "Политика · PDF" %}</div>
+                            <div class="gov-doc-title">{% translate "Политика противодействия коррупции" %}</div>
                         </div>
                     </div>
                     <div class="gov-doc-footer">
                         <a href="{% static 'docs/board/Политика противодействия коррупции.pdf' %}" class="btn-gov-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -160,11 +160,11 @@
     <div class="gov-cta-strip">
         <div class="gov-cta-container">
             <div class="gov-cta-text">
-                <h3>Совет директоров</h3>
-                <p>Ознакомьтесь с составом Совета директоров и положениями о комитетах.</p>
+                <h3>{% translate "Совет директоров" %}</h3>
+                <p>{% translate "Ознакомьтесь с составом Совета директоров и положениями о комитетах." %}</p>
             </div>
-            <a href="/board/" class="btn-gov-cta">
-                ПЕРЕЙТИ <i class="fa-solid fa-arrow-right"></i>
+            <a href="{% url 'core:board' %}" class="btn-gov-cta">
+                {% translate "ПЕРЕЙТИ" %} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Политика конфиденциальности - Казгеология{% endblock %}
+{% block title %}{% translate "Политика конфиденциальности" %} - {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/privacy-policy.css' %}">
@@ -14,9 +14,9 @@
     <section class="privacy-hero">
         <div class="privacy-hero-container">
             <nav class="privacy-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Политика конфиденциальности</span>
+                <span class="current">{% translate "Политика конфиденциальности" %}</span>
             </nav>
             <div class="privacy-hero-label">{{ privacy_policy.hero_label|default:'АО «Казгеология»' }}</div>
             <h1 class="privacy-hero-title">{{ privacy_policy.hero_title|default:'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ'|linebreaksbr }}</h1>
@@ -28,15 +28,15 @@
         <div class="privacy-container">
             <aside class="privacy-meta" aria-label="Сведения о документе">
                 <div class="privacy-meta-item">
-                    <span>Документ</span>
+                    <span>{% translate "Документ" %}</span>
                     <strong>{{ privacy_policy.document_title|default:'Политика конфиденциальности' }}</strong>
                 </div>
                 <div class="privacy-meta-item">
-                    <span>Дата обновления</span>
+                    <span>{% translate "Дата обновления" %}</span>
                     <strong>{{ privacy_policy.updated_date|default:'28 мая 2026' }}</strong>
                 </div>
                 <div class="privacy-meta-item">
-                    <span>Контакт</span>
+                    <span>{% translate "Контакт" %}</span>
                     <a href="mailto:{{ privacy_policy.contact_email|default:'info@kazgeology.kz' }}">{{ privacy_policy.contact_email|default:'info@kazgeology.kz' }}</a>
                 </div>
             </aside>

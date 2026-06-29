@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Комплаенс — Казгеология{% endblock %}
+{% block title %}{% translate "Комплаенс" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/compliance.css' %}">
@@ -15,16 +15,16 @@
     <section class="comp-hero">
         <div class="comp-hero-container">
             <nav class="comp-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Комплаенс</span>
+                <span class="current">{% translate "Комплаенс" %}</span>
             </nav>
-            <div class="comp-hero-label">АО «Казгеология»</div>
-            <h1 class="comp-hero-title">КОМПЛАЕНС</h1>
-            <p class="comp-hero-subtitle">Обеспечение соответствия деятельности компании законодательству, отраслевым стандартам и обязательным требованиям</p>
+            <div class="comp-hero-label">{% translate "АО «Казгеология»" %}</div>
+            <h1 class="comp-hero-title">{% translate "КОМПЛАЕНС" %}</h1>
+            <p class="comp-hero-subtitle">{% translate "Обеспечение соответствия деятельности компании законодательству, отраслевым стандартам и обязательным требованиям" %}</p>
         </div>
         <div class="comp-hero-image-wrap">
-            <img src="{% static 'images/compliance-hero.webp' %}" alt="Комплаенс-система Казгеология" class="comp-hero-image" loading="lazy">
+            <img src="{% static 'images/compliance-hero.webp' %}" alt="{% translate 'Комплаенс-система Казгеология' %}" class="comp-hero-image" loading="lazy">
         </div>
     </section>
 
@@ -33,32 +33,32 @@
         <div class="comp-container">
             <div class="comp-about-grid">
                 <div class="comp-about-text">
-                    <div class="comp-section-label">О системе</div>
-                    <h2 class="comp-about-title">Комплаенс-система АО «Казгеология»</h2>
-                    <p>Комплаенс-система АО «Казгеология» обеспечивает соответствие деятельности компании законодательству, отраслевым стандартам и прочим обязательным требованиям.</p>
-                    <p>Основной целью деятельности комплаенс-системы Общества является обеспечение соблюдения регуляторных требований по вопросам противодействия коррупции и определение политики в этом направлении, а также осуществление контроля за реализацией мероприятий по противодействию коррупции, включая оценку коррупционных рисков в Обществе и его дочерних организациях, внедрение механизмов предотвращения коррупционных рисков в соответствии с антикоррупционным законодательством Республики Казахстан и лучшей международной практикой противодействия коррупции.</p>
+                    <div class="comp-section-label">{% translate "О системе" %}</div>
+                    <h2 class="comp-about-title">{% translate "Комплаенс-система АО «Казгеология»" %}</h2>
+                    <p>{% translate "Комплаенс-система АО «Казгеология» обеспечивает соответствие деятельности компании законодательству, отраслевым стандартам и прочим обязательным требованиям." %}</p>
+                    <p>{% translate "Основной целью деятельности комплаенс-системы Общества является обеспечение соблюдения регуляторных требований по вопросам противодействия коррупции и определение политики в этом направлении, а также осуществление контроля за реализацией мероприятий по противодействию коррупции, включая оценку коррупционных рисков в Обществе и его дочерних организациях, внедрение механизмов предотвращения коррупционных рисков в соответствии с антикоррупционным законодательством Республики Казахстан и лучшей международной практикой противодействия коррупции." %}</p>
                 </div>
                 <div class="comp-directions">
-                    <div class="comp-directions-title">Основные направления деятельности Службы комплаенс</div>
+                    <div class="comp-directions-title">{% translate "Основные направления деятельности Службы комплаенс" %}</div>
                     <div class="comp-direction-item">
                         <div class="comp-direction-icon"><i class="fa-solid fa-thumbs-up"></i></div>
-                        <span>Положительная деловая репутация</span>
+                        <span>{% translate "Положительная деловая репутация" %}</span>
                     </div>
                     <div class="comp-direction-item">
                         <div class="comp-direction-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                        <span>Соблюдение законодательства, общепринятых норм корпоративной и деловой этики</span>
+                        <span>{% translate "Соблюдение законодательства, общепринятых норм корпоративной и деловой этики" %}</span>
                     </div>
                     <div class="comp-direction-item">
                         <div class="comp-direction-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <span>Противодействие коррупции</span>
+                        <span>{% translate "Противодействие коррупции" %}</span>
                     </div>
                     <div class="comp-direction-item">
                         <div class="comp-direction-icon"><i class="fa-solid fa-handshake"></i></div>
-                        <span>Управление конфликтами интересов</span>
+                        <span>{% translate "Управление конфликтами интересов" %}</span>
                     </div>
                     <div class="comp-direction-item">
                         <div class="comp-direction-icon"><i class="fa-solid fa-bell"></i></div>
-                        <span>Своевременное информирование о случаях действительного или возможного нарушения положений Кодекса деловой этики</span>
+                        <span>{% translate "Своевременное информирование о случаях действительного или возможного нарушения положений Кодекса деловой этики" %}</span>
                     </div>
                 </div>
             </div>
@@ -69,23 +69,23 @@
     <section class="comp-docs-section">
         <div class="comp-container">
             <div class="comp-section-header">
-                <div class="comp-section-label">Нормативная база</div>
-                <h2 class="comp-section-title">ВНУТРЕННИЕ ДОКУМЕНТЫ ПО ВОПРОСАМ КОМПЛАЕНС</h2>
+                <div class="comp-section-label">{% translate "Нормативная база" %}</div>
+                <h2 class="comp-section-title">{% translate "ВНУТРЕННИЕ ДОКУМЕНТЫ ПО ВОПРОСАМ КОМПЛАЕНС" %}</h2>
             </div>
-            <p class="comp-docs-intro">В целях соответствия стандартам этичного поведения и добросовестного ведения деятельности АО «Казгеология» руководствуется следующими внутренними документами:</p>
+            <p class="comp-docs-intro">{% translate "В целях соответствия стандартам этичного поведения и добросовестного ведения деятельности АО «Казгеология» руководствуется следующими внутренними документами:" %}</p>
             <div class="comp-docs-grid">
                 <div class="comp-doc-card">
                     <div class="comp-doc-top">
                         <div class="comp-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="comp-doc-type">Кодекс · PDF</div>
-                            <div class="comp-doc-title">Кодекс деловой этики АО «Казгеология»</div>
-                            <div class="comp-doc-meta">2024 г.</div>
+                            <div class="comp-doc-type">{% translate "Кодекс · PDF" %}</div>
+                            <div class="comp-doc-title">{% translate "Кодекс деловой этики АО «Казгеология»" %}</div>
+                            <div class="comp-doc-meta">{% translate "2024 г." %}</div>
                         </div>
                     </div>
                     <div class="comp-doc-footer">
                         <a href="{% static 'docs/compliance/Кодекс деловой этики 2024.pdf' %}" class="btn-comp-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -93,13 +93,13 @@
                     <div class="comp-doc-top">
                         <div class="comp-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="comp-doc-type">Политика · PDF</div>
-                            <div class="comp-doc-title">Политика противодействия коррупции</div>
+                            <div class="comp-doc-type">{% translate "Политика · PDF" %}</div>
+                            <div class="comp-doc-title">{% translate "Политика противодействия коррупции" %}</div>
                         </div>
                     </div>
                     <div class="comp-doc-footer">
                         <a href="{% static 'docs/compliance/Политика противодействия коррупции.pdf' %}" class="btn-comp-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -107,13 +107,13 @@
                     <div class="comp-doc-top">
                         <div class="comp-doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div>
-                            <div class="comp-doc-type">Положение · PDF</div>
-                            <div class="comp-doc-title">Положение о комплаенс-офицере АО «Казгеология»</div>
+                            <div class="comp-doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="comp-doc-title">{% translate "Положение о комплаенс-офицере АО «Казгеология»" %}</div>
                         </div>
                     </div>
                     <div class="comp-doc-footer">
                         <a href="{% static 'docs/compliance/Положение о КО.pdf' %}" class="btn-comp-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -129,16 +129,16 @@
                 <div class="comp-hotline-text">
                     <div class="comp-hotline-alert">
                         <i class="fa-solid fa-triangle-exclamation"></i>
-                        Если у вас возникли проблемы — не игнорируйте их!
+                        {% translate "Если у вас возникли проблемы — не игнорируйте их!" %}
                     </div>
-                    <h2 class="comp-hotline-title">Горячая линия</h2>
-                    <p class="comp-hotline-desc">Необходимую информацию можете отправлять через независимую горячую линию по вопросам этики, противодействия мошенничеству, хищениям и коррупции.</p>
+                    <h2 class="comp-hotline-title">{% translate "Горячая линия" %}</h2>
+                    <p class="comp-hotline-desc">{% translate "Необходимую информацию можете отправлять через независимую горячую линию по вопросам этики, противодействия мошенничеству, хищениям и коррупции." %}</p>
 
                     <div class="comp-contacts">
                         <div class="comp-contact-item">
                             <div class="comp-contact-icon"><i class="fa-solid fa-phone"></i></div>
                             <div>
-                                <div class="comp-contact-label">Телефон конфиденциального информирования</div>
+                                <div class="comp-contact-label">{% translate "Телефон конфиденциального информирования" %}</div>
                                 <div class="comp-contact-value"><a href="tel:88000804747">8 800 080 47 47</a></div>
                             </div>
                         </div>
@@ -152,21 +152,21 @@
                         <div class="comp-contact-item">
                             <div class="comp-contact-icon"><i class="fa-solid fa-envelope"></i></div>
                             <div>
-                                <div class="comp-contact-label">Электронная почта горячей линии</div>
+                                <div class="comp-contact-label">{% translate "Электронная почта горячей линии" %}</div>
                                 <div class="comp-contact-value"><a href="mailto:mail@sk-hotline.kz">mail@sk-hotline.kz</a></div>
                             </div>
                         </div>
                         <div class="comp-contact-item">
                             <div class="comp-contact-icon"><i class="fa-solid fa-globe"></i></div>
                             <div>
-                                <div class="comp-contact-label">Интернет-портал</div>
+                                <div class="comp-contact-label">{% translate "Интернет-портал" %}</div>
                                 <div class="comp-contact-value"><a href="https://www.sk-hotline.kz" target="_blank" rel="noopener">www.sk-hotline.kz</a></div>
                             </div>
                         </div>
                         <div class="comp-contact-item">
                             <div class="comp-contact-icon"><i class="fa-solid fa-envelope-circle-check"></i></div>
                             <div>
-                                <div class="comp-contact-label">Служба комплаенс</div>
+                                <div class="comp-contact-label">{% translate "Служба комплаенс" %}</div>
                                 <div class="comp-contact-value"><a href="mailto:Compliance@kazgeology.kz">Compliance@kazgeology.kz</a></div>
                             </div>
                         </div>
@@ -174,14 +174,14 @@
                 </div>
 
                 <div class="comp-hotline-right">
-                    <img src="{% static 'images/compliance-security.jpg' %}" alt="Горячая линия" class="comp-hotline-image" loading="lazy">
+                    <img src="{% static 'images/compliance-security.jpg' %}" alt="{% translate 'Горячая линия' %}" class="comp-hotline-image" loading="lazy">
                     <div class="comp-guarantee-card">
                         <div class="comp-guarantee-icon"><i class="fa-solid fa-lock"></i></div>
-                        <div class="comp-guarantee-title">МЫ ГАРАНТИРУЕМ</div>
+                        <div class="comp-guarantee-title">{% translate "МЫ ГАРАНТИРУЕМ" %}</div>
                         <div class="comp-guarantee-items">
-                            <div class="comp-guarantee-item"><i class="fa-solid fa-check"></i> Конфиденциальность</div>
-                            <div class="comp-guarantee-item"><i class="fa-solid fa-check"></i> Анонимность</div>
-                            <div class="comp-guarantee-item"><i class="fa-solid fa-check"></i> 100% рассмотрение обращений</div>
+                            <div class="comp-guarantee-item"><i class="fa-solid fa-check"></i> {% translate "Конфиденциальность" %}</div>
+                            <div class="comp-guarantee-item"><i class="fa-solid fa-check"></i> {% translate "Анонимность" %}</div>
+                            <div class="comp-guarantee-item"><i class="fa-solid fa-check"></i> {% translate "100% рассмотрение обращений" %}</div>
                         </div>
                     </div>
                 </div>

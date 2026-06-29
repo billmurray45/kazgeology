@@ -15,3 +15,6 @@ ssl/
 *.pem
 *.key
 *.crt
+
+# Compiled translations (built in container via compilemessages)
+*.mo

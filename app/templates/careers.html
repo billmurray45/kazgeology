@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Вакансии — Казгеология{% endblock %}
+{% block title %}{% translate "Вакансии" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/careers.css' %}">
@@ -15,14 +15,13 @@
 <section class="car-hero">
     <div class="car-hero-container">
         <nav class="car-breadcrumb" aria-label="Breadcrumb">
-            <a href="/">Главная</a>
+            <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
             <span class="sep">/</span>
-            <span class="current">Вакансии</span>
+            <span class="current">{% translate "Вакансии" %}</span>
         </nav>
-        <div class="car-hero-label">Карьера в Казгеологии</div>
-        <h1 class="car-hero-title">ВАКАНСИИ</h1>
-        <p class="car-hero-subtitle">Мы постоянно развиваемся и расширяем команду, открывая новые рабочие места для
-            специалистов, готовых расти вместе с нами.</p>
+        <div class="car-hero-label">{% translate "Карьера в Казгеологии" %}</div>
+        <h1 class="car-hero-title">{% translate "ВАКАНСИИ" %}</h1>
+        <p class="car-hero-subtitle">{% translate "Мы постоянно развиваемся и расширяем команду, открывая новые рабочие места для специалистов, готовых расти вместе с нами." %}</p>
     </div>
 </section>
 
@@ -32,16 +31,13 @@
         <div class="car-main-grid">
 
             <div class="car-text-col">
-                <div class="car-section-label">О работе у нас</div>
-                <h2 class="car-main-title">Присоединяйтесь к нашей команде</h2>
-                <p>Мы внимательно подходим к подбору сотрудников, ценим профессионализм, ответственность и стремление к
-                    развитию.</p>
-                <p>Для нас важно создавать комфортную рабочую среду, в которой каждый сотрудник может реализовать свой
-                    потенциал и внести значимый вклад в общее дело.</p>
-                <p>Актуальные вакансии и информация о процессе отбора размещаются на официальной платформе по найму
-                    персонала QSAMRUK.</p>
+                <div class="car-section-label">{% translate "О работе у нас" %}</div>
+                <h2 class="car-main-title">{% translate "Присоединяйтесь к нашей команде" %}</h2>
+                <p>{% translate "Мы внимательно подходим к подбору сотрудников, ценим профессионализм, ответственность и стремление к развитию." %}</p>
+                <p>{% translate "Для нас важно создавать комфортную рабочую среду, в которой каждый сотрудник может реализовать свой потенциал и внести значимый вклад в общее дело." %}</p>
+                <p>{% translate "Актуальные вакансии и информация о процессе отбора размещаются на официальной платформе по найму персонала QSAMRUK." %}</p>
                 <a href="https://qsamruk.kz/vacancy" target="_blank" rel="noopener" class="btn-car-portal">
-                    СМОТРЕТЬ ВАКАНСИИ <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    {% translate "СМОТРЕТЬ ВАКАНСИИ" %} <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
 
@@ -49,29 +45,29 @@
                 <div class="car-value-item">
                     <div class="car-value-icon"><i class="fa-solid fa-star"></i></div>
                     <div>
-                        <div class="car-value-title">Профессионализм</div>
-                        <div class="car-value-desc">Ценим экспертизу и высокие стандарты работы</div>
+                        <div class="car-value-title">{% translate "Профессионализм" %}</div>
+                        <div class="car-value-desc">{% translate "Ценим экспертизу и высокие стандарты работы" %}</div>
                     </div>
                 </div>
                 <div class="car-value-item">
                     <div class="car-value-icon"><i class="fa-solid fa-handshake"></i></div>
                     <div>
-                        <div class="car-value-title">Ответственность</div>
-                        <div class="car-value-desc">Каждый сотрудник — часть общего результата</div>
+                        <div class="car-value-title">{% translate "Ответственность" %}</div>
+                        <div class="car-value-desc">{% translate "Каждый сотрудник — часть общего результата" %}</div>
                     </div>
                 </div>
                 <div class="car-value-item">
                     <div class="car-value-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <div>
-                        <div class="car-value-title">Развитие</div>
-                        <div class="car-value-desc">Поддерживаем рост и обучение на каждом этапе</div>
+                        <div class="car-value-title">{% translate "Развитие" %}</div>
+                        <div class="car-value-desc">{% translate "Поддерживаем рост и обучение на каждом этапе" %}</div>
                     </div>
                 </div>
                 <div class="car-value-item">
                     <div class="car-value-icon"><i class="fa-solid fa-users"></i></div>
                     <div>
-                        <div class="car-value-title">Комфортная среда</div>
-                        <div class="car-value-desc">Создаём условия для реализации потенциала</div>
+                        <div class="car-value-title">{% translate "Комфортная среда" %}</div>
+                        <div class="car-value-desc">{% translate "Создаём условия для реализации потенциала" %}</div>
                     </div>
                 </div>
             </div>

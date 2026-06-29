@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Совет директоров — Казгеология{% endblock %}
+{% block title %}{% translate "Совет директоров" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/board.css' %}">
@@ -17,15 +17,15 @@
     <section class="board-page-hero">
         <div class="board-page-hero-container">
             <nav class="board-page-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <a href="/about/">О компании</a>
+                <a href="{% url 'core:about' %}">{% translate "О компании" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Совет директоров</span>
+                <span class="current">{% translate "Совет директоров" %}</span>
             </nav>
-            <div class="board-page-label">Корпоративное управление</div>
-            <h1 class="board-page-title">СОВЕТ<br>ДИРЕКТОРОВ</h1>
-            <p class="board-page-subtitle">Нормативные документы, регулирующие деятельность Совета директоров и его комитетов АО «Казгеология»</p>
+            <div class="board-page-label">{% translate "Корпоративное управление" %}</div>
+            <h1 class="board-page-title">{% translate "СОВЕТ<br>ДИРЕКТОРОВ" %}</h1>
+            <p class="board-page-subtitle">{% translate "Нормативные документы, регулирующие деятельность Совета директоров и его комитетов АО «Казгеология»" %}</p>
         </div>
     </section>
 
@@ -35,8 +35,8 @@
 
             <div class="board-docs-header">
                 <div class="board-docs-header-left">
-                    <h2>Состав</h2>
-                    <p>СОВЕТ ДИРЕКТОРОВ</p>
+                    <h2>{% translate "Состав" %}</h2>
+                    <p>{% translate "СОВЕТ ДИРЕКТОРОВ" %}</p>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 {% empty %}
-                <p style="color:#64748b;">Состав Совета директоров будет добавлен в ближайшее время.</p>
+                <p style="color:#64748b;">{% translate "Состав Совета директоров будет добавлен в ближайшее время." %}</p>
                 {% endfor %}
             </div>
 
@@ -75,8 +75,8 @@
 
             <div class="board-docs-header">
                 <div class="board-docs-header-left">
-                    <h2>Комитеты</h2>
-                    <p>СОСТАВ КОМИТЕТОВ СД</p>
+                    <h2>{% translate "Комитеты" %}</h2>
+                    <p>{% translate "СОСТАВ КОМИТЕТОВ СД" %}</p>
                 </div>
             </div>
 
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 {% empty %}
-                <p style="color:#64748b;">Состав комитетов будет добавлен в ближайшее время.</p>
+                <p style="color:#64748b;">{% translate "Состав комитетов будет добавлен в ближайшее время." %}</p>
                 {% endfor %}
 
             </div>
@@ -119,8 +119,8 @@
 
             <div class="board-docs-header">
                 <div class="board-docs-header-left">
-                    <h2>Документы</h2>
-                    <p>НОРМАТИВНАЯ БАЗА</p>
+                    <h2>{% translate "Документы" %}</h2>
+                    <p>{% translate "НОРМАТИВНАЯ БАЗА" %}</p>
                 </div>
             </div>
 
@@ -130,14 +130,14 @@
                     <div class="doc-card-top">
                         <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="doc-meta">
-                            <div class="doc-type">Положение · PDF</div>
-                            <div class="doc-title">Положение о Совете директоров</div>
+                            <div class="doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="doc-title">{% translate "Положение о Совете директоров" %}</div>
                         </div>
                     </div>
                     <div class="doc-card-footer">
-                        <span class="doc-size">PDF документ</span>
+                        <span class="doc-size">{% translate "PDF документ" %}</span>
                         <a href="{% static 'docs/board/Положение об СД.pdf' %}" class="btn-doc-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -146,14 +146,14 @@
                     <div class="doc-card-top">
                         <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="doc-meta">
-                            <div class="doc-type">Положение · PDF</div>
-                            <div class="doc-title">Положение о Комитете по стратегическому планированию, инвестициям и устойчивому развитию СД</div>
+                            <div class="doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="doc-title">{% translate "Положение о Комитете по стратегическому планированию, инвестициям и устойчивому развитию СД" %}</div>
                         </div>
                     </div>
                     <div class="doc-card-footer">
-                        <span class="doc-size">PDF документ</span>
+                        <span class="doc-size">{% translate "PDF документ" %}</span>
                         <a href="{% static 'docs/board/Положение о КСПИУР СД.pdf' %}" class="btn-doc-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -162,14 +162,14 @@
                     <div class="doc-card-top">
                         <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="doc-meta">
-                            <div class="doc-type">Положение · PDF</div>
-                            <div class="doc-title">Положение о Комитете по кадрам, вознаграждениям и социальным вопросам СД</div>
+                            <div class="doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="doc-title">{% translate "Положение о Комитете по кадрам, вознаграждениям и социальным вопросам СД" %}</div>
                         </div>
                     </div>
                     <div class="doc-card-footer">
-                        <span class="doc-size">PDF документ</span>
+                        <span class="doc-size">{% translate "PDF документ" %}</span>
                         <a href="{% static 'docs/board/Положение ККВСВ СД.pdf' %}" class="btn-doc-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -178,14 +178,14 @@
                     <div class="doc-card-top">
                         <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="doc-meta">
-                            <div class="doc-type">Положение · PDF</div>
-                            <div class="doc-title">Положение о Комитете по аудиту СД</div>
+                            <div class="doc-type">{% translate "Положение · PDF" %}</div>
+                            <div class="doc-title">{% translate "Положение о Комитете по аудиту СД" %}</div>
                         </div>
                     </div>
                     <div class="doc-card-footer">
-                        <span class="doc-size">PDF документ</span>
+                        <span class="doc-size">{% translate "PDF документ" %}</span>
                         <a href="{% static 'docs/board/Положение о КА СД.pdf' %}" class="btn-doc-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -194,14 +194,14 @@
                     <div class="doc-card-top">
                         <div class="doc-icon"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="doc-meta">
-                            <div class="doc-type">Кодекс · PDF</div>
-                            <div class="doc-title">Кодекс корпоративного управления (с изм. от 15.08.2024)</div>
+                            <div class="doc-type">{% translate "Кодекс · PDF" %}</div>
+                            <div class="doc-title">{% translate "Кодекс корпоративного управления (с изм. от 15.08.2024)" %}</div>
                         </div>
                     </div>
                     <div class="doc-card-footer">
-                        <span class="doc-size">PDF документ</span>
+                        <span class="doc-size">{% translate "PDF документ" %}</span>
                         <a href="{% static 'docs/board/Кодекс КУ.pdf' %}" class="btn-doc-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -214,11 +214,11 @@
     <div class="board-info-strip">
         <div class="board-info-strip-container">
             <div class="board-info-text">
-                <h3>Остались вопросы по документам?</h3>
-                <p>По всем вопросам корпоративного управления вы можете обратиться в секретариат Совета директоров.</p>
+                <h3>{% translate "Остались вопросы по документам?" %}</h3>
+                <p>{% translate "По всем вопросам корпоративного управления вы можете обратиться в секретариат Совета директоров." %}</p>
             </div>
             <a href="mailto:info@kazgeology.kz" class="btn-board-contact">
-                НАПИСАТЬ НАМ <i class="fa-solid fa-arrow-right"></i>
+                {% translate "НАПИСАТЬ НАМ" %} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

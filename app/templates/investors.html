@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Инвесторам — Казгеология{% endblock %}
+{% block title %}{% translate "Инвесторам" %} — {% translate "Казгеология" %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/investors.css' %}">
@@ -17,13 +17,13 @@
     <section class="inv-hero">
         <div class="inv-hero-container">
             <nav class="inv-breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Главная</a>
+                <a href="{% url 'core:index' %}">{% translate "Главная" %}</a>
                 <span class="sep">/</span>
-                <span class="current">Инвесторам</span>
+                <span class="current">{% translate "Инвесторам" %}</span>
             </nav>
-            <div class="inv-hero-label">Раскрытие информации</div>
-            <h1 class="inv-hero-title">ИНВЕСТОРАМ</h1>
-            <p class="inv-hero-subtitle">Финансовая отчётность, списки аффилированных лиц и корпоративный календарь АО «Казгеология»</p>
+            <div class="inv-hero-label">{% translate "Раскрытие информации" %}</div>
+            <h1 class="inv-hero-title">{% translate "ИНВЕСТОРАМ" %}</h1>
+            <p class="inv-hero-subtitle">{% translate "Финансовая отчётность, списки аффилированных лиц и корпоративный календарь АО «Казгеология»" %}</p>
         </div>
     </section>
 
@@ -32,8 +32,8 @@
         <div class="inv-container">
 
             <div class="inv-section-header">
-                <div class="inv-section-label">Финансовая отчётность</div>
-                <h2 class="inv-section-title">ОТЧЁТНОСТЬ</h2>
+                <div class="inv-section-label">{% translate "Финансовая отчётность" %}</div>
+                <h2 class="inv-section-title">{% translate "ОТЧЁТНОСТЬ" %}</h2>
             </div>
 
             {% if report_years %}
@@ -46,14 +46,14 @@
                     <div class="inv-doc-top">
                         <div class="inv-doc-icon inv-doc-icon--pdf"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="inv-doc-meta">
-                            <div class="inv-doc-type">Консолидированная · PDF</div>
-                            <div class="inv-doc-title">Консолидированная финансовая отчётность</div>
+                            <div class="inv-doc-type">{% translate "Консолидированная · PDF" %}</div>
+                            <div class="inv-doc-title">{% translate "Консолидированная финансовая отчётность" %}</div>
                         </div>
                     </div>
                     <div class="inv-doc-footer">
                         <span class="inv-doc-badge inv-doc-badge--pdf">PDF</span>
                         <a href="{{ consolidated.file.url }}" class="btn-inv-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -63,14 +63,14 @@
                     <div class="inv-doc-top">
                         <div class="inv-doc-icon inv-doc-icon--pdf"><i class="fa-regular fa-file-pdf"></i></div>
                         <div class="inv-doc-meta">
-                            <div class="inv-doc-type">Отдельная · PDF</div>
-                            <div class="inv-doc-title">Отдельная финансовая отчётность</div>
+                            <div class="inv-doc-type">{% translate "Отдельная · PDF" %}</div>
+                            <div class="inv-doc-title">{% translate "Отдельная финансовая отчётность" %}</div>
                         </div>
                     </div>
                     <div class="inv-doc-footer">
                         <span class="inv-doc-badge inv-doc-badge--pdf">PDF</span>
                         <a href="{{ separate.file.url }}" class="btn-inv-download" download>
-                            СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                            {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
             </div>
             {% endfor %}
             {% else %}
-            <p style="color:#64748b;">Документы будут добавлены в ближайшее время.</p>
+            <p style="color:#64748b;">{% translate "Документы будут добавлены в ближайшее время." %}</p>
             {% endif %}
 
         </div>
@@ -90,17 +90,17 @@
         <div class="inv-container">
 
             <div class="inv-section-header">
-                <div class="inv-section-label">Раскрытие информации</div>
-                <h2 class="inv-section-title">СПИСОК АФФИЛИРОВАННЫХ ЛИЦ</h2>
+                <div class="inv-section-label">{% translate "Раскрытие информации" %}</div>
+                <h2 class="inv-section-title">{% translate "СПИСОК АФФИЛИРОВАННЫХ ЛИЦ" %}</h2>
             </div>
 
             <div class="inv-table-wrapper">
                 <table class="inv-table">
                     <thead>
                         <tr>
-                            <th>Период</th>
-                            <th>Документ</th>
-                            <th>Формат</th>
+                            <th>{% translate "Период" %}</th>
+                            <th>{% translate "Документ" %}</th>
+                            <th>{% translate "Формат" %}</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -108,16 +108,16 @@
                         {% for item in affiliated %}
                         <tr>
                             <td><span class="inv-period">{{ item.get_quarter_display }} {{ item.year }}</span></td>
-                            <td>Список аффилированных лиц АО «Казгеология»</td>
+                            <td>{% translate "Список аффилированных лиц АО «Казгеология»" %}</td>
                             <td><span class="inv-doc-badge inv-doc-badge--xlsx">XLSX</span></td>
                             <td>
                                 <a href="{{ item.file.url }}" class="btn-inv-download btn-inv-download--sm" download>
-                                    СКАЧАТЬ <i class="fa-solid fa-arrow-down"></i>
+                                    {% translate "СКАЧАТЬ" %} <i class="fa-solid fa-arrow-down"></i>
                                 </a>
                             </td>
                         </tr>
                         {% empty %}
-                        <tr><td colspan="4" style="color:#64748b; padding: 20px;">Документы будут добавлены в ближайшее время.</td></tr>
+                        <tr><td colspan="4" style="color:#64748b; padding: 20px;">{% translate "Документы будут добавлены в ближайшее время." %}</td></tr>
                         {% endfor %}
                     </tbody>
                 </table>
@@ -131,8 +131,8 @@
         <div class="inv-container">
 
             <div class="inv-section-header">
-                <div class="inv-section-label">Корпоративные события</div>
-                <h2 class="inv-section-title">КАЛЕНДАРЬ СОБЫТИЙ</h2>
+                <div class="inv-section-label">{% translate "Корпоративные события" %}</div>
+                <h2 class="inv-section-title">{% translate "КАЛЕНДАРЬ СОБЫТИЙ" %}</h2>
             </div>
 
             <div class="inv-events-list">
@@ -142,7 +142,7 @@
                     <div class="inv-event-title">{{ event.title }}</div>
                 </div>
                 {% empty %}
-                <p style="color:#64748b;">События будут добавлены в ближайшее время.</p>
+                <p style="color:#64748b;">{% translate "События будут добавлены в ближайшее время." %}</p>
                 {% endfor %}
             </div>
 
@@ -153,11 +153,11 @@
     <div class="inv-info-strip">
         <div class="inv-info-container">
             <div class="inv-info-text">
-                <h3>Остались вопросы?</h3>
-                <p>По вопросам раскрытия информации обращайтесь в корпоративный секретариат.</p>
+                <h3>{% translate "Остались вопросы?" %}</h3>
+                <p>{% translate "По вопросам раскрытия информации обращайтесь в корпоративный секретариат." %}</p>
             </div>
             <a href="mailto:info@kazgeology.kz" class="btn-inv-contact">
-                НАПИСАТЬ НАМ <i class="fa-solid fa-arrow-right"></i>
+                {% translate "НАПИСАТЬ НАМ" %} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

@@ -1,6 +1,7 @@
-{% load static %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ LANGUAGE_CODE }}">
 
 <head>
     <meta charset="UTF-8">
@@ -20,18 +21,23 @@
     <header class="site-header">
         <div class="header-top">
             <div class="logo-area">
-                <a href="/">
+                <a href="{% url 'core:index' %}">
                     <img src="{% static 'img/logo.png' %}" alt="KazGeology Logo"
                         style="height: 48px; width: auto;">
                 </a>
             </div>
             <div class="header-actions">
                 <div class="lang-switch">
-                    <span class="active">ҚАЗ</span>
-                    <span>РУС</span>
-                    <span>ENG</span>
+                    {% for code, label in lang_labels %}
+                    <form action="{% url 'set_language' %}" method="post" class="lang-form">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="{{ code }}">
+                        <input type="hidden" name="next" value="{{ request.path }}">
+                        <button type="submit" class="lang-btn{% if code == LANGUAGE_CODE %} active{% endif %}">{{ label }}</button>
+                    </form>
+                    {% endfor %}
                 </div>
-                <a href="mailto:info@kazgeology.kz" class="btn-call">СВЯЗАТЬСЯ
+                <a href="mailto:info@kazgeology.kz" class="btn-call">{% translate "СВЯЗАТЬСЯ" %}
                     <i class="fa-solid fa-plus"></i>
                 </a>
                 <button class="btn-search" aria-label="Search">
@@ -43,42 +49,42 @@
             <nav class="main-nav">
 
                 <div class="nav-item has-dropdown">
-                    <a href="/about/" {% block nav_about %}{% endblock %}>О КОМПАНИИ <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <a href="{% url 'core:about' %}" {% block nav_about %}{% endblock %}>{% translate "О КОМПАНИИ" %} <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
                     <div class="nav-dropdown">
-                        <a href="/about/" class="nav-drop-link">О компании</a>
-                        <a href="/board/" class="nav-drop-link">Совет директоров</a>
-                        <a href="/governance/" class="nav-drop-link">Корпоративное управление</a>
+                        <a href="{% url 'core:about' %}" class="nav-drop-link">{% translate "О компании" %}</a>
+                        <a href="{% url 'core:board' %}" class="nav-drop-link">{% translate "Совет директоров" %}</a>
+                        <a href="{% url 'core:governance' %}" class="nav-drop-link">{% translate "Корпоративное управление" %}</a>
                     </div>
                 </div>
 
                 <div class="nav-item has-dropdown">
-                    <a href="/projects/" {% block nav_projects %}{% endblock %}>ПРОЕКТЫ <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <a href="{% url 'core:projects' %}" {% block nav_projects %}{% endblock %}>{% translate "ПРОЕКТЫ" %} <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
                     <div class="nav-dropdown">
-                        <a href="/projects/" class="nav-drop-link">Совместные проекты</a>
+                        <a href="{% url 'core:projects' %}" class="nav-drop-link">{% translate "Совместные проекты" %}</a>
                     </div>
                 </div>
 
                 <div class="nav-item has-dropdown">
-                    <a href="/investors/" {% block nav_investors %}{% endblock %}>ИНВЕСТОРАМ <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <a href="{% url 'core:investors' %}" {% block nav_investors %}{% endblock %}>{% translate "ИНВЕСТОРАМ" %} <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
                     <div class="nav-dropdown">
-                        <a href="/investors/" class="nav-drop-link">Финансовая отчётность</a>
-                        <a href="/investors/" class="nav-drop-link">Аффилированные лица</a>
+                        <a href="{% url 'core:investors' %}" class="nav-drop-link">{% translate "Финансовая отчётность" %}</a>
+                        <a href="{% url 'core:investors' %}" class="nav-drop-link">{% translate "Аффилированные лица" %}</a>
                     </div>
                 </div>
 
                 <div class="nav-item has-dropdown">
-                    <a href="https://zakup.sk.kz" target="_blank" rel="noopener" {% block nav_procurement %}{% endblock %}>ЗАКУПКИ <i class="fa-solid fa-arrow-up-right-from-square nav-chevron"></i></a>
+                    <a href="https://zakup.sk.kz" target="_blank" rel="noopener" {% block nav_procurement %}{% endblock %}>{% translate "ЗАКУПКИ" %} <i class="fa-solid fa-arrow-up-right-from-square nav-chevron"></i></a>
                     <div class="nav-dropdown">
-                        <a href="https://zakup.sk.kz" target="_blank" rel="noopener" class="nav-drop-link">Портал закупок zakup.sk.kz</a>
+                        <a href="https://zakup.sk.kz" target="_blank" rel="noopener" class="nav-drop-link">{% translate "Портал закупок zakup.sk.kz" %}</a>
                     </div>
                 </div>
 
                 <div class="nav-item has-dropdown">
-                    <a href="/compliance/" {% block nav_compliance %}{% endblock %}>КОМПЛАЕНС <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+                    <a href="{% url 'core:compliance' %}" {% block nav_compliance %}{% endblock %}>{% translate "КОМПЛАЕНС" %} <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
                     <div class="nav-dropdown">
-                        <a href="/compliance/" class="nav-drop-link">Комплаенс-система</a>
-                        <a href="/compliance/" class="nav-drop-link">Горячая линия</a>
-                        <a href="/careers/" class="nav-drop-link">Вакансии</a>
+                        <a href="{% url 'core:compliance' %}" class="nav-drop-link">{% translate "Комплаенс-система" %}</a>
+                        <a href="{% url 'core:compliance' %}" class="nav-drop-link">{% translate "Горячая линия" %}</a>
+                        <a href="{% url 'core:careers' %}" class="nav-drop-link">{% translate "Вакансии" %}</a>
                     </div>
                 </div>
 
@@ -93,41 +99,41 @@
         {% block footer_contact %}
         <div class="footer-top">
             <div class="footer-container footer-contact-header">
-                <h2 class="footer-title">КОНТАКТЫ</h2>
-                <p class="footer-subtitle">МЫ ВСЕГДА РАДЫ ВАШЕМУ ОБРАЩЕНИЮ</p>
+                <h2 class="footer-title">{% translate "КОНТАКТЫ" %}</h2>
+                <p class="footer-subtitle">{% translate "МЫ ВСЕГДА РАДЫ ВАШЕМУ ОБРАЩЕНИЮ" %}</p>
             </div>
 
             {% block footer_form %}
             <div class="footer-container contact-split" style="padding-bottom: 80px;">
                 <div>
-                    <h3 style="font-size: 32px; font-weight: 800; margin-bottom: 24px; color: #1e293b;">Нужна дополнительная информация?</h3>
+                    <h3 style="font-size: 32px; font-weight: 800; margin-bottom: 24px; color: #1e293b;">{% translate "Нужна дополнительная информация?" %}</h3>
                     <p style="color: #64748b; line-height: 1.6; max-width: 90%;">
-                        Есть проект или вопросы по нашим услугам? Заполните форму ниже — наша команда свяжется с вами в ближайшее время.
+                        {% translate "Есть проект или вопросы по нашим услугам? Заполните форму ниже — наша команда свяжется с вами в ближайшее время." %}
                     </p>
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Спасибо за обращение! Мы свяжемся с вами в ближайшее время.');">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('{% translate "Спасибо за обращение! Мы свяжемся с вами в ближайшее время." %}');">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" id="contact-name" required placeholder=" ">
-                                <label for="contact-name">Ваше имя</label>
+                                <label for="contact-name">{% translate "Ваше имя" %}</label>
                             </div>
                             <div class="form-group">
                                 <input type="email" id="contact-email" required placeholder=" ">
-                                <label for="contact-email">Email адрес</label>
+                                <label for="contact-email">{% translate "Email адрес" %}</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <input type="text" id="contact-subject" required placeholder=" ">
-                            <label for="contact-subject">Тема</label>
+                            <label for="contact-subject">{% translate "Тема" %}</label>
                         </div>
                         <div class="form-group">
                             <textarea id="contact-message" rows="4" required placeholder=" "></textarea>
-                            <label for="contact-message">Сообщение</label>
+                            <label for="contact-message">{% translate "Сообщение" %}</label>
                         </div>
                         <button type="submit" class="btn-submit-form">
-                            ОТПРАВИТЬ СООБЩЕНИЕ <i class="fa-solid fa-paper-plane"></i>
+                            {% translate "ОТПРАВИТЬ СООБЩЕНИЕ" %} <i class="fa-solid fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
@@ -139,33 +145,33 @@
         <div class="footer-main">
             <div class="footer-container footer-main-grid">
                 <div class="footer-col brand-col">
-                    <p class="brand-tagline">Изучаем недра Казахстана.</p>
-                    <p class="brand-subtext">Основано в 2011 году</p>
+                    <p class="brand-tagline">{% translate "Изучаем недра Казахстана." %}</p>
+                    <p class="brand-subtext">{% translate "Основано в 2011 году" %}</p>
                 </div>
 
                 <div class="footer-col info-col">
-                    <h4 class="col-title">ЮРИДИЧЕСКИЙ АДРЕС</h4>
+                    <h4 class="col-title">{% translate "ЮРИДИЧЕСКИЙ АДРЕС" %}</h4>
                     <p>+7 (7172) 75-00-00</p>
-                    <p>г. Астана, район Нұра,<br>ул. Сығанақ, строение 17/10,<br>почтовый индекс: 010000</p>
+                    <p>{% translate "г. Астана, район Нұра," %}<br>{% translate "ул. Сығанақ, строение 17/10," %}<br>{% translate "почтовый индекс: 010000" %}</p>
                     <p><a href="mailto:info@kazgeology.kz" class="link-line">info@kazgeology.kz</a></p>
                 </div>
 
                 <div class="footer-col links-col">
-                    <h4 class="col-title">КОМПАНИЯ</h4>
+                    <h4 class="col-title">{% translate "КОМПАНИЯ" %}</h4>
                     <ul class="footer-nav">
-                        <li><a href="/about/">О компании</a></li>
-                        <li><a href="/board/">Совет директоров</a></li>
-                        <li><a href="/governance/">Корпоративное управление</a></li>
-                        <li><a href="/projects/">Проекты</a></li>
-                        <li><a href="/investors/">Инвесторам</a></li>
-                        <li><a href="https://zakup.sk.kz" target="_blank" rel="noopener">Закупки</a></li>
-                        <li><a href="/compliance/">Комплаенс</a></li>
-                        <li><a href="/careers/">Вакансии</a></li>
+                        <li><a href="{% url 'core:about' %}">{% translate "О компании" %}</a></li>
+                        <li><a href="{% url 'core:board' %}">{% translate "Совет директоров" %}</a></li>
+                        <li><a href="{% url 'core:governance' %}">{% translate "Корпоративное управление" %}</a></li>
+                        <li><a href="{% url 'core:projects' %}">{% translate "Проекты" %}</a></li>
+                        <li><a href="{% url 'core:investors' %}">{% translate "Инвесторам" %}</a></li>
+                        <li><a href="https://zakup.sk.kz" target="_blank" rel="noopener">{% translate "Закупки" %}</a></li>
+                        <li><a href="{% url 'core:compliance' %}">{% translate "Комплаенс" %}</a></li>
+                        <li><a href="{% url 'core:careers' %}">{% translate "Вакансии" %}</a></li>
                     </ul>
                 </div>
 
                 <button class="btn-back-to-top" id="backToTop"
-                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Наверх">
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="{% translate 'Наверх' %}">
                     <i class="fa-solid fa-arrow-up"></i>
                 </button>
             </div>
@@ -173,11 +179,11 @@
 
         <div class="footer-bottom">
             <div class="footer-container bottom-row">
-                <div class="copyright">© 2012–2026 АО «Казгеология». Все права защищены.</div>
+                <div class="copyright">{% blocktranslate %}© 2012–2026 АО «Казгеология». Все права защищены.{% endblocktranslate %}</div>
                 <div class="legal-links">
-                    <a href="/privacy-policy/">Политика конфиденциальности</a>
+                    <a href="{% url 'core:privacy_policy' %}">{% translate "Политика конфиденциальности" %}</a>
                 </div>
-                <div class="credit">Самрук-Казына</div>
+                <div class="credit">{% translate "Самрук-Казына" %}</div>
             </div>
         </div>
     </footer>

@@ -1,0 +1,1645 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-25 17:29+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: project/settings.py:132
+msgid "Русский"
+msgstr "Орысша"
+
+#: project/settings.py:133
+msgid "Қазақша"
+msgstr "Қазақша"
+
+#: project/settings.py:134
+msgid "English"
+msgstr "Ағылшынша"
+
+#: templates/about.html:4 templates/about.html:22 templates/base.html:54
+#: templates/base.html:162 templates/board.html:22
+#: templates/governance.html:22
+msgid "О компании"
+msgstr "Компания туралы"
+
+#: templates/about.html:4 templates/about.html:143 templates/board.html:4
+#: templates/careers.html:4 templates/compliance.html:4
+#: templates/governance.html:4 templates/investors.html:4
+#: templates/privacy_policy.html:4 templates/procurement.html:4
+#: templates/projects.html:4
+msgid "Казгеология"
+msgstr "Қазгеология"
+
+#: templates/about.html:20 templates/board.html:20 templates/careers.html:18
+#: templates/compliance.html:18 templates/governance.html:20
+#: templates/investors.html:20 templates/privacy_policy.html:17
+#: templates/procurement.html:18 templates/projects.html:20
+msgid "Главная"
+msgstr "Басты бет"
+
+#: templates/about.html:24 templates/compliance.html:22
+#: templates/governance.html:26 templates/procurement.html:22
+#: templates/projects.html:277
+msgid "АО «Казгеология»"
+msgstr "«Қазгеология» АҚ"
+
+#: templates/about.html:25
+msgid "О<br>КОМПАНИИ"
+msgstr "КОМПАНИЯ<br>ТУРАЛЫ"
+
+#: templates/about.html:26 templates/about.html:36
+msgid "Высокотехнологичная геологоразведочная компания"
+msgstr "Жоғары технологиялық геологиялық барлау компаниясы"
+
+#: templates/about.html:35
+msgid "Кто мы"
+msgstr "Біз кімбіз"
+
+#: templates/about.html:40
+msgid ""
+"АО «Казгеология» — высокотехнологичная геологоразведочная компания. Компания"
+" осуществляет государственные программы по поиску и оценке месторождений "
+"стратегических полезных ископаемых на территории Республики Казахстан."
+msgstr ""
+"«Қазгеология» АҚ — жоғары технологиялық геологиялық барлау компаниясы. "
+"Компания Қазақстан Республикасы аумағында стратегиялық пайдалы қазбалар кен "
+"орындарын іздеу және бағалау бойынша мемлекеттік бағдарламаларды жүзеге "
+"асырады."
+
+#: templates/about.html:45
+msgid "Год основания"
+msgstr "Құрылған жылы"
+
+#: templates/about.html:49
+msgid "Государственное владение"
+msgstr "Мемлекеттік меншік"
+
+#: templates/about.html:53
+msgid "Лет работы"
+msgstr "Жұмыс жылдары"
+
+#: templates/about.html:66
+msgid "Хроника событий"
+msgstr "Оқиғалар хроникасы"
+
+#: templates/about.html:67
+msgid "ИСТОРИЯ<br>КОМПАНИИ"
+msgstr "КОМПАНИЯ<br>ТАРИХЫ"
+
+#: templates/about.html:98
+msgid "История компании будет добавлена в ближайшее время."
+msgstr "Компания тарихы жақын арада қосылады."
+
+#: templates/about.html:110
+msgid "Акционерная структура"
+msgstr "Акционерлік құрылым"
+
+#: templates/about.html:111
+msgid "Единственный акционер"
+msgstr "Жалғыз акционер"
+
+#: templates/about.html:113
+#, python-format
+msgid ""
+"Единственным акционером АО «Казгеология» является АО «НГК «Тау-Кен Самрук». "
+"100%% голосующих акций Общества принадлежат АО «НГК «Тау-Кен Самрук» на "
+"праве собственности."
+msgstr ""
+"«Қазгеология» АҚ-ның жалғыз акционері «Тау-Кен Самұрық» ҰТК» АҚ болып "
+"табылады. Қоғамның дауыс беретін акцияларының 100%%-ы «Тау-Кен Самұрық» ҰТК»"
+" АҚ-ға меншік құқығымен тиесілі."
+
+#: templates/about.html:116
+msgid ""
+"АО «НГК «Тау-Кен Самрук» входит в структуру АО «Фонд национального "
+"благосостояния «Самрук-Қазына» и осуществляет консолидацию инвестиционной "
+"деятельности в сфере твердых полезных ископаемых."
+msgstr ""
+"«Тау-Кен Самұрық» ҰТК» АҚ «Самұрық-Қазына» ұлттық әл-ауқат қоры» АҚ "
+"құрылымына кіреді және қатты пайдалы қазбалар саласындағы инвестициялық "
+"қызметті шоғырландыруды жүзеге асырады."
+
+#: templates/about.html:122
+msgid "Республика Казахстан"
+msgstr "Қазақстан Республикасы"
+
+#: templates/about.html:123
+msgid "Государство"
+msgstr "Мемлекет"
+
+#: templates/about.html:129
+msgid "Самрук-Қазына"
+msgstr "Самұрық-Қазына"
+
+#: templates/about.html:130
+msgid "ФНБ — Фонд национального благосостояния"
+msgstr "ҰӘҚ — Ұлттық әл-ауқат қоры"
+
+#: templates/about.html:136
+msgid "Тау-Кен Самрук"
+msgstr "Тау-Кен Самұрық"
+
+#: templates/about.html:137
+msgid "НГК — Национальная горнорудная компания"
+msgstr "ҰТК — Ұлттық тау-кен компаниясы"
+
+#: templates/about.html:144
+msgid "ВГК — Высокотехнологичная геологоразведочная компания"
+msgstr "ЖТК — Жоғары технологиялық геологиялық барлау компаниясы"
+
+#: templates/about.html:156 templates/about.html:174 templates/base.html:56
+#: templates/base.html:164 templates/board.html:26 templates/governance.html:4
+#: templates/governance.html:24
+msgid "Корпоративное управление"
+msgstr "Корпоративтік басқару"
+
+#: templates/about.html:157
+msgid "ОРГАНИЗАЦИОННАЯ<br>СТРУКТУРА"
+msgstr "ҰЙЫМДЫҚ<br>ҚҰРЫЛЫМ"
+
+#: templates/about.html:161
+msgid "Организационная структура АО «Казгеология»"
+msgstr "«Қазгеология» АҚ ұйымдық құрылымы"
+
+#: templates/about.html:164
+msgid "Структура будет добавлена в ближайшее время."
+msgstr "Құрылым жақын арада қосылады."
+
+#: templates/about.html:175
+msgid ""
+"Ознакомьтесь с составом Совета директоров и нормативными документами "
+"компании."
+msgstr ""
+"Директорлар кеңесінің құрамымен және компанияның нормативтік құжаттарымен "
+"танысыңыз."
+
+#: templates/about.html:178 templates/board.html:39
+msgid "СОВЕТ ДИРЕКТОРОВ"
+msgstr "ДИРЕКТОРЛАР КЕҢЕСІ"
+
+#: templates/base.html:40
+msgid "СВЯЗАТЬСЯ"
+msgstr "БАЙЛАНЫСУ"
+
+#: templates/base.html:52 templates/index.html:33
+msgid "О КОМПАНИИ"
+msgstr "КОМПАНИЯ ТУРАЛЫ"
+
+#: templates/base.html:55 templates/base.html:163 templates/board.html:4
+#: templates/board.html:24 templates/governance.html:163
+msgid "Совет директоров"
+msgstr "Директорлар кеңесі"
+
+#: templates/base.html:61 templates/index.html:89
+msgid "ПРОЕКТЫ"
+msgstr "ЖОБАЛАР"
+
+#: templates/base.html:63 templates/projects.html:24
+msgid "Совместные проекты"
+msgstr "Бірлескен жобалар"
+
+#: templates/base.html:68 templates/investors.html:25
+msgid "ИНВЕСТОРАМ"
+msgstr "ИНВЕСТОРЛАРҒА"
+
+#: templates/base.html:70 templates/investors.html:35
+msgid "Финансовая отчётность"
+msgstr "Қаржылық есептілік"
+
+#: templates/base.html:71
+msgid "Аффилированные лица"
+msgstr "Үлестес тұлғалар"
+
+#: templates/base.html:76 templates/procurement.html:23
+msgid "ЗАКУПКИ"
+msgstr "САТЫП АЛУЛАР"
+
+#: templates/base.html:78
+msgid "Портал закупок zakup.sk.kz"
+msgstr "zakup.sk.kz сатып алу порталы"
+
+#: templates/base.html:83 templates/compliance.html:23
+msgid "КОМПЛАЕНС"
+msgstr "КОМПЛАЕНС"
+
+#: templates/base.html:85
+msgid "Комплаенс-система"
+msgstr "Комплаенс-жүйесі"
+
+#: templates/base.html:86 templates/compliance.html:134
+#: templates/compliance.html:177
+msgid "Горячая линия"
+msgstr "Сенім телефоны"
+
+#: templates/base.html:87 templates/base.html:169 templates/careers.html:4
+#: templates/careers.html:20
+msgid "Вакансии"
+msgstr "Бос орындар"
+
+#: templates/base.html:102
+msgid "КОНТАКТЫ"
+msgstr "БАЙЛАНЫСТАР"
+
+#: templates/base.html:103
+msgid "МЫ ВСЕГДА РАДЫ ВАШЕМУ ОБРАЩЕНИЮ"
+msgstr "БІЗ СІЗДІҢ ӨТІНІШІҢІЗГЕ ӘРҚАШАН ҚУАНЫШТЫМЫЗ"
+
+#: templates/base.html:109
+msgid "Нужна дополнительная информация?"
+msgstr "Қосымша ақпарат керек пе?"
+
+#: templates/base.html:111
+msgid ""
+"Есть проект или вопросы по нашим услугам? Заполните форму ниже — наша "
+"команда свяжется с вами в ближайшее время."
+msgstr ""
+"Жобаңыз бар ма немесе қызметтеріміз бойынша сұрақтарыңыз бар ма? Төмендегі "
+"форманы толтырыңыз — біздің команда жақын арада сізбен хабарласады."
+
+#: templates/base.html:116
+msgid "Спасибо за обращение! Мы свяжемся с вами в ближайшее время."
+msgstr "Өтінішіңіз үшін рахмет! Жақын арада сізбен хабарласамыз."
+
+#: templates/base.html:120
+msgid "Ваше имя"
+msgstr "Атыңыз"
+
+#: templates/base.html:124
+msgid "Email адрес"
+msgstr "Email мекенжайы"
+
+#: templates/base.html:129
+msgid "Тема"
+msgstr "Тақырып"
+
+#: templates/base.html:133
+msgid "Сообщение"
+msgstr "Хабарлама"
+
+#: templates/base.html:136
+msgid "ОТПРАВИТЬ СООБЩЕНИЕ"
+msgstr "ХАБАРЛАМА ЖІБЕРУ"
+
+#: templates/base.html:148
+msgid "Изучаем недра Казахстана."
+msgstr "Қазақстан жер қойнауын зерттейміз."
+
+#: templates/base.html:149
+msgid "Основано в 2011 году"
+msgstr "2011 жылы құрылған"
+
+#: templates/base.html:153
+msgid "ЮРИДИЧЕСКИЙ АДРЕС"
+msgstr "ЗАҢДЫ МЕКЕНЖАЙЫ"
+
+#: templates/base.html:155
+msgid "г. Астана, район Нұра,"
+msgstr "Астана қ., Нұра ауданы,"
+
+#: templates/base.html:155
+msgid "ул. Сығанақ, строение 17/10,"
+msgstr "Сығанақ к-сі, 17/10 ғимарат,"
+
+#: templates/base.html:155
+msgid "почтовый индекс: 010000"
+msgstr "пошта индексі: 010000"
+
+#: templates/base.html:160
+msgid "КОМПАНИЯ"
+msgstr "КОМПАНИЯ"
+
+#: templates/base.html:165 templates/projects.html:22
+msgid "Проекты"
+msgstr "Жобалар"
+
+#: templates/base.html:166 templates/investors.html:4
+#: templates/investors.html:22
+msgid "Инвесторам"
+msgstr "Инвесторларға"
+
+#: templates/base.html:167 templates/procurement.html:4
+#: templates/procurement.html:20
+msgid "Закупки"
+msgstr "Сатып алулар"
+
+#: templates/base.html:168 templates/compliance.html:4
+#: templates/compliance.html:20
+msgid "Комплаенс"
+msgstr "Комплаенс"
+
+#: templates/base.html:174
+msgid "Наверх"
+msgstr "Жоғары"
+
+#: templates/base.html:182
+msgid "© 2012–2026 АО «Казгеология». Все права защищены."
+msgstr "© 2012–2026 «Қазгеология» АҚ. Барлық құқықтар қорғалған."
+
+#: templates/base.html:184 templates/privacy_policy.html:4
+#: templates/privacy_policy.html:19
+msgid "Политика конфиденциальности"
+msgstr "Құпиялылық саясаты"
+
+#: templates/base.html:186
+msgid "Самрук-Казына"
+msgstr "Самұрық-Қазына"
+
+#: templates/board.html:27
+msgid "СОВЕТ<br>ДИРЕКТОРОВ"
+msgstr "ДИРЕКТОРЛАР<br>КЕҢЕСІ"
+
+#: templates/board.html:28
+msgid ""
+"Нормативные документы, регулирующие деятельность Совета директоров и его "
+"комитетов АО «Казгеология»"
+msgstr ""
+"«Қазгеология» АҚ Директорлар кеңесі мен оның комитеттерінің қызметін "
+"реттейтін нормативтік құжаттар"
+
+#: templates/board.html:38
+msgid "Состав"
+msgstr "Құрамы"
+
+#: templates/board.html:58
+msgid "Состав Совета директоров будет добавлен в ближайшее время."
+msgstr "Директорлар кеңесінің құрамы жақын арада қосылады."
+
+#: templates/board.html:78
+msgid "Комитеты"
+msgstr "Комитеттер"
+
+#: templates/board.html:79
+msgid "СОСТАВ КОМИТЕТОВ СД"
+msgstr "ДК КОМИТЕТТЕРІНІҢ ҚҰРАМЫ"
+
+#: templates/board.html:109
+msgid "Состав комитетов будет добавлен в ближайшее время."
+msgstr "Комитеттер құрамы жақын арада қосылады."
+
+#: templates/board.html:122
+msgid "Документы"
+msgstr "Құжаттар"
+
+#: templates/board.html:123
+msgid "НОРМАТИВНАЯ БАЗА"
+msgstr "НОРМАТИВТІК БАЗА"
+
+#: templates/board.html:133 templates/board.html:149 templates/board.html:165
+#: templates/board.html:181 templates/compliance.html:110
+#: templates/governance.html:112 templates/governance.html:127
+msgid "Положение · PDF"
+msgstr "Ереже · PDF"
+
+#: templates/board.html:134 templates/governance.html:113
+msgid "Положение о Совете директоров"
+msgstr "Директорлар кеңесі туралы ереже"
+
+#: templates/board.html:138 templates/board.html:154 templates/board.html:170
+#: templates/board.html:186 templates/board.html:202
+msgid "PDF документ"
+msgstr "PDF құжаты"
+
+#: templates/board.html:140 templates/board.html:156 templates/board.html:172
+#: templates/board.html:188 templates/board.html:204
+#: templates/compliance.html:88 templates/compliance.html:102
+#: templates/compliance.html:116 templates/governance.html:103
+#: templates/governance.html:118 templates/governance.html:134
+#: templates/governance.html:149 templates/investors.html:56
+#: templates/investors.html:73 templates/investors.html:115
+msgid "СКАЧАТЬ"
+msgstr "ЖҮКТЕП АЛУ"
+
+#: templates/board.html:150
+msgid ""
+"Положение о Комитете по стратегическому планированию, инвестициям и "
+"устойчивому развитию СД"
+msgstr ""
+"ДК Стратегиялық жоспарлау, инвестициялар және орнықты даму комитеті туралы "
+"ереже"
+
+#: templates/board.html:166
+msgid ""
+"Положение о Комитете по кадрам, вознаграждениям и социальным вопросам СД"
+msgstr "ДК Кадрлар, сыйақылар және әлеуметтік мәселелер комитеті туралы ереже"
+
+#: templates/board.html:182
+msgid "Положение о Комитете по аудиту СД"
+msgstr "ДК Аудит комитеті туралы ереже"
+
+#: templates/board.html:197 templates/compliance.html:81
+#: templates/governance.html:96
+msgid "Кодекс · PDF"
+msgstr "Кодекс · PDF"
+
+#: templates/board.html:198
+msgid "Кодекс корпоративного управления (с изм. от 15.08.2024)"
+msgstr "Корпоративтік басқару кодексі (15.08.2024 ж. өзг.)"
+
+#: templates/board.html:217
+msgid "Остались вопросы по документам?"
+msgstr "Құжаттар бойынша сұрақтарыңыз бар ма?"
+
+#: templates/board.html:218
+msgid ""
+"По всем вопросам корпоративного управления вы можете обратиться в "
+"секретариат Совета директоров."
+msgstr ""
+"Корпоративтік басқарудың барлық мәселелері бойынша Директорлар кеңесінің "
+"хатшылығына жүгіне аласыз."
+
+#: templates/board.html:221 templates/investors.html:160
+#: templates/projects.html:366
+msgid "НАПИСАТЬ НАМ"
+msgstr "БІЗГЕ ЖАЗУ"
+
+#: templates/careers.html:22
+msgid "Карьера в Казгеологии"
+msgstr "Қазгеологиядағы мансап"
+
+#: templates/careers.html:23
+msgid "ВАКАНСИИ"
+msgstr "БОС ОРЫНДАР"
+
+#: templates/careers.html:24
+msgid ""
+"Мы постоянно развиваемся и расширяем команду, открывая новые рабочие места "
+"для специалистов, готовых расти вместе с нами."
+msgstr ""
+"Біз үнемі дамып, командамызды кеңейтеміз, бізбен бірге өсуге дайын "
+"мамандарға жаңа жұмыс орындарын ашамыз."
+
+#: templates/careers.html:34
+msgid "О работе у нас"
+msgstr "Бізде жұмыс істеу туралы"
+
+#: templates/careers.html:35
+msgid "Присоединяйтесь к нашей команде"
+msgstr "Біздің командаға қосылыңыз"
+
+#: templates/careers.html:36
+msgid ""
+"Мы внимательно подходим к подбору сотрудников, ценим профессионализм, "
+"ответственность и стремление к развитию."
+msgstr ""
+"Біз қызметкерлерді іріктеуге мұқият қараймыз, кәсібилікті, жауапкершілікті "
+"және дамуға ұмтылысты бағалаймыз."
+
+#: templates/careers.html:37
+msgid ""
+"Для нас важно создавать комфортную рабочую среду, в которой каждый сотрудник"
+" может реализовать свой потенциал и внести значимый вклад в общее дело."
+msgstr ""
+"Біз үшін әрбір қызметкер өз әлеуетін жүзеге асырып, ортақ іске елеулі үлес "
+"қоса алатын жайлы жұмыс ортасын құру маңызды."
+
+#: templates/careers.html:38
+msgid ""
+"Актуальные вакансии и информация о процессе отбора размещаются на "
+"официальной платформе по найму персонала QSAMRUK."
+msgstr ""
+"Өзекті бос орындар мен іріктеу процесі туралы ақпарат персоналды жалдау "
+"бойынша ресми QSAMRUK платформасында орналастырылады."
+
+#: templates/careers.html:40
+msgid "СМОТРЕТЬ ВАКАНСИИ"
+msgstr "БОС ОРЫНДАРДЫ КӨРУ"
+
+#: templates/careers.html:48
+msgid "Профессионализм"
+msgstr "Кәсібилік"
+
+#: templates/careers.html:49
+msgid "Ценим экспертизу и высокие стандарты работы"
+msgstr "Сараптаманы және жұмыстың жоғары стандарттарын бағалаймыз"
+
+#: templates/careers.html:55 templates/index.html:317
+msgid "Ответственность"
+msgstr "Жауапкершілік"
+
+#: templates/careers.html:56
+msgid "Каждый сотрудник — часть общего результата"
+msgstr "Әрбір қызметкер — жалпы нәтиженің бөлігі"
+
+#: templates/careers.html:62
+msgid "Развитие"
+msgstr "Даму"
+
+#: templates/careers.html:63
+msgid "Поддерживаем рост и обучение на каждом этапе"
+msgstr "Әр кезеңде өсу мен оқуды қолдаймыз"
+
+#: templates/careers.html:69
+msgid "Комфортная среда"
+msgstr "Жайлы орта"
+
+#: templates/careers.html:70
+msgid "Создаём условия для реализации потенциала"
+msgstr "Әлеуетті жүзеге асыруға жағдай жасаймыз"
+
+#: templates/compliance.html:24
+msgid ""
+"Обеспечение соответствия деятельности компании законодательству, отраслевым "
+"стандартам и обязательным требованиям"
+msgstr ""
+"Компания қызметінің заңнамаға, салалық стандарттарға және міндетті "
+"талаптарға сәйкестігін қамтамасыз ету"
+
+#: templates/compliance.html:27
+msgid "Комплаенс-система Казгеология"
+msgstr "Қазгеология комплаенс-жүйесі"
+
+#: templates/compliance.html:36
+msgid "О системе"
+msgstr "Жүйе туралы"
+
+#: templates/compliance.html:37
+msgid "Комплаенс-система АО «Казгеология»"
+msgstr "«Қазгеология» АҚ комплаенс-жүйесі"
+
+#: templates/compliance.html:38
+msgid ""
+"Комплаенс-система АО «Казгеология» обеспечивает соответствие деятельности "
+"компании законодательству, отраслевым стандартам и прочим обязательным "
+"требованиям."
+msgstr ""
+"«Қазгеология» АҚ комплаенс-жүйесі компания қызметінің заңнамаға, салалық "
+"стандарттарға және өзге де міндетті талаптарға сәйкестігін қамтамасыз етеді."
+
+#: templates/compliance.html:39
+msgid ""
+"Основной целью деятельности комплаенс-системы Общества является обеспечение "
+"соблюдения регуляторных требований по вопросам противодействия коррупции и "
+"определение политики в этом направлении, а также осуществление контроля за "
+"реализацией мероприятий по противодействию коррупции, включая оценку "
+"коррупционных рисков в Обществе и его дочерних организациях, внедрение "
+"механизмов предотвращения коррупционных рисков в соответствии с "
+"антикоррупционным законодательством Республики Казахстан и лучшей "
+"международной практикой противодействия коррупции."
+msgstr ""
+"Қоғам комплаенс-жүйесі қызметінің негізгі мақсаты — сыбайлас жемқорлыққа "
+"қарсы іс-қимыл мәселелері бойынша реттеуші талаптардың сақталуын қамтамасыз "
+"ету және осы бағыттағы саясатты айқындау, сондай-ақ Қазақстан "
+"Республикасының сыбайлас жемқорлыққа қарсы заңнамасына және сыбайлас "
+"жемқорлыққа қарсы іс-қимылдың үздік халықаралық тәжірибесіне сәйкес Қоғамда "
+"және оның еншілес ұйымдарында сыбайлас жемқорлық тәуекелдерін бағалауды, "
+"сыбайлас жемқорлық тәуекелдерінің алдын алу тетіктерін енгізуді қоса "
+"алғанда, сыбайлас жемқорлыққа қарсы іс-қимыл шараларының іске асырылуын "
+"бақылауды жүзеге асыру."
+
+#: templates/compliance.html:42
+msgid "Основные направления деятельности Службы комплаенс"
+msgstr "Комплаенс қызметінің негізгі бағыттары"
+
+#: templates/compliance.html:45
+msgid "Положительная деловая репутация"
+msgstr "Оң іскерлік бедел"
+
+#: templates/compliance.html:49
+msgid ""
+"Соблюдение законодательства, общепринятых норм корпоративной и деловой этики"
+msgstr ""
+"Заңнаманы, корпоративтік және іскерлік әдептің жалпыға бірдей нормаларын "
+"сақтау"
+
+#: templates/compliance.html:53
+msgid "Противодействие коррупции"
+msgstr "Сыбайлас жемқорлыққа қарсы іс-қимыл"
+
+#: templates/compliance.html:57
+msgid "Управление конфликтами интересов"
+msgstr "Мүдделер қақтығысын басқару"
+
+#: templates/compliance.html:61
+msgid ""
+"Своевременное информирование о случаях действительного или возможного "
+"нарушения положений Кодекса деловой этики"
+msgstr ""
+"Іскерлік әдеп кодексі ережелерінің нақты немесе ықтимал бұзылуы туралы "
+"уақтылы хабарлау"
+
+#: templates/compliance.html:72 templates/governance.html:86
+#: templates/procurement.html:33
+msgid "Нормативная база"
+msgstr "Нормативтік база"
+
+#: templates/compliance.html:73
+msgid "ВНУТРЕННИЕ ДОКУМЕНТЫ ПО ВОПРОСАМ КОМПЛАЕНС"
+msgstr "КОМПЛАЕНС МӘСЕЛЕЛЕРІ БОЙЫНША ІШКІ ҚҰЖАТТАР"
+
+#: templates/compliance.html:75
+msgid ""
+"В целях соответствия стандартам этичного поведения и добросовестного ведения"
+" деятельности АО «Казгеология» руководствуется следующими внутренними "
+"документами:"
+msgstr ""
+"Этикалық мінез-құлық стандарттарына және адал қызмет жүргізуге сәйкес келу "
+"мақсатында «Қазгеология» АҚ келесі ішкі құжаттарды басшылыққа алады:"
+
+#: templates/compliance.html:82
+msgid "Кодекс деловой этики АО «Казгеология»"
+msgstr "«Қазгеология» АҚ іскерлік әдеп кодексі"
+
+#: templates/compliance.html:83
+msgid "2024 г."
+msgstr "2024 ж."
+
+#: templates/compliance.html:96 templates/governance.html:143
+msgid "Политика · PDF"
+msgstr "Саясат · PDF"
+
+#: templates/compliance.html:97 templates/governance.html:144
+msgid "Политика противодействия коррупции"
+msgstr "Сыбайлас жемқорлыққа қарсы іс-қимыл саясаты"
+
+#: templates/compliance.html:111
+msgid "Положение о комплаенс-офицере АО «Казгеология»"
+msgstr "«Қазгеология» АҚ комплаенс-офицері туралы ереже"
+
+#: templates/compliance.html:132
+msgid "Если у вас возникли проблемы — не игнорируйте их!"
+msgstr "Егер сізде мәселе туындаса — оларды елемеңіз!"
+
+#: templates/compliance.html:135
+msgid ""
+"Необходимую информацию можете отправлять через независимую горячую линию по "
+"вопросам этики, противодействия мошенничеству, хищениям и коррупции."
+msgstr ""
+"Қажетті ақпаратты этика, алаяқтыққа, ұрлыққа және сыбайлас жемқорлыққа қарсы"
+" іс-қимыл мәселелері бойынша тәуелсіз сенім телефоны арқылы жібере аласыз."
+
+#: templates/compliance.html:141
+msgid "Телефон конфиденциального информирования"
+msgstr "Құпия хабарлау телефоны"
+
+#: templates/compliance.html:155
+msgid "Электронная почта горячей линии"
+msgstr "Сенім телефонының электрондық поштасы"
+
+#: templates/compliance.html:162
+msgid "Интернет-портал"
+msgstr "Интернет-портал"
+
+#: templates/compliance.html:169
+msgid "Служба комплаенс"
+msgstr "Комплаенс қызметі"
+
+#: templates/compliance.html:180
+msgid "МЫ ГАРАНТИРУЕМ"
+msgstr "БІЗ КЕПІЛДІК БЕРЕМІЗ"
+
+#: templates/compliance.html:182
+msgid "Конфиденциальность"
+msgstr "Құпиялылық"
+
+#: templates/compliance.html:183
+msgid "Анонимность"
+msgstr "Анонимдік"
+
+#: templates/compliance.html:184
+#, python-format
+msgid "100%% рассмотрение обращений"
+msgstr "Өтініштерді 100%% қарау"
+
+#: templates/governance.html:27
+msgid "КОРПОРАТИВНОЕ<br>УПРАВЛЕНИЕ"
+msgstr "КОРПОРАТИВТІК<br>БАСҚАРУ"
+
+#: templates/governance.html:28
+msgid ""
+"Принципы надлежащего корпоративного управления, деловой этики и прозрачности"
+msgstr "Тиісті корпоративтік басқару, іскерлік әдеп және ашықтық қағидаттары"
+
+#: templates/governance.html:38
+msgid ""
+"В процессе своей деятельности Общество обеспечивает соблюдение принципов "
+"надлежащего корпоративного управления, деловой этики и прозрачности во "
+"внутренних отношениях и во взаимодействии с участниками рынка."
+msgstr ""
+"Қызметі барысында Қоғам ішкі қатынастарда және нарық қатысушыларымен өзара "
+"іс-қимылда тиісті корпоративтік басқару, іскерлік әдеп және ашықтық "
+"қағидаттарының сақталуын қамтамасыз етеді."
+
+#: templates/governance.html:39
+msgid ""
+"Корпоративное управление в Обществе осуществляется в соответствии с "
+"законодательством Республики Казахстан, включая Закон Республики Казахстан "
+"«Об акционерных обществах», и иные применимые нормативные правовые акты, а "
+"также с учетом Кодекса корпоративного управления и корпоративных стандартов,"
+" действующих в группе Фонда."
+msgstr ""
+"Қоғамдағы корпоративтік басқару Қазақстан Республикасының заңнамасына, оның "
+"ішінде «Акционерлік қоғамдар туралы» Қазақстан Республикасының Заңына және "
+"өзге де қолданылатын нормативтік құқықтық актілерге, сондай-ақ Қор тобында "
+"қолданыстағы Корпоративтік басқару кодексі мен корпоративтік стандарттарға "
+"сәйкес жүзеге асырылады."
+
+#: templates/governance.html:40
+msgid ""
+"С учетом наличия единственного акционера Общество обеспечивает надлежащую "
+"систему подотчетности, прозрачности принятия решений и эффективного "
+"взаимодействия органов управления с акционером."
+msgstr ""
+"Жалғыз акционердің болуын ескере отырып, Қоғам тиісті есеп берушілік "
+"жүйесін, шешімдер қабылдаудың ашықтығын және басқару органдарының "
+"акционермен тиімді өзара іс-қимылын қамтамасыз етеді."
+
+#: templates/governance.html:41
+msgid ""
+"В Обществе функционируют системы внутреннего контроля, управления рисками и "
+"комплаенс, направленные на обеспечение законности деятельности, "
+"предотвращение конфликта интересов и коррупционных проявлений, а также на "
+"защиту интересов акционера и иных заинтересованных сторон."
+msgstr ""
+"Қоғамда қызметтің заңдылығын қамтамасыз етуге, мүдделер қақтығысы мен "
+"сыбайлас жемқорлық көріністерінің алдын алуға, сондай-ақ акционердің және "
+"өзге де мүдделі тараптардың мүдделерін қорғауға бағытталған ішкі бақылау, "
+"тәуекелдерді басқару және комплаенс жүйелері жұмыс істейді."
+
+#: templates/governance.html:42
+msgid ""
+"Общество внедряет и последовательно реализует принципы устойчивого развития "
+"(ESG), включая экологическую, социальную и управленческую ответственность, с"
+" учетом корпоративной политики и стратегических ориентиров Фонда."
+msgstr ""
+"Қоғам Қордың корпоративтік саясаты мен стратегиялық бағдарларын ескере "
+"отырып, экологиялық, әлеуметтік және басқарушылық жауапкершілікті қоса "
+"алғанда, орнықты даму (ESG) қағидаттарын енгізеді және дәйекті түрде жүзеге "
+"асырады."
+
+#: templates/governance.html:46
+msgid "Ключевые принципы"
+msgstr "Негізгі қағидаттар"
+
+#: templates/governance.html:50
+msgid "Законность"
+msgstr "Заңдылық"
+
+#: templates/governance.html:51
+msgid "Соответствие законодательству РК и нормативным актам"
+msgstr "ҚР заңнамасы мен нормативтік актілерге сәйкестік"
+
+#: templates/governance.html:57 templates/index.html:302
+msgid "Прозрачность"
+msgstr "Ашықтық"
+
+#: templates/governance.html:58
+msgid "Открытость в принятии решений и взаимодействии"
+msgstr "Шешім қабылдау мен өзара іс-қимылдағы ашықтық"
+
+#: templates/governance.html:64
+msgid "Внутренний контроль"
+msgstr "Ішкі бақылау"
+
+#: templates/governance.html:65
+msgid "Системы управления рисками и комплаенс"
+msgstr "Тәуекелдерді басқару және комплаенс жүйелері"
+
+#: templates/governance.html:72
+msgid "Экологическая, социальная и управленческая ответственность"
+msgstr "Экологиялық, әлеуметтік және басқарушылық жауапкершілік"
+
+#: templates/governance.html:87
+msgid "ДОКУМЕНТЫ"
+msgstr "ҚҰЖАТТАР"
+
+#: templates/governance.html:97
+msgid "Кодекс корпоративного управления"
+msgstr "Корпоративтік басқару кодексі"
+
+#: templates/governance.html:98
+msgid "от 05.11.2012 г. (с изм. от 15.08.2024 г.)"
+msgstr "05.11.2012 ж. (15.08.2024 ж. өзг.)"
+
+#: templates/governance.html:128
+msgid "Положение о Корпоративном секретаре"
+msgstr "Корпоративтік хатшы туралы ереже"
+
+#: templates/governance.html:129
+msgid "2023 г."
+msgstr "2023 ж."
+
+#: templates/governance.html:164
+msgid "Ознакомьтесь с составом Совета директоров и положениями о комитетах."
+msgstr ""
+"Директорлар кеңесінің құрамымен және комитеттер туралы ережелермен "
+"танысыңыз."
+
+#: templates/governance.html:167
+msgid "ПЕРЕЙТИ"
+msgstr "ӨТУ"
+
+#: templates/index.html:4
+msgid "Казгеология — Геологическое изучение недр Казахстана"
+msgstr "Қазгеология — Қазақстан жер қойнауын геологиялық зерттеу"
+
+#: templates/index.html:37
+msgid "Более 40 млрд тенге — общий объём государственного финансирования"
+msgstr "40 млрд теңгеден астам — мемлекеттік қаржыландырудың жалпы көлемі"
+
+#: templates/index.html:43
+msgid ""
+"Мы проводим геологическое изучение недр Казахстана, обеспечивая решение "
+"геологических задач в различных отраслях недропользования. Компания "
+"располагает квалифицированными кадрами, экспертизой, опытом и финансовой "
+"устойчивостью для оперативного и безопасного выполнения проектов."
+msgstr ""
+"Біз Қазақстан жер қойнауын геологиялық зерттеуді жүргізіп, жер қойнауын "
+"пайдаланудың әртүрлі салаларында геологиялық міндеттердің шешілуін "
+"қамтамасыз етеміз. Компанияда жобаларды жедел әрі қауіпсіз орындау үшін "
+"білікті кадрлар, сараптама, тәжірибе және қаржылық тұрақтылық бар."
+
+#: templates/index.html:58
+msgid "Более 500 специалистов и экспертов"
+msgstr "500-ден астам маман мен сарапшы"
+
+#: templates/index.html:60
+msgid "СПЕЦИАЛИСТОВ"
+msgstr "МАМАН"
+
+#: templates/index.html:63
+msgid "Работаем во всех регионах страны"
+msgstr "Елдің барлық өңірлерінде жұмыс істейміз"
+
+#: templates/index.html:65
+msgid "РЕГИОНОВ"
+msgstr "ӨҢІР"
+
+#: templates/index.html:68
+msgid "Более 200 проектов с момента основания"
+msgstr "Құрылғаннан бері 200-ден астам жоба"
+
+#: templates/index.html:70
+msgid "+ПРОЕКТОВ"
+msgstr "+ЖОБА"
+
+#: templates/index.html:77
+msgid "УЗНАТЬ БОЛЬШЕ"
+msgstr "КӨБІРЕК БІЛУ"
+
+#: templates/index.html:88
+msgid "ПОСЛЕДНИЕ РЕАЛИЗОВАННЫЕ РАБОТЫ"
+msgstr "СОҢҒЫ ОРЫНДАЛҒАН ЖҰМЫСТАР"
+
+#: templates/index.html:96 templates/projects.html:178
+msgid "ТОО «Корпорация Казахмыс»"
+msgstr "«Қазақмыс корпорациясы» ЖШС"
+
+#: templates/index.html:97 templates/projects.html:186
+msgid "Разведка золота и медьсодержащих руд на Алтынказганском рудном поле"
+msgstr "Алтынқазған кен алаңында алтын және құрамында мыс бар кендерді барлау"
+
+#: templates/index.html:98 templates/projects.html:185
+#: templates/projects.html:192
+msgid "Костанайская, Карагандинская обл."
+msgstr "Қостанай, Қарағанды обл."
+
+#: templates/index.html:107 templates/projects.html:229
+msgid "ТОО «Казцинк»"
+msgstr "«Қазмырыш» ЖШС"
+
+#: templates/index.html:108 templates/projects.html:237
+msgid ""
+"Разведка колчеданно-полиметаллических руд на площади Сакмарихинско-"
+"Черноубинская"
+msgstr "Сақмарихин-Черноубин алаңында колчедан-полиметалл кендерін барлау"
+
+#: templates/index.html:109
+msgid "Восточно-Казахстанская обл."
+msgstr "Шығыс Қазақстан обл."
+
+#: templates/index.html:118 templates/projects.html:268
+msgid "Разведка медно-порфировых руд на участке Балхаш-Сарышаган"
+msgstr "Балқаш-Сарышаған учаскесінде мыс-порфирлі кендерді барлау"
+
+#: templates/index.html:119 templates/projects.html:267
+msgid "Балхаш-Сарышаган"
+msgstr "Балқаш-Сарышаған"
+
+#: templates/index.html:127
+msgid "ВСЕ ПРОЕКТЫ"
+msgstr "БАРЛЫҚ ЖОБАЛАР"
+
+#: templates/index.html:207
+msgid "ИСТОРИЯ"
+msgstr "ТАРИХ"
+
+#: templates/index.html:213
+msgid "Основание компании"
+msgstr "Компанияның құрылуы"
+
+#: templates/index.html:214
+msgid ""
+"АО «Казгеология» создано как высокотехнологичная геологоразведочная компания"
+" Республики Казахстан."
+msgstr ""
+"«Қазгеология» АҚ Қазақстан Республикасының жоғары технологиялық геологиялық "
+"барлау компаниясы ретінде құрылды."
+
+#: templates/index.html:221
+msgid "Вхождение в Тау-Кен Самрук"
+msgstr "Тау-Кен Самұрық құрамына кіру"
+
+#: templates/index.html:222
+#, python-format
+msgid ""
+"100%% акций компании переданы АО «НГК «Тау-Кен Самрук» — национальному "
+"горнорудному холдингу Республики Казахстан."
+msgstr ""
+"Компания акцияларының 100%%-ы Қазақстан Республикасының ұлттық тау-кен "
+"холдингі — «Тау-Кен Самұрық» ҰТК» АҚ-ға берілді."
+
+#: templates/index.html:229
+msgid "Переименование в ВГК"
+msgstr "ЖТК болып қайта аталуы"
+
+#: templates/index.html:230
+msgid ""
+"Компания получила статус национальной геологоразведочной компании и "
+"переименована в АО «Казгеология»."
+msgstr ""
+"Компания ұлттық геологиялық барлау компаниясы мәртебесін алып, «Қазгеология»"
+" АҚ болып қайта аталды."
+
+#: templates/index.html:236
+msgid "НАШИ ПАРТНЁРЫ И АФФИЛИРОВАННЫЕ СТРУКТУРЫ"
+msgstr "БІЗДІҢ СЕРІКТЕСТЕР МЕН ҮЛЕСТЕС ҚҰРЫЛЫМДАР"
+
+#: templates/index.html:291
+msgid "Принципы управления"
+msgstr "Басқару қағидаттары"
+
+#: templates/index.html:292
+msgid "КОРПОРАТИВНОЕ УПРАВЛЕНИЕ"
+msgstr "КОРПОРАТИВТІК БАСҚАРУ"
+
+#: templates/index.html:293
+msgid ""
+"Система корпоративного управления АО «Казгеология» построена на "
+"международных стандартах и обеспечивает эффективную защиту прав акционеров и"
+" устойчивое развитие компании."
+msgstr ""
+"«Қазгеология» АҚ корпоративтік басқару жүйесі халықаралық стандарттарға "
+"негізделген және акционерлер құқықтарының тиімді қорғалуын әрі компанияның "
+"орнықты дамуын қамтамасыз етеді."
+
+#: templates/index.html:295
+msgid "ПОДРОБНЕЕ"
+msgstr "ТОЛЫҒЫРАҚ"
+
+#: templates/index.html:303
+msgid "Открытое раскрытие информации акционерам и заинтересованным лицам"
+msgstr "Акционерлер мен мүдделі тұлғаларға ақпаратты ашық ұсыну"
+
+#: templates/index.html:310
+msgid "Подотчётность"
+msgstr "Есеп берушілік"
+
+#: templates/index.html:311
+msgid "Ответственность органов управления перед акционерами"
+msgstr "Басқару органдарының акционерлер алдындағы жауапкершілігі"
+
+#: templates/index.html:318
+msgid "Соответствие деятельности законодательству и этическим нормам"
+msgstr "Қызметтің заңнама мен әдеп нормаларына сәйкестігі"
+
+#: templates/index.html:324
+msgid "Справедливость"
+msgstr "Әділдік"
+
+#: templates/index.html:325
+msgid "Равное отношение ко всем акционерам и участникам рынка"
+msgstr "Барлық акционерлер мен нарық қатысушыларына тең қарым-қатынас"
+
+#: templates/investors.html:24 templates/investors.html:93
+msgid "Раскрытие информации"
+msgstr "Ақпаратты ашу"
+
+#: templates/investors.html:26
+msgid ""
+"Финансовая отчётность, списки аффилированных лиц и корпоративный календарь "
+"АО «Казгеология»"
+msgstr ""
+"«Қазгеология» АҚ қаржылық есептілігі, үлестес тұлғалар тізімдері және "
+"корпоративтік күнтізбесі"
+
+#: templates/investors.html:36
+msgid "ОТЧЁТНОСТЬ"
+msgstr "ЕСЕПТІЛІК"
+
+#: templates/investors.html:49
+msgid "Консолидированная · PDF"
+msgstr "Шоғырландырылған · PDF"
+
+#: templates/investors.html:50
+msgid "Консолидированная финансовая отчётность"
+msgstr "Шоғырландырылған қаржылық есептілік"
+
+#: templates/investors.html:66
+msgid "Отдельная · PDF"
+msgstr "Жеке · PDF"
+
+#: templates/investors.html:67
+msgid "Отдельная финансовая отчётность"
+msgstr "Жеке қаржылық есептілік"
+
+#: templates/investors.html:82 templates/investors.html:120
+msgid "Документы будут добавлены в ближайшее время."
+msgstr "Құжаттар жақын арада қосылады."
+
+#: templates/investors.html:94
+msgid "СПИСОК АФФИЛИРОВАННЫХ ЛИЦ"
+msgstr "ҮЛЕСТЕС ТҰЛҒАЛАР ТІЗІМІ"
+
+#: templates/investors.html:101
+msgid "Период"
+msgstr "Кезең"
+
+#: templates/investors.html:102 templates/privacy_policy.html:31
+msgid "Документ"
+msgstr "Құжат"
+
+#: templates/investors.html:103
+msgid "Формат"
+msgstr "Формат"
+
+#: templates/investors.html:111
+msgid "Список аффилированных лиц АО «Казгеология»"
+msgstr "«Қазгеология» АҚ үлестес тұлғалар тізімі"
+
+#: templates/investors.html:134
+msgid "Корпоративные события"
+msgstr "Корпоративтік оқиғалар"
+
+#: templates/investors.html:135
+msgid "КАЛЕНДАРЬ СОБЫТИЙ"
+msgstr "ОҚИҒАЛАР КҮНТІЗБЕСІ"
+
+#: templates/investors.html:145
+msgid "События будут добавлены в ближайшее время."
+msgstr "Оқиғалар жақын арада қосылады."
+
+#: templates/investors.html:156
+msgid "Остались вопросы?"
+msgstr "Сұрақтарыңыз қалды ма?"
+
+#: templates/investors.html:157
+msgid ""
+"По вопросам раскрытия информации обращайтесь в корпоративный секретариат."
+msgstr "Ақпаратты ашу мәселелері бойынша корпоративтік хатшылыққа жүгініңіз."
+
+#: templates/privacy_policy.html:35
+msgid "Дата обновления"
+msgstr "Жаңарту күні"
+
+#: templates/privacy_policy.html:39
+msgid "Контакт"
+msgstr "Байланыс"
+
+#: templates/procurement.html:24
+msgid ""
+"Все закупочные процедуры осуществляются в соответствии с Порядком "
+"осуществления закупок АО «Самрук-Қазына»"
+msgstr ""
+"Барлық сатып алу рәсімдері «Самұрық-Қазына» АҚ сатып алуды жүзеге асыру "
+"тәртібіне сәйкес жүргізіледі"
+
+#: templates/procurement.html:34
+msgid ""
+"Все закупочные процедуры осуществляются в соответствии с Порядком "
+"осуществления закупок АО «Фонд национального благосостояния «Самрук-Қазына» "
+"и юридическими лицами, пятьдесят и более процентов голосующих акций (долей "
+"участия) которых прямо или косвенно принадлежат АО «Самрук-Қазына» на праве "
+"собственности или доверительного управления»."
+msgstr ""
+"Барлық сатып алу рәсімдері «Самұрық-Қазына» ұлттық әл-ауқат қоры» АҚ және "
+"дауыс беретін акцияларының (қатысу үлестерінің) елу және одан да көп пайызы "
+"тікелей немесе жанама түрде «Самұрық-Қазына» АҚ-ға меншік немесе сенімгерлік"
+" басқару құқығымен тиесілі заңды тұлғалардың сатып алуды жүзеге асыру "
+"тәртібіне сәйкес жүргізіледі."
+
+#: templates/procurement.html:40
+msgid "Портал закупок"
+msgstr "Сатып алу порталы"
+
+#: templates/procurement.html:45
+msgid "СКАЧАТЬ ПЛАН ЗАКУПОК"
+msgstr "САТЫП АЛУ ЖОСПАРЫН ЖҮКТЕП АЛУ"
+
+#: templates/procurement.html:57
+msgid "2026 год"
+msgstr "2026 жыл"
+
+#: templates/procurement.html:58
+msgid "ПЛАН ЗАКУПОК ТОВАРОВ, РАБОТ И УСЛУГ"
+msgstr "ТАУАРЛАР, ЖҰМЫСТАР МЕН ҚЫЗМЕТТЕРДІ САТЫП АЛУ ЖОСПАРЫ"
+
+#: templates/procurement.html:65
+msgid "1. Товары"
+msgstr "1. Тауарлар"
+
+#: templates/procurement.html:66 templates/procurement.html:147
+#: templates/procurement.html:190
+msgid "Итого:"
+msgstr "Барлығы:"
+
+#: templates/procurement.html:66 templates/procurement.html:147
+#: templates/procurement.html:190
+msgid "(с НДС)"
+msgstr "(ҚҚС-пен)"
+
+#: templates/procurement.html:72 templates/procurement.html:153
+#: templates/procurement.html:196
+msgid "№"
+msgstr "№"
+
+#: templates/procurement.html:73 templates/procurement.html:154
+#: templates/procurement.html:197
+msgid "Наименование"
+msgstr "Атауы"
+
+#: templates/procurement.html:74 templates/procurement.html:155
+#: templates/procurement.html:198
+msgid "Способ закупок"
+msgstr "Сатып алу тәсілі"
+
+#: templates/procurement.html:75 templates/procurement.html:157
+#: templates/procurement.html:200
+msgid "Сумма без НДС, тенге"
+msgstr "ҚҚС-сыз сома, теңге"
+
+#: templates/procurement.html:76 templates/procurement.html:158
+#: templates/procurement.html:201
+msgid "Сумма с НДС, тенге"
+msgstr "ҚҚС-пен сома, теңге"
+
+#: templates/procurement.html:83
+msgid "Принтер (офисная оргтехника)"
+msgstr "Принтер (кеңсе техникасы)"
+
+#: templates/procurement.html:87 templates/procurement.html:95
+#: templates/procurement.html:103 templates/procurement.html:111
+#: templates/procurement.html:119 templates/procurement.html:127
+#: templates/procurement.html:170 templates/procurement.html:213
+#: templates/procurement.html:222 templates/procurement.html:231
+#: templates/procurement.html:240 templates/procurement.html:249
+#: templates/procurement.html:258 templates/procurement.html:267
+#: templates/procurement.html:276 templates/procurement.html:285
+#: templates/procurement.html:294 templates/procurement.html:303
+#: templates/procurement.html:312 templates/procurement.html:321
+#: templates/procurement.html:330
+msgid "Перейти"
+msgstr "Өту"
+
+#: templates/procurement.html:91
+msgid "Напитки"
+msgstr "Сусындар"
+
+#: templates/procurement.html:99
+msgid "Осветительное оборудование"
+msgstr "Жарықтандыру жабдықтары"
+
+#: templates/procurement.html:107
+msgid "Канцелярские товары"
+msgstr "Кеңсе тауарлары"
+
+#: templates/procurement.html:115
+msgid "Картридж (офисная оргтехника)"
+msgstr "Картридж (кеңсе техникасы)"
+
+#: templates/procurement.html:123
+msgid ""
+"Товары из реестра доверенного программного обеспечения и продукции "
+"электронной промышленности"
+msgstr ""
+"Сенімді бағдарламалық қамтамасыз ету және электрондық өнеркәсіп өнімдері "
+"тізілімінен тауарлар"
+
+#: templates/procurement.html:132
+msgid "Итого по товарам"
+msgstr "Тауарлар бойынша барлығы"
+
+#: templates/procurement.html:146
+msgid "2. Работы"
+msgstr "2. Жұмыстар"
+
+#: templates/procurement.html:156 templates/procurement.html:199
+msgid "Срок"
+msgstr "Мерзім"
+
+#: templates/procurement.html:165
+msgid "Работы по разработке/созданию сайтов"
+msgstr "Сайттарды әзірлеу/жасау жұмыстары"
+
+#: templates/procurement.html:175
+msgid "Итого по работам"
+msgstr "Жұмыстар бойынша барлығы"
+
+#: templates/procurement.html:189
+msgid "3. Услуги"
+msgstr "3. Қызметтер"
+
+#: templates/procurement.html:208
+msgid "Услуги по ускоренной/курьерской почтовой связи"
+msgstr "Жедел/курьерлік пошта байланысы қызметтері"
+
+#: templates/procurement.html:217
+msgid "Услуги облачного сервиса (корпоративная почта)"
+msgstr "Бұлттық сервис қызметтері (корпоративтік пошта)"
+
+#: templates/procurement.html:219 templates/procurement.html:318
+msgid "365 кал. дней"
+msgstr "365 күнтізбелік күн"
+
+#: templates/procurement.html:226
+msgid "Услуги по пользованию информационной системой электронных закупок"
+msgstr "Электрондық сатып алу ақпараттық жүйесін пайдалану қызметтері"
+
+#: templates/procurement.html:235
+msgid "Услуги депозитария финансовой отчётности"
+msgstr "Қаржылық есептілік депозитарийі қызметтері"
+
+#: templates/procurement.html:244
+msgid "Услуги по предоставлению доступа к нормативно-правовой базе"
+msgstr "Нормативтік-құқықтық базаға қол жеткізу қызметтері"
+
+#: templates/procurement.html:253
+msgid "Услуги по аренде административных/производственных помещений"
+msgstr "Әкімшілік/өндірістік үй-жайларды жалға алу қызметтері"
+
+#: templates/procurement.html:262
+msgid "Услуги депозитария ценных бумаг"
+msgstr "Бағалы қағаздар депозитарийі қызметтері"
+
+#: templates/procurement.html:271
+msgid "Услуги по обучению персонала (тренинги, повышение квалификации)"
+msgstr "Персоналды оқыту қызметтері (тренингтер, біліктілікті арттыру)"
+
+#: templates/procurement.html:280
+msgid "Услуги по обучению (Порядок закупок АО «Самрук-Қазына»)"
+msgstr "Оқыту қызметтері («Самұрық-Қазына» АҚ сатып алу тәртібі)"
+
+#: templates/procurement.html:289
+msgid "Услуги по оценке 180 градусов (HR Tools)"
+msgstr "180 градус бағалау қызметтері (HR Tools)"
+
+#: templates/procurement.html:291 templates/procurement.html:300
+msgid "до 12.2026"
+msgstr "12.2026 дейін"
+
+#: templates/procurement.html:298
+msgid "Услуги по организации полиграфологического исследования кандидатов"
+msgstr "Үміткерлерді полиграфологиялық зерттеуді ұйымдастыру қызметтері"
+
+#: templates/procurement.html:307
+msgid "Услуги такси"
+msgstr "Такси қызметтері"
+
+#: templates/procurement.html:316
+msgid "Услуги по предоставлению доступа к информационным ресурсам Qsamruk"
+msgstr "Qsamruk ақпараттық ресурстарына қол жеткізу қызметтері"
+
+#: templates/procurement.html:325
+msgid ""
+"Услуги по информационному и имиджевому сопровождению (размещение в СМИ)"
+msgstr "Ақпараттық және имидждік сүйемелдеу қызметтері (БАҚ-та орналастыру)"
+
+#: templates/procurement.html:335
+msgid "Итого по услугам"
+msgstr "Қызметтер бойынша барлығы"
+
+#: templates/procurement.html:347
+msgid "Всего по плану закупок 2026"
+msgstr "2026 сатып алу жоспары бойынша барлығы"
+
+#: templates/procurement.html:351
+msgid "без НДС"
+msgstr "ҚҚС-сыз"
+
+#: templates/procurement.html:356
+msgid "с НДС"
+msgstr "ҚҚС-пен"
+
+#: templates/procurement.html:368
+msgid "Все тендеры на портале закупок"
+msgstr "Барлық тендерлер сатып алу порталында"
+
+#: templates/procurement.html:369
+msgid ""
+"Актуальные тендеры АО «Казгеология» размещены на официальном портале закупок"
+" Самрук-Қазына."
+msgstr ""
+"«Қазгеология» АҚ өзекті тендерлері Самұрық-Қазына сатып алу ресми порталында"
+" орналастырылған."
+
+#: templates/procurement.html:372
+msgid "ПЕРЕЙТИ НА ПОРТАЛ"
+msgstr "ПОРТАЛҒА ӨТУ"
+
+#: templates/projects.html:4
+msgid "Проекты и партнёры"
+msgstr "Жобалар мен серіктестер"
+
+#: templates/projects.html:25
+msgid "ПРОЕКТЫ<br>И ПАРТНЁРЫ"
+msgstr "ЖОБАЛАР<br>МЕН СЕРІКТЕСТЕР"
+
+#: templates/projects.html:26
+msgid ""
+"Геологоразведочные проекты АО «Казгеология» совместно с ведущими "
+"горнодобывающими компаниями Казахстана и мира"
+msgstr ""
+"«Қазгеология» АҚ-ның Қазақстан мен әлемнің жетекші тау-кен компанияларымен "
+"бірлескен геологиялық барлау жобалары"
+
+#: templates/projects.html:32
+msgid "Совместных проектов"
+msgstr "Бірлескен жобалар"
+
+#: templates/projects.html:37
+msgid "Партнёров"
+msgstr "Серіктестер"
+
+#: templates/projects.html:42
+msgid "Регионов Казахстана"
+msgstr "Қазақстан өңірлері"
+
+#: templates/projects.html:56
+#, python-format
+msgid "100%% дочерняя компания"
+msgstr "100%% еншілес компания"
+
+#: templates/projects.html:58
+msgid "Производство буро-взрывных работ на месторождениях"
+msgstr "Кен орындарында бұрғылау-жару жұмыстарын жүргізу"
+
+#: templates/projects.html:67 templates/projects.html:83
+msgid "Партнёрская лаборатория"
+msgstr "Серіктес зертхана"
+
+#: templates/projects.html:69
+msgid "Геохимические и аналитические исследования проб · г. Караганда"
+msgstr "Сынамаларды геохимиялық және аналитикалық зерттеу · Қарағанды қ."
+
+#: templates/projects.html:78
+msgid "Закрыть"
+msgstr "Жабу"
+
+#: templates/projects.html:91
+msgid "г. Караганда, 125-учетный квартал, строение 125/1"
+msgstr "Қарағанды қ., 125-есептік шағын аудан, 125/1 ғимарат"
+
+#: templates/projects.html:98
+msgid "проб в год"
+msgstr "жылына сынама"
+
+#: templates/projects.html:102
+msgid "Структура лаборатории"
+msgstr "Зертхана құрылымы"
+
+#: templates/projects.html:107
+msgid "Отдел пробоподготовки"
+msgstr "Сынама дайындау бөлімі"
+
+#: templates/projects.html:108
+msgid ""
+"Сушка, дробление, измельчение, хранение, распил горных пород, "
+"рентгенофлуоресцентный анализатор (XRF), инфракрасное сканирование TerraSpec"
+msgstr ""
+"Кептіру, ұсақтау, майдалау, сақтау, тау жыныстарын кесу, "
+"рентгенофлуоресценттік анализатор (XRF), TerraSpec инфрақызыл сканерлеу"
+
+#: templates/projects.html:114
+msgid "Отдел пробирного анализа"
+msgstr "Сынамалық талдау бөлімі"
+
+#: templates/projects.html:115
+msgid ""
+"Определение содержания благородных металлов пробирной плавкой "
+"гравиметрическим, атомно-абсорбционным (AAS) и атомно-эмиссионным (ICP-AES) "
+"окончанием"
+msgstr ""
+"Асыл металдар мөлшерін сынамалық балқыту арқылы гравиметриялық, атомдық-"
+"абсорбциялық (AAS) және атомдық-эмиссиялық (ICP-AES) аяқтаумен анықтау"
+
+#: templates/projects.html:121
+msgid "Отдел многоэлементного анализа"
+msgstr "Көпэлементті талдау бөлімі"
+
+#: templates/projects.html:122
+msgid ""
+"Мультиэлементный анализ на 35 элементов с 2- и 4-кислотным разложением (ICP-"
+"AES), атомно-абсорбционный анализ базовых металлов, ИК-анализ серы и "
+"углерода"
+msgstr ""
+"2- және 4-қышқылды ыдыратумен 35 элементке көпэлементті талдау (ICP-AES), "
+"базалық металдарды атомдық-абсорбциялық талдау, күкірт пен көміртектің ИҚ-"
+"талдауы"
+
+#: templates/projects.html:129
+msgid "Преимущества"
+msgstr "Артықшылықтары"
+
+#: templates/projects.html:131
+msgid "Высокая скорость обработки проб"
+msgstr "Сынамаларды өңдеудің жоғары жылдамдығы"
+
+#: templates/projects.html:132
+msgid "Современное оборудование и передовые технологии"
+msgstr "Заманауи жабдық пен озық технологиялар"
+
+#: templates/projects.html:133
+msgid "Автоматизированная система GEMS (LIMS)"
+msgstr "Автоматтандырылған GEMS жүйесі (LIMS)"
+
+#: templates/projects.html:134
+msgid "Более 50 лет опыта в сфере геохимии"
+msgstr "Геохимия саласында 50 жылдан астам тәжірибе"
+
+#: templates/projects.html:135
+msgid "Большинство методов доступны в ИЛ «Караганда»"
+msgstr "Әдістердің көпшілігі «Қарағанды» СЗ қолжетімді"
+
+#: templates/projects.html:143
+msgid "Телефон"
+msgstr "Телефон"
+
+#: templates/projects.html:158
+msgid "ОФИЦИАЛЬНЫЙ САЙТ"
+msgstr "РЕСМИ САЙТ"
+
+#: templates/projects.html:160
+msgid "Прайс-лист доступен на русском и английском языке"
+msgstr "Прайс-парақ орыс және ағылшын тілдерінде қолжетімді"
+
+#: templates/projects.html:172
+msgid "СОВМЕСТНЫЕ ПРОЕКТЫ"
+msgstr "БІРЛЕСКЕН ЖОБАЛАР"
+
+#: templates/projects.html:179
+msgid "6 проектов"
+msgstr "6 жоба"
+
+#: templates/projects.html:193
+msgid ""
+"Разведка золота и медьсодержащих руд на Алтынказган (Центральный участок)"
+msgstr ""
+"Алтынқазған (Орталық учаске) алтын және құрамында мыс бар кендерді барлау"
+
+#: templates/projects.html:199
+msgid "Костанайская обл."
+msgstr "Қостанай обл."
+
+#: templates/projects.html:200
+msgid "Разведка цветных металлов на площади Бенкала"
+msgstr "Бенкала алаңында түсті металдарды барлау"
+
+#: templates/projects.html:206 templates/projects.html:213
+#: templates/projects.html:220 templates/projects.html:275
+#: templates/projects.html:331
+msgid "Карагандинская обл."
+msgstr "Қарағанды обл."
+
+#: templates/projects.html:207
+msgid "Разведка полиметаллических руд на участке Даутбай"
+msgstr "Дәутбай учаскесінде полиметалл кендерін барлау"
+
+#: templates/projects.html:214
+msgid "Разведка полиметаллов на участке Дюсембай"
+msgstr "Дүйсембай учаскесінде полиметалдарды барлау"
+
+#: templates/projects.html:221
+msgid "Разведка меди и попутных компонентов на участке Озерное"
+msgstr "Озерное учаскесінде мыс пен ілеспе компоненттерді барлау"
+
+#: templates/projects.html:230
+msgid "3 проекта"
+msgstr "3 жоба"
+
+#: templates/projects.html:236 templates/projects.html:243
+msgid "ВКО"
+msgstr "ШҚО"
+
+#: templates/projects.html:244
+msgid "Разведка колчеданно-полиметаллических руд на площади Приграничная"
+msgstr "Приграничная алаңында колчедан-полиметалл кендерін барлау"
+
+#: templates/projects.html:250
+msgid "Акмолинская обл., СКО"
+msgstr "Ақмола обл., СҚО"
+
+#: templates/projects.html:251
+msgid "Разведка золота, меди и полиметаллов на площади Кокшетауская"
+msgstr "Көкшетау алаңында алтын, мыс және полиметалдарды барлау"
+
+#: templates/projects.html:260
+msgid "Прочие партнёры"
+msgstr "Өзге серіктестер"
+
+#: templates/projects.html:261
+msgid "11 проектов"
+msgstr "11 жоба"
+
+#: templates/projects.html:276
+msgid "Ордабасская площадь в Карагандинской области"
+msgstr "Қарағанды облысындағы Ордабасы алаңы"
+
+#: templates/projects.html:283
+msgid "Участок Акбулак"
+msgstr "Ақбұлақ учаскесі"
+
+#: templates/projects.html:284
+msgid "Разведка редких земель на участке Акбулак"
+msgstr "Ақбұлақ учаскесінде сирек жер элементтерін барлау"
+
+#: templates/projects.html:291 templates/projects.html:323
+msgid "Жамбылская обл."
+msgstr "Жамбыл обл."
+
+#: templates/projects.html:292
+msgid "Разведка железосодержащих руд на участке Аккудук"
+msgstr "Аққұдық учаскесінде құрамында темір бар кендерді барлау"
+
+#: templates/projects.html:299
+msgid "Площадь Западная"
+msgstr "Западная алаңы"
+
+#: templates/projects.html:300
+msgid ""
+"Разведка золотосодержащих, медьсодержащих руд и попутных компонентов на "
+"площади Западная"
+msgstr ""
+"Западная алаңында құрамында алтын, мыс бар кендер мен ілеспе компоненттерді "
+"барлау"
+
+#: templates/projects.html:307
+msgid "Акмолинская обл."
+msgstr "Ақмола обл."
+
+#: templates/projects.html:308
+msgid ""
+"Разведка золотосодержащих полиметаллических руд на площади Теллур-Степокская"
+msgstr "Теллур-Степок алаңында құрамында алтын бар полиметалл кендерін барлау"
+
+#: templates/projects.html:315
+msgid "Карабайбулак, Сарымсактин, Арпаозен-Култас"
+msgstr "Қарабайбұлақ, Сарымсақтын, Арпаөзен-Құлтас"
+
+#: templates/projects.html:316
+msgid ""
+"Разведка золотосодержащих руд на Карабайбулакском, Сарымсактинском и "
+"Арпаозен-Култасском рудных полях"
+msgstr ""
+"Қарабайбұлақ, Сарымсақтын және Арпаөзен-Құлтас кен алаңдарында құрамында "
+"алтын бар кендерді барлау"
+
+#: templates/projects.html:324
+msgid "Разведка золотосодержащих руд на Дюкаревской площади"
+msgstr "Дюкарев алаңында құрамында алтын бар кендерді барлау"
+
+#: templates/projects.html:332
+msgid "Разведка медно-порфировых руд на участке Коргантас"
+msgstr "Қорғантас учаскесінде мыс-порфирлі кендерді барлау"
+
+#: templates/projects.html:339
+msgid "Абайская обл."
+msgstr "Абай обл."
+
+#: templates/projects.html:340
+msgid ""
+"Разведка золотосодержащих руд на участке Майлишат в пределах Баканасской "
+"площади"
+msgstr ""
+"Бақанас алаңы шегіндегі Майлишат учаскесінде құрамында алтын бар кендерді "
+"барлау"
+
+#: templates/projects.html:347
+msgid "Таулинская площадь"
+msgstr "Таулы алаңы"
+
+#: templates/projects.html:348
+msgid "Разведка гематита (железная руда) на Таулинской площади"
+msgstr "Таулы алаңында гематитті (темір кені) барлау"
+
+#: templates/projects.html:362
+msgid "Заинтересованы в сотрудничестве?"
+msgstr "Ынтымақтастыққа қызығушылық танытасыз ба?"
+
+#: templates/projects.html:363
+msgid ""
+"Свяжитесь с нами для обсуждения совместных геологоразведочных проектов."
+msgstr ""
+"Бірлескен геологиялық барлау жобаларын талқылау үшін бізбен байланысыңыз."

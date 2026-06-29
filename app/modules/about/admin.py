@@ -1,9 +1,10 @@
 from django.contrib import admin
+from modeltranslation.admin import TabbedTranslationAdmin
 from .models import AboutHistoryEvent, AboutSection, AboutStatistic
 
 
 @admin.register(AboutSection)
-class AboutSectionAdmin(admin.ModelAdmin):
+class AboutSectionAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'main_stat_value', 'main_stat_description')
 
     def has_add_permission(self, request):
@@ -16,14 +17,14 @@ class AboutSectionAdmin(admin.ModelAdmin):
 
 
 @admin.register(AboutStatistic)
-class AboutStatisticAdmin(admin.ModelAdmin):
+class AboutStatisticAdmin(TabbedTranslationAdmin):
     list_display = ('value', 'label', 'description', 'order')
     list_editable = ('order',)
     ordering = ('order', 'id')
 
 
 @admin.register(AboutHistoryEvent)
-class AboutHistoryEventAdmin(admin.ModelAdmin):
+class AboutHistoryEventAdmin(TabbedTranslationAdmin):
     list_display = ('year', 'date_label', 'title', 'is_featured', 'is_active', 'order')
     list_editable = ('is_featured', 'is_active', 'order')
     list_filter = ('year', 'is_featured', 'is_active')

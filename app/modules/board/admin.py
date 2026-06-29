@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline
 from .models import BoardCommittee, BoardCommitteeMember, BoardMember, BoardSecretary
 
 
 @admin.register(BoardMember)
-class BoardMemberAdmin(admin.ModelAdmin):
+class BoardMemberAdmin(TabbedTranslationAdmin):
     list_display = ('full_name', 'role', 'photo_preview', 'is_chair', 'is_active', 'order')
     list_editable = ('is_chair', 'is_active', 'order')
     list_filter = ('is_chair', 'is_active')
@@ -24,7 +25,7 @@ class BoardMemberAdmin(admin.ModelAdmin):
 
 
 @admin.register(BoardSecretary)
-class BoardSecretaryAdmin(admin.ModelAdmin):
+class BoardSecretaryAdmin(TabbedTranslationAdmin):
     list_display = ('label', 'full_name', 'is_active')
     list_editable = ('is_active',)
     search_fields = ('label', 'full_name')
@@ -33,25 +34,25 @@ class BoardSecretaryAdmin(admin.ModelAdmin):
         return not BoardSecretary.objects.exists()
 
 
-class BoardCommitteeMemberInline(admin.TabularInline):
+class BoardCommitteeMemberInline(TranslationTabularInline):
     model = BoardCommitteeMember
     extra = 1
     fields = ('full_name', 'note', 'role_label', 'is_chair', 'is_active', 'order')
 
 
 @admin.register(BoardCommittee)
-class BoardCommitteeAdmin(admin.ModelAdmin):
+class BoardCommitteeAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'count_label', 'icon_class', 'is_active', 'order')
-    list_editable = ('count_label', 'icon_class', 'is_active', 'order')
+    list_editable = ('icon_class', 'is_active', 'order')
     search_fields = ('title',)
     ordering = ('order', 'id')
     inlines = [BoardCommitteeMemberInline]
 
 
 @admin.register(BoardCommitteeMember)
-class BoardCommitteeMemberAdmin(admin.ModelAdmin):
+class BoardCommitteeMemberAdmin(TabbedTranslationAdmin):
     list_display = ('full_name', 'committee', 'role_label', 'note', 'is_chair', 'is_active', 'order')
-    list_editable = ('role_label', 'is_chair', 'is_active', 'order')
+    list_editable = ('is_chair', 'is_active', 'order')
     list_filter = ('committee', 'is_chair', 'is_active')
     search_fields = ('full_name', 'note', 'committee__title')
     ordering = ('committee', 'order', 'id')
